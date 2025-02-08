@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap");
+
+:root {
+	--primary-color: #6d28d9;
+	--secondary-color: #4c1d95;
+	--input-color: #00d1b2;
+	--dark-color: #111827;
+	--gray-color: #6b7280;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1rem;
+	line-height: 1.7;
+	background-color: #f4f4f4;
+}
+
+.container {
+	min-width: 350px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	max-width: 350px;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 0.5rem;
+}
+
+/* form elements*/
+.form-field {
+	margin-bottom: 1rem;
+}
+
+label {
+	margin-bottom: 0.35rem;
+	display: block;
+	color: var(--dark-color);
+}
+
+input[type="text"],
+input[type="email"] {
+	outline: none;
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 2%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font-size: 1rem;
+	border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+	box-shadow: 0 0 5px var(--input-color);
+	padding: 3%;
+	border: 1px solid var(--input-color);
+}
+
+input[type="submit"] {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: var(--primary-color);
+	border-style: none none solid none;
+	border-bottom: 2px solid var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+	background: var(--primary-color);
+	cursor: pointer;
+}
+
+.error {
+	color: #e74c3c;
+	font-size: 0.9rem;
+}
+
+.shaddow {
+	box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
