@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<!-- Mirrored from www.CodeCamp Python/tr/Map%2C_Filter%2C_Reduce by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:16:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Map, Filter, Reduce - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Harita, Filtre, Azalt - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">Harita, Filtre, Azalt</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>Harita, Filtre, Azalt</h1>
+                <hr/>
+                
+                <p>Map, Filter ve Reduce, fonksiyonel programlamanın paradigmalarıdır. Programcının (sizin) döngüler ve dallanmalar gibi karmaşıklıklarla uğraşmak zorunda kalmadan daha basit ve kısa kod yazmasına olanak tanır.</p>
+<p>Özünde, bu üç fonksiyon, bir işlevi bir dizi yineleme üzerinde tek seferde uygulamanıza olanak tanır. <code>map</code> ve <code>filter</code>, Python'da yerleşik olarak bulunur (<code>__builtins__</code> modülünde) ve herhangi bir ithalata gerek duymazlar. Ancak <code>reduce</code>, <code>functools</code> modülünde yer aldığından ithal edilmesi gerekir. Hepsinin nasıl çalıştığını anlamaya başlayalım; öncelikle <code>map</code> ile.</p>
+<h4>Map</h4>
+<p>Python'daki <code>map()</code> fonksiyonunun sözdizimi:</p>
+<p><code>map(func, *iterables)</code></p>
+<p>Burada <code>func</code>, her bir <code>iterables</code> (kaç tane oldukları önemli değil) elemanına uygulanacak olan fonksiyondur. <code>iterables</code>'ın başındaki yıldız işaretine (<code>*</code>) dikkat ettiniz mi? Bu, mümkün olan kadar çok sayıda iterable olabileceği anlamına gelir, yeter ki <code>func</code>, gerekli girdi argümanları olarak o sayıya sahip olsun. Bir örneğe geçmeden önce aşağıdaki noktalara dikkat etmeniz önemlidir:</p>
+<ol>
+<li>Python 2'de, <code>map()</code> fonksiyonu bir liste döndürür. Ancak Python 3'te, fonksiyon bir <code>map object</code> yani bir jeneratör objesi döndürür. Sonucu bir liste olarak almak için, yerleşik <code>list()</code> fonksiyonu map nesnesine çağrılabilir. Örneğin, <code>list(map(func, *iterables))</code>.</li>
+<li><code>func</code>'a verilen argüman sayısı, listelenen <code>iterables</code> sayısı ile eşleşmelidir.</li>
+</ol>
+<p>Bu kuralların nasıl çalıştığını aşağıdaki örneklerle görelim.</p>
+<p>Diyelim ki, tümü küçük harfle yazılmış en sevdiğim evcil hayvan isimlerimden oluşan bir listem (<code>iterable</code>) var ve onları büyük harfle yazmam gerekiyor. Geleneksel olarak, normal Python kullanımıyla, şöyle yapardım:</p>
+<pre><code>my_pets = ['alfred', 'tabitha', 'william', 'arla']
+uppered_pets = []
+
+for pet in my_pets:
+    pet_ = pet.upper()
+    uppered_pets.append(pet_)
+
+print(uppered_pets)
+</code></pre>
+<p>Bu, <code>['ALFRED', 'TABITHA', 'WILLIAM', 'ARLA']</code> çıktısını verir.</p>
+<p><code>map()</code> fonksiyonlarıyla bu işlem hem daha kolay hem de çok daha esnektir. Sadece şu şekilde yaparım:</p>
+<pre><code># Python 3
+my_pets = ['alfred', 'tabitha', 'william', 'arla']
+
+uppered_pets = list(map(str.upper, my_pets))
+
+print(uppered_pets)
+</code></pre>
+<p>Bu da aynı sonucu verir. Yukarıda tanımlanan <code>map()</code> sözdizimini kullanarak, burada <code>func</code>, <code>str.upper</code>, ve <code>iterables</code>, sadece bir iterable olan <code>my_pets</code> listesidir. Ayrıca, <code>str.upper</code> fonksiyonunu (<code>str.upper()</code> şeklinde) çağırmadığımıza dikkat edin; çünkü map fonksiyonu, <em><code>my_pets</code> listesindeki her bir eleman için</em> bunu gerçekleştirir.</p>
+<p>Daha dikkat edilmesi gereken şey, <code>str.upper</code> fonksiyonunun tanımı gereği yalnızca <strong>bir</strong> argüman gerektirmesi ve bu nedenle ona sadece <strong>bir</strong> iterable geçmemizdir. Yani, <em>geçirdiğiniz fonksiyonun iki, üç veya n argüman gerektirdiğini varsayarsanız</em>, o zaman <em>ona iki, üç veya n iterables geçirmeniz gerekir</em>. Bunu başka bir örnekle açıklayayım.</p>
+<p>Bir yerlerde hesapladığım beş ondalık basamaklı bir dizi daire alanım olduğunu varsayalım. Ve listedeki her bir elemanı, kendi pozisyonu kadar ondalık basamağa yuvarlamam gerekiyor. Yani listedeki ilk elemanı bir ondalık basamağa, listedeki ikinci elemanı iki ondalık basamağa, listedeki üçüncü elemanı üç ondalık basamağa vb. yuvarlamam gerekiyor. <code>map()</code> ile bu çok kolay. Nasıl olduğuna bakalım.</p>
+<p>Python, zaten iki argüman alan yerleşik <code>round()</code> fonksiyonu ile bu konuda şanslıyız -- yuvarlanacak sayı ve yuvarlanacak ondalık basamak sayısı. Yani, fonksiyon <strong>iki</strong> argüman gerektirdiğinden, <strong>iki</strong> iterable geçirmemiz gerekiyor.</p>
+<pre><code># Python 3
+
+circle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]
+
+result = list(map(round, circle_areas, range(1, 7)))
+
+print(result)
+</code></pre>
+<p><code>map()</code>'in güzelliğini görüyor musunuz? Bu esnekliğin verdiği heyecanı düşünebiliyor musunuz?</p>
+<p><code>range(1, 7)</code> fonksiyonu, <code>round</code> fonksiyonuna ikinci argüman olarak görev yapar (her iterasyon başına istenen ondalık basamak sayısı). Bu nedenle, <code>map</code> <code>circle_areas</code> üzerinden iterasyon yaparken, ilk iterasyonda, <code>circle_areas</code>'ın ilk elemanı, <code>3.56773</code>, <code>range(1,7)</code>'nin ilk elemanı, <code>1</code>, ile birlikte <code>round</code>'a geçirilir ve bu, aslında <code>round(3.56773, 1)</code> olur. İkinci iterasyonda, <code>circle_areas</code>'ın ikinci elemanı, <code>5.57668</code>, <code>range(1,7)</code>'nin ikinci elemanı, <code>2</code>, ile birlikte <code>round</code>'a geçirilir ve bu, aslında <code>round(5.57668, 2)</code> olur. Bu işlem, <code>circle_areas</code> listesinin sonuna kadar devam eder.</p>
+<p>Merak ediyorsunuzdur, "Ya birinci iterable'dan daha kısa veya daha uzun bir iterable geçirirsem? Örneğin, yukarıdaki fonksiyona ikinci iterable olarak <code>range(1, 3)</code> veya <code>range(1, 9999)</code> geçirirsem ne olur?" ve cevap basit: bir şey olmaz! Tamam, bu doğru değil. Bir şey "olmaz" çünkü <code>map()</code> fonksiyonu herhangi bir istisna yükseltmez, sadece bir ikinci argüman bulamayacağı ana kadar elemanlar üzerinde iterasyon yapar ve ardından sadece durur ve sonucu döndürür.</p>
+<p>Örneğin, <code>result = list(map(round, circle_areas, range(1, 3)))</code>'ü değerlendirirseniz, <code>circle_areas</code> ve <code>range(1, 3)</code>'ın uzunluğu farklı olmasına rağmen herhangi bir hata almazsınız. Bunun yerine Python şu işlemi yapar: <code>circle_areas</code>'ın ilk elemanını ve <code>range(1,3)</code>'ün ilk elemanını alır ve <code>round</code>'a geçirir. <code>round</code> bunu değerlendirir ve sonucu kaydeder. Ardından ikinci iterasyona geçer, <code>circle_areas</code>'ın ikinci elemanı ve <code>range(1,3)</code>'ün ikinci elemanını, <code>round</code> tekrar kaydeder. Şimdi üçüncü iterasyonda (<code>circle_areas</code>'ın üçüncü bir elemanı vardır), Python <code>circle_areas</code>'ın üçüncü elemanını alır ve <code>range(1,3)</code>'ün üçüncü elemanını almaya çalışır ancak <code>range(1,3)</code> üçüncü bir elemana sahip olmadığından, Python basitçe durur ve sonucu döndürür; bu durumda bu sadece <code>[3.6, 5.58]</code> olur.</p>
+<p>Devam edin ve deneyin.</p>
+<pre><code># Python 3
+
+circle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]
+
+result = list(map(round, circle_areas, range(1, 3)))
+
+print(result)
+</code></pre>
+<p>Aynı durum, <code>circle_areas</code>'ın ikinci iterable'ın uzunluğundan daha kısa olması durumunda da geçerlidir. Python, iterable'lardan birinde bir sonraki elemanı bulamadığında durur. </p>
+<p><code>map()</code> fonksiyonuna dair bilgimizi pekiştirmek için, kendi özel <code>zip()</code> fonksiyonumuzu uygulayacağız. <code>zip()</code> fonksiyonu, bir dizi iterable alır ve ardından iterable'lardaki her bir elementi içeren bir demet oluşturur. <code>map()</code> gibi, Python 3'te, bir jeneratör objesi döndürür ve bu, yerleşik <code>list</code> fonksiyonu çağrılarak kolayca bir listeye dönüştürülebilir. <code>map()</code> kullanarak kendi zip() fonksiyonumuzu oluşturacağız. Her iki fonksiyonu da anlamak için önce aşağıdaki yorumlamayı inceleyin.</p>
+<pre><code># Python 3
+
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [1, 2, 3, 4, 5]
+
+results = list(zip(my_strings, my_numbers))
+
+print(results)
+</code></pre>
+<p>Bir bonus olarak, eğer <code>my_strings</code> ve <code>my_numbers</code> aynı uzunlukta değilse ne olacağı konusunda tahmin yapabilir misiniz? Hayır mı? Deneyin! Bunlardan birinin uzunluğunu değiştirin.</p>
+<p>Kendi özel <code>zip()</code> fonksiyonumuza geçelim!</p>
+<pre><code># Python 3
+
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [1, 2, 3, 4, 5]
+
+results = list(map(lambda x, y: (x, y), my_strings, my_numbers))
+
+print(results)
+</code></pre>
+<p>Şuna bir bakın! <code>zip</code> ile aynı sonuca ulaştık. </p>
+<p>Ayrıca, <code>def my_function()</code> standart yöntemiyle bir fonksiyon oluşturmam gerekmediğini de fark ettiniz mi? Bu, <code>map()</code> ve genel olarak Python ne kadar esnek olduğunu gösterir! Sadece bir <code>lambda</code> fonksiyonu kullandım. Bu, standart fonksiyon tanımlama yönteminin (<code>def function_name()</code>) kullanılmasının yasak olduğu anlamına gelmez, hala kullanılabilir. Sadece daha az kod yazmayı (daha "Pythonik" olmayı) tercih ettim.</p>
+<p><code>filter()</code>'a geçelim.</p>
+<h4>Filter</h4>
+<p><code>map()</code>, bir fonksiyon aracılığıyla iterable'ın her bir elemanını geçirir ve fonksiyondan geçmiş tüm elemanların sonucunu döndürürken, <code>filter()</code>, önce fonksiyonun boolean değerler (true veya false) döndürmesini gerektirir ve ardından iterable'ın her bir elemanını fonksiyon aracılığıyla geçirir, false olanları "elenir". Şu sözdizime sahiptir:</p>
+<p><code>filter(func, iterable)</code></p>
+<p>Aşağıdaki noktalar <code>filter()</code> hakkında belirtilmelidir:</p>
+<ol>
+<li><code>map()</code>'in aksine, yalnızca bir iterable gereklidir.</li>
+<li><code>func</code> argümanı bir boolean türü döndürmelidir. Eğer döndürmezse, <code>filter</code> yalnızca kendisine geçirilen <code>iterable</code>'i döndürür. Ayrıca, yalnızca bir iterable gerektiğinden, <code>func</code>'ın yalnızca bir argüman alması gerektiği de açıktır.</li>
+<li><code>filter</code>, <code>func</code> aracılığıyla iterable'daki her bir elemanı geçirir ve sadece true olarak değerlendirilenleri döndürür. Yani, adına aldanarak, bir "filtre" görevi görür.</li>
+</ol>
+<p>Birkaç örneğe bakalım.</p>
+<p>Aşağıdakiler, bir Kimya sınavında 10 öğrencinin aldığı puanların bir listesidir (<code>iterable</code>). 75'in üzerinde puan alan öğrencileri filtreleyelim... <code>filter</code> kullanarak.</p>
+<pre><code># Python 3
+scores = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65]
+
+def is_A_student(score):
+    return score &gt; 75
+
+over_75 = list(filter(is_A_student, scores))
+
+print(over_75)
+</code></pre>
+<p>Bir sonraki örnek, bir palindrom dedektörü olacak. Bir "palindrom", geriye doğru da okunabilen bir kelime, ifade veya dizi demektir. Palindrom olduklarından şüphelenilen kelimelerden oluşan bir tuple (<code>iterable</code>) içinden palindrom olanları filtreleyelim.</p>
+<pre><code># Python 3
+dromes = ("demigod", "rewire", "madam", "freer", "anutforajaroftuna", "kiosk")
+
+palindromes = list(filter(lambda word: word == word[::-1], dromes))
+
+print(palindromes)
+</code></pre>
+<p>Bu, <code>['madam', 'anutforajaroftuna']</code> çıktısı verecektir. </p>
+<p>Oldukça şık, değil mi? Son olarak, <code>reduce()</code>'a bakalım.</p>
+<h4>Reduce</h4>
+<p><code>reduce</code>, bir <strong>iki argümanlı</strong> fonksiyonu, isteğe bağlı başlangıç argümanıyla birlikte bir iterable'ın elemanlarına kümülatif olarak uygular. Şu sözdizime sahiptir:</p>
+<p><code>reduce(func, iterable[, initial])</code></p>
+<p>Burada <code>func</code>, <code>iterable</code> içindeki her bir elemanın kümülatif bir şekilde uygulandığı fonksiyondur ve <code>initial</code>, hesaplamada elemanın <code>iterable</code>'ın önüne konulduğu ve iterable boş olduğunda bir varsayılan olarak görev yapan isteğe bağlı değerdir. Aşağıdaki noktalar <code>reduce()</code> hakkında belirtilmelidir:
+1. <code>func</code> iki argüman gerektirir; bunlardan ilki, (eğer <code>initial</code> sağlanmamışsa) <code>iterable</code>'ın ilk elemanı ve ikincisi, <code>iterable</code>'ın ikinci elemanıdır. Eğer <code>initial</code> sağlanmışsa, o ilk argüman olur ve <code>iterable</code>'ın ilk elemanı ikinci argüman olur.
+2. <code>reduce</code>, <code>iterable</code>'ı tek bir değere "indirir".</p>
+<p>Her zamanki gibi birkaç örneğe göz atalım.</p>
+<p>Python'un yerleşik <code>sum()</code> fonksiyonunun kendi versiyonumuzu yaratalım. <code>sum()</code> fonksiyonu, kendisine geçirilen iterable'daki tüm elemanların toplamını döndürür.</p>
+<pre><code># Python 3
+from functools import reduce
+
+numbers = [3, 4, 6, 9, 34, 12]
+
+def custom_sum(first, second):
+    return first + second
+
+result = reduce(custom_sum, numbers)
+print(result)
+</code></pre>
+<p>Sonuç, beklediğiniz gibi <code>68</code>'dir.</p>
+<p>Ne oldu?</p>
+<p>Her zamanki gibi, her şey iterasyonlarla ilgili: <code>reduce</code>, <code>numbers</code> içindeki ilk ve ikinci elemanları alır ve bunları sırayla <code>custom_sum</code>'a geçirir. <code>custom_sum</code> bunların toplamını hesaplar ve <code>reduce</code>'a döndürür. <code>reduce</code>, bu sonucu alır ve <code>custom_sum</code>'a birinci eleman olarak ve <code>numbers</code> içindeki bir sonraki (üçüncü) elemanı ikinci eleman olarak geçirir. Bu işlemi (kümülatif olarak) <code>numbers</code>'ın sonuna kadar sürdürür.</p>
+<p>İsteğe bağlı <code>initial</code> değerini kullanınca ne olacağına bakalım.</p>
+<pre><code># Python 3
+from functools import reduce
+
+numbers = [3, 4, 6, 9, 34, 12]
+
+def custom_sum(first, second):
+    return first + second
+
+result = reduce(custom_sum, numbers, 10)
+print(result)
+</code></pre>
+<p>Sonuç, beklediğiniz gibi <code>78</code> olacaktır çünkü <code>reduce</code> başlangıçta <code>10</code>'u <code>custom_sum</code>'a ilk argüman olarak kullanır.</p>
+<p>Python'un Map, Reduce ve Filter fonksiyonları hakkında her şey bu kadar. Her bir fonksiyonun anlaşılmasını sağlamak için aşağıdaki alıştırmaları deneyin.</p>
+<h2>Alıştırma</h2>
+<p>Bu alıştırmada, bozuk kodu düzeltmek için <code>map</code>, <code>filter</code> ve <code>reduce</code>'yi kullanacaksınız.</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">from functools import reduce 
+
+# Use map to print the square of each numbers rounded
+# to three decimal places
+my_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]
+
+# Use filter to print only the names that are less than 
+# or equal to seven letters
+my_names = [&#34;olumide&#34;, &#34;akinremi&#34;, &#34;josiah&#34;, &#34;temidayo&#34;, &#34;omoseun&#34;]
+
+# Use reduce to print the product of these numbers
+my_numbers = [4, 6, 9, 23, 5]
+
+# Fix all three respectively.
+map_result = list(map(lambda x: x, my_floats))
+filter_result = list(filter(lambda name: name, my_names, my_names))
+reduce_result = reduce(lambda num1, num2: num1 * num2, my_numbers, 0)
+
+print(map_result)
+print(filter_result)
+print(reduce_result)</code>
+              <code data-type="solution">#### Map
+from functools import reduce 
+
+my_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]
+my_names = [&#34;olumide&#34;, &#34;akinremi&#34;, &#34;josiah&#34;, &#34;temidayo&#34;, &#34;omoseun&#34;]
+my_numbers = [4, 6, 9, 23, 5]
+
+map_result = list(map(lambda x: round(x ** 2, 3), my_floats))
+filter_result = list(filter(lambda name: len(name) &lt;= 7, my_names))
+reduce_result = reduce(lambda num1, num2: num1 * num2, my_numbers)
+
+print(map_result)
+print(filter_result)
+print(reduce_result)</code>
+              <code data-type="sct">test_output_contains(&#34;[18.922, 37.088, 10.562, 95.453, 4.666, 78.854, 21.068]&#34;)
+test_output_contains(&#34;[&#39;olumide&#39;, &#39;josiah&#39;, &#39;omoseun&#39;]&#34;)
+test_output_contains(&#34;24840&#34;)
+success_msg(&#34;Congrats! Nice work.&#34;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Decorators.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Parsing_CSV_Files.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=Harita,%20Filtre,%20Azalt&amp;language=tr" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Merhaba, Dünya!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">Değişkenler ve Türler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">Listeler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">Temel Operatörler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">String Biçimlendirme</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">Temel Dize İşlemleri</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">Koşullar</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">Döngüler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">Fonksiyonlar</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">Sınıflar ve Nesneler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">Sözlükler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">Modüller ve Paketler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">Girdi ve Çıktı</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">Jeneratörler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">Liste Anlamaları</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Lambda fonksiyonları</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">Birden Fazla Fonksiyon Argümanı</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">Düzenli İfadeler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">İstisna Yönetimi</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">Kümeleme</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">Serileştirme</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">Kısmi fonksiyonlar</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">Kod İncelemesi</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">Kapanışlar</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">Dekoratörler</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">Harita, Filtre, Azalt</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">CSV Dosyalarını Ayrıştırma</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "tr"};
+        var nextChapter = "/tr/Parsing_CSV_Files";
+        var previousChapter = "/tr/Decorators";
+        var backChapter = "/tr/Welcome";
+        var tutorialData = {"page_title": "Harita, Filtre, Azalt", "text": "<p>Map, Filter ve Reduce, fonksiyonel programlaman\u0131n paradigmalar\u0131d\u0131r. Programc\u0131n\u0131n (sizin) d\u00f6ng\u00fcler ve dallanmalar gibi karma\u015f\u0131kl\u0131klarla u\u011fra\u015fmak zorunda kalmadan daha basit ve k\u0131sa kod yazmas\u0131na olanak tan\u0131r.</p>\n<p>\u00d6z\u00fcnde, bu \u00fc\u00e7 fonksiyon, bir i\u015flevi bir dizi yineleme \u00fczerinde tek seferde uygulaman\u0131za olanak tan\u0131r. <code>map</code> ve <code>filter</code>, Python'da yerle\u015fik olarak bulunur (<code>__builtins__</code> mod\u00fcl\u00fcnde) ve herhangi bir ithalata gerek duymazlar. Ancak <code>reduce</code>, <code>functools</code> mod\u00fcl\u00fcnde yer ald\u0131\u011f\u0131ndan ithal edilmesi gerekir. Hepsinin nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 anlamaya ba\u015flayal\u0131m; \u00f6ncelikle <code>map</code> ile.</p>\n<h4>Map</h4>\n<p>Python'daki <code>map()</code> fonksiyonunun s\u00f6zdizimi:</p>\n<p><code>map(func, *iterables)</code></p>\n<p>Burada <code>func</code>, her bir <code>iterables</code> (ka\u00e7 tane olduklar\u0131 \u00f6nemli de\u011fil) eleman\u0131na uygulanacak olan fonksiyondur. <code>iterables</code>'\u0131n ba\u015f\u0131ndaki y\u0131ld\u0131z i\u015faretine (<code>*</code>) dikkat ettiniz mi? Bu, m\u00fcmk\u00fcn olan kadar \u00e7ok say\u0131da iterable olabilece\u011fi anlam\u0131na gelir, yeter ki <code>func</code>, gerekli girdi arg\u00fcmanlar\u0131 olarak o say\u0131ya sahip olsun. Bir \u00f6rne\u011fe ge\u00e7meden \u00f6nce a\u015fa\u011f\u0131daki noktalara dikkat etmeniz \u00f6nemlidir:</p>\n<ol>\n<li>Python 2'de, <code>map()</code> fonksiyonu bir liste d\u00f6nd\u00fcr\u00fcr. Ancak Python 3'te, fonksiyon bir <code>map object</code> yani bir jenerat\u00f6r objesi d\u00f6nd\u00fcr\u00fcr. Sonucu bir liste olarak almak i\u00e7in, yerle\u015fik <code>list()</code> fonksiyonu map nesnesine \u00e7a\u011fr\u0131labilir. \u00d6rne\u011fin, <code>list(map(func, *iterables))</code>.</li>\n<li><code>func</code>'a verilen arg\u00fcman say\u0131s\u0131, listelenen <code>iterables</code> say\u0131s\u0131 ile e\u015fle\u015fmelidir.</li>\n</ol>\n<p>Bu kurallar\u0131n nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 a\u015fa\u011f\u0131daki \u00f6rneklerle g\u00f6relim.</p>\n<p>Diyelim ki, t\u00fcm\u00fc k\u00fc\u00e7\u00fck harfle yaz\u0131lm\u0131\u015f en sevdi\u011fim evcil hayvan isimlerimden olu\u015fan bir listem (<code>iterable</code>) var ve onlar\u0131 b\u00fcy\u00fck harfle yazmam gerekiyor. Geleneksel olarak, normal Python kullan\u0131m\u0131yla, \u015f\u00f6yle yapard\u0131m:</p>\n<pre><code>my_pets = ['alfred', 'tabitha', 'william', 'arla']\nuppered_pets = []\n\nfor pet in my_pets:\n    pet_ = pet.upper()\n    uppered_pets.append(pet_)\n\nprint(uppered_pets)\n</code></pre>\n<p>Bu, <code>['ALFRED', 'TABITHA', 'WILLIAM', 'ARLA']</code> \u00e7\u0131kt\u0131s\u0131n\u0131 verir.</p>\n<p><code>map()</code> fonksiyonlar\u0131yla bu i\u015flem hem daha kolay hem de \u00e7ok daha esnektir. Sadece \u015fu \u015fekilde yapar\u0131m:</p>\n<pre><code># Python 3\nmy_pets = ['alfred', 'tabitha', 'william', 'arla']\n\nuppered_pets = list(map(str.upper, my_pets))\n\nprint(uppered_pets)\n</code></pre>\n<p>Bu da ayn\u0131 sonucu verir. Yukar\u0131da tan\u0131mlanan <code>map()</code> s\u00f6zdizimini kullanarak, burada <code>func</code>, <code>str.upper</code>, ve <code>iterables</code>, sadece bir iterable olan <code>my_pets</code> listesidir. Ayr\u0131ca, <code>str.upper</code> fonksiyonunu (<code>str.upper()</code> \u015feklinde) \u00e7a\u011f\u0131rmad\u0131\u011f\u0131m\u0131za dikkat edin; \u00e7\u00fcnk\u00fc map fonksiyonu, <em><code>my_pets</code> listesindeki her bir eleman i\u00e7in</em> bunu ger\u00e7ekle\u015ftirir.</p>\n<p>Daha dikkat edilmesi gereken \u015fey, <code>str.upper</code> fonksiyonunun tan\u0131m\u0131 gere\u011fi yaln\u0131zca <strong>bir</strong> arg\u00fcman gerektirmesi ve bu nedenle ona sadece <strong>bir</strong> iterable ge\u00e7memizdir. Yani, <em>ge\u00e7irdi\u011finiz fonksiyonun iki, \u00fc\u00e7 veya n arg\u00fcman gerektirdi\u011fini varsayarsan\u0131z</em>, o zaman <em>ona iki, \u00fc\u00e7 veya n iterables ge\u00e7irmeniz gerekir</em>. Bunu ba\u015fka bir \u00f6rnekle a\u00e7\u0131klayay\u0131m.</p>\n<p>Bir yerlerde hesaplad\u0131\u011f\u0131m be\u015f ondal\u0131k basamakl\u0131 bir dizi daire alan\u0131m oldu\u011funu varsayal\u0131m. Ve listedeki her bir eleman\u0131, kendi pozisyonu kadar ondal\u0131k basama\u011fa yuvarlamam gerekiyor. Yani listedeki ilk eleman\u0131 bir ondal\u0131k basama\u011fa, listedeki ikinci eleman\u0131 iki ondal\u0131k basama\u011fa, listedeki \u00fc\u00e7\u00fcnc\u00fc eleman\u0131 \u00fc\u00e7 ondal\u0131k basama\u011fa vb. yuvarlamam gerekiyor. <code>map()</code> ile bu \u00e7ok kolay. Nas\u0131l oldu\u011funa bakal\u0131m.</p>\n<p>Python, zaten iki arg\u00fcman alan yerle\u015fik <code>round()</code> fonksiyonu ile bu konuda \u015fansl\u0131y\u0131z -- yuvarlanacak say\u0131 ve yuvarlanacak ondal\u0131k basamak say\u0131s\u0131. Yani, fonksiyon <strong>iki</strong> arg\u00fcman gerektirdi\u011finden, <strong>iki</strong> iterable ge\u00e7irmemiz gerekiyor.</p>\n<pre><code># Python 3\n\ncircle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]\n\nresult = list(map(round, circle_areas, range(1, 7)))\n\nprint(result)\n</code></pre>\n<p><code>map()</code>'in g\u00fczelli\u011fini g\u00f6r\u00fcyor musunuz? Bu esnekli\u011fin verdi\u011fi heyecan\u0131 d\u00fc\u015f\u00fcnebiliyor musunuz?</p>\n<p><code>range(1, 7)</code> fonksiyonu, <code>round</code> fonksiyonuna ikinci arg\u00fcman olarak g\u00f6rev yapar (her iterasyon ba\u015f\u0131na istenen ondal\u0131k basamak say\u0131s\u0131). Bu nedenle, <code>map</code> <code>circle_areas</code> \u00fczerinden iterasyon yaparken, ilk iterasyonda, <code>circle_areas</code>'\u0131n ilk eleman\u0131, <code>3.56773</code>, <code>range(1,7)</code>'nin ilk eleman\u0131, <code>1</code>, ile birlikte <code>round</code>'a ge\u00e7irilir ve bu, asl\u0131nda <code>round(3.56773, 1)</code> olur. \u0130kinci iterasyonda, <code>circle_areas</code>'\u0131n ikinci eleman\u0131, <code>5.57668</code>, <code>range(1,7)</code>'nin ikinci eleman\u0131, <code>2</code>, ile birlikte <code>round</code>'a ge\u00e7irilir ve bu, asl\u0131nda <code>round(5.57668, 2)</code> olur. Bu i\u015flem, <code>circle_areas</code> listesinin sonuna kadar devam eder.</p>\n<p>Merak ediyorsunuzdur, \"Ya birinci iterable'dan daha k\u0131sa veya daha uzun bir iterable ge\u00e7irirsem? \u00d6rne\u011fin, yukar\u0131daki fonksiyona ikinci iterable olarak <code>range(1, 3)</code> veya <code>range(1, 9999)</code> ge\u00e7irirsem ne olur?\" ve cevap basit: bir \u015fey olmaz! Tamam, bu do\u011fru de\u011fil. Bir \u015fey \"olmaz\" \u00e7\u00fcnk\u00fc <code>map()</code> fonksiyonu herhangi bir istisna y\u00fckseltmez, sadece bir ikinci arg\u00fcman bulamayaca\u011f\u0131 ana kadar elemanlar \u00fczerinde iterasyon yapar ve ard\u0131ndan sadece durur ve sonucu d\u00f6nd\u00fcr\u00fcr.</p>\n<p>\u00d6rne\u011fin, <code>result = list(map(round, circle_areas, range(1, 3)))</code>'\u00fc de\u011ferlendirirseniz, <code>circle_areas</code> ve <code>range(1, 3)</code>'\u0131n uzunlu\u011fu farkl\u0131 olmas\u0131na ra\u011fmen herhangi bir hata almazs\u0131n\u0131z. Bunun yerine Python \u015fu i\u015flemi yapar: <code>circle_areas</code>'\u0131n ilk eleman\u0131n\u0131 ve <code>range(1,3)</code>'\u00fcn ilk eleman\u0131n\u0131 al\u0131r ve <code>round</code>'a ge\u00e7irir. <code>round</code> bunu de\u011ferlendirir ve sonucu kaydeder. Ard\u0131ndan ikinci iterasyona ge\u00e7er, <code>circle_areas</code>'\u0131n ikinci eleman\u0131 ve <code>range(1,3)</code>'\u00fcn ikinci eleman\u0131n\u0131, <code>round</code> tekrar kaydeder. \u015eimdi \u00fc\u00e7\u00fcnc\u00fc iterasyonda (<code>circle_areas</code>'\u0131n \u00fc\u00e7\u00fcnc\u00fc bir eleman\u0131 vard\u0131r), Python <code>circle_areas</code>'\u0131n \u00fc\u00e7\u00fcnc\u00fc eleman\u0131n\u0131 al\u0131r ve <code>range(1,3)</code>'\u00fcn \u00fc\u00e7\u00fcnc\u00fc eleman\u0131n\u0131 almaya \u00e7al\u0131\u015f\u0131r ancak <code>range(1,3)</code> \u00fc\u00e7\u00fcnc\u00fc bir elemana sahip olmad\u0131\u011f\u0131ndan, Python basit\u00e7e durur ve sonucu d\u00f6nd\u00fcr\u00fcr; bu durumda bu sadece <code>[3.6, 5.58]</code> olur.</p>\n<p>Devam edin ve deneyin.</p>\n<pre><code># Python 3\n\ncircle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]\n\nresult = list(map(round, circle_areas, range(1, 3)))\n\nprint(result)\n</code></pre>\n<p>Ayn\u0131 durum, <code>circle_areas</code>'\u0131n ikinci iterable'\u0131n uzunlu\u011fundan daha k\u0131sa olmas\u0131 durumunda da ge\u00e7erlidir. Python, iterable'lardan birinde bir sonraki eleman\u0131 bulamad\u0131\u011f\u0131nda durur. </p>\n<p><code>map()</code> fonksiyonuna dair bilgimizi peki\u015ftirmek i\u00e7in, kendi \u00f6zel <code>zip()</code> fonksiyonumuzu uygulayaca\u011f\u0131z. <code>zip()</code> fonksiyonu, bir dizi iterable al\u0131r ve ard\u0131ndan iterable'lardaki her bir elementi i\u00e7eren bir demet olu\u015fturur. <code>map()</code> gibi, Python 3'te, bir jenerat\u00f6r objesi d\u00f6nd\u00fcr\u00fcr ve bu, yerle\u015fik <code>list</code> fonksiyonu \u00e7a\u011fr\u0131larak kolayca bir listeye d\u00f6n\u00fc\u015ft\u00fcr\u00fclebilir. <code>map()</code> kullanarak kendi zip() fonksiyonumuzu olu\u015fturaca\u011f\u0131z. Her iki fonksiyonu da anlamak i\u00e7in \u00f6nce a\u015fa\u011f\u0131daki yorumlamay\u0131 inceleyin.</p>\n<pre><code># Python 3\n\nmy_strings = ['a', 'b', 'c', 'd', 'e']\nmy_numbers = [1, 2, 3, 4, 5]\n\nresults = list(zip(my_strings, my_numbers))\n\nprint(results)\n</code></pre>\n<p>Bir bonus olarak, e\u011fer <code>my_strings</code> ve <code>my_numbers</code> ayn\u0131 uzunlukta de\u011filse ne olaca\u011f\u0131 konusunda tahmin yapabilir misiniz? Hay\u0131r m\u0131? Deneyin! Bunlardan birinin uzunlu\u011funu de\u011fi\u015ftirin.</p>\n<p>Kendi \u00f6zel <code>zip()</code> fonksiyonumuza ge\u00e7elim!</p>\n<pre><code># Python 3\n\nmy_strings = ['a', 'b', 'c', 'd', 'e']\nmy_numbers = [1, 2, 3, 4, 5]\n\nresults = list(map(lambda x, y: (x, y), my_strings, my_numbers))\n\nprint(results)\n</code></pre>\n<p>\u015euna bir bak\u0131n! <code>zip</code> ile ayn\u0131 sonuca ula\u015ft\u0131k. </p>\n<p>Ayr\u0131ca, <code>def my_function()</code> standart y\u00f6ntemiyle bir fonksiyon olu\u015fturmam gerekmedi\u011fini de fark ettiniz mi? Bu, <code>map()</code> ve genel olarak Python ne kadar esnek oldu\u011funu g\u00f6sterir! Sadece bir <code>lambda</code> fonksiyonu kulland\u0131m. Bu, standart fonksiyon tan\u0131mlama y\u00f6nteminin (<code>def function_name()</code>) kullan\u0131lmas\u0131n\u0131n yasak oldu\u011fu anlam\u0131na gelmez, hala kullan\u0131labilir. Sadece daha az kod yazmay\u0131 (daha \"Pythonik\" olmay\u0131) tercih ettim.</p>\n<p><code>filter()</code>'a ge\u00e7elim.</p>\n<h4>Filter</h4>\n<p><code>map()</code>, bir fonksiyon arac\u0131l\u0131\u011f\u0131yla iterable'\u0131n her bir eleman\u0131n\u0131 ge\u00e7irir ve fonksiyondan ge\u00e7mi\u015f t\u00fcm elemanlar\u0131n sonucunu d\u00f6nd\u00fcr\u00fcrken, <code>filter()</code>, \u00f6nce fonksiyonun boolean de\u011ferler (true veya false) d\u00f6nd\u00fcrmesini gerektirir ve ard\u0131ndan iterable'\u0131n her bir eleman\u0131n\u0131 fonksiyon arac\u0131l\u0131\u011f\u0131yla ge\u00e7irir, false olanlar\u0131 \"elenir\". \u015eu s\u00f6zdizime sahiptir:</p>\n<p><code>filter(func, iterable)</code></p>\n<p>A\u015fa\u011f\u0131daki noktalar <code>filter()</code> hakk\u0131nda belirtilmelidir:</p>\n<ol>\n<li><code>map()</code>'in aksine, yaln\u0131zca bir iterable gereklidir.</li>\n<li><code>func</code> arg\u00fcman\u0131 bir boolean t\u00fcr\u00fc d\u00f6nd\u00fcrmelidir. E\u011fer d\u00f6nd\u00fcrmezse, <code>filter</code> yaln\u0131zca kendisine ge\u00e7irilen <code>iterable</code>'i d\u00f6nd\u00fcr\u00fcr. Ayr\u0131ca, yaln\u0131zca bir iterable gerekti\u011finden, <code>func</code>'\u0131n yaln\u0131zca bir arg\u00fcman almas\u0131 gerekti\u011fi de a\u00e7\u0131kt\u0131r.</li>\n<li><code>filter</code>, <code>func</code> arac\u0131l\u0131\u011f\u0131yla iterable'daki her bir eleman\u0131 ge\u00e7irir ve sadece true olarak de\u011ferlendirilenleri d\u00f6nd\u00fcr\u00fcr. Yani, ad\u0131na aldanarak, bir \"filtre\" g\u00f6revi g\u00f6r\u00fcr.</li>\n</ol>\n<p>Birka\u00e7 \u00f6rne\u011fe bakal\u0131m.</p>\n<p>A\u015fa\u011f\u0131dakiler, bir Kimya s\u0131nav\u0131nda 10 \u00f6\u011frencinin ald\u0131\u011f\u0131 puanlar\u0131n bir listesidir (<code>iterable</code>). 75'in \u00fczerinde puan alan \u00f6\u011frencileri filtreleyelim... <code>filter</code> kullanarak.</p>\n<pre><code># Python 3\nscores = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65]\n\ndef is_A_student(score):\n    return score &gt; 75\n\nover_75 = list(filter(is_A_student, scores))\n\nprint(over_75)\n</code></pre>\n<p>Bir sonraki \u00f6rnek, bir palindrom dedekt\u00f6r\u00fc olacak. Bir \"palindrom\", geriye do\u011fru da okunabilen bir kelime, ifade veya dizi demektir. Palindrom olduklar\u0131ndan \u015f\u00fcphelenilen kelimelerden olu\u015fan bir tuple (<code>iterable</code>) i\u00e7inden palindrom olanlar\u0131 filtreleyelim.</p>\n<pre><code># Python 3\ndromes = (\"demigod\", \"rewire\", \"madam\", \"freer\", \"anutforajaroftuna\", \"kiosk\")\n\npalindromes = list(filter(lambda word: word == word[::-1], dromes))\n\nprint(palindromes)\n</code></pre>\n<p>Bu, <code>['madam', 'anutforajaroftuna']</code> \u00e7\u0131kt\u0131s\u0131 verecektir. </p>\n<p>Olduk\u00e7a \u015f\u0131k, de\u011fil mi? Son olarak, <code>reduce()</code>'a bakal\u0131m.</p>\n<h4>Reduce</h4>\n<p><code>reduce</code>, bir <strong>iki arg\u00fcmanl\u0131</strong> fonksiyonu, iste\u011fe ba\u011fl\u0131 ba\u015flang\u0131\u00e7 arg\u00fcman\u0131yla birlikte bir iterable'\u0131n elemanlar\u0131na k\u00fcm\u00fclatif olarak uygular. \u015eu s\u00f6zdizime sahiptir:</p>\n<p><code>reduce(func, iterable[, initial])</code></p>\n<p>Burada <code>func</code>, <code>iterable</code> i\u00e7indeki her bir eleman\u0131n k\u00fcm\u00fclatif bir \u015fekilde uyguland\u0131\u011f\u0131 fonksiyondur ve <code>initial</code>, hesaplamada eleman\u0131n <code>iterable</code>'\u0131n \u00f6n\u00fcne konuldu\u011fu ve iterable bo\u015f oldu\u011funda bir varsay\u0131lan olarak g\u00f6rev yapan iste\u011fe ba\u011fl\u0131 de\u011ferdir. A\u015fa\u011f\u0131daki noktalar <code>reduce()</code> hakk\u0131nda belirtilmelidir:\n1. <code>func</code> iki arg\u00fcman gerektirir; bunlardan ilki, (e\u011fer <code>initial</code> sa\u011flanmam\u0131\u015fsa) <code>iterable</code>'\u0131n ilk eleman\u0131 ve ikincisi, <code>iterable</code>'\u0131n ikinci eleman\u0131d\u0131r. E\u011fer <code>initial</code> sa\u011flanm\u0131\u015fsa, o ilk arg\u00fcman olur ve <code>iterable</code>'\u0131n ilk eleman\u0131 ikinci arg\u00fcman olur.\n2. <code>reduce</code>, <code>iterable</code>'\u0131 tek bir de\u011fere \"indirir\".</p>\n<p>Her zamanki gibi birka\u00e7 \u00f6rne\u011fe g\u00f6z atal\u0131m.</p>\n<p>Python'un yerle\u015fik <code>sum()</code> fonksiyonunun kendi versiyonumuzu yaratal\u0131m. <code>sum()</code> fonksiyonu, kendisine ge\u00e7irilen iterable'daki t\u00fcm elemanlar\u0131n toplam\u0131n\u0131 d\u00f6nd\u00fcr\u00fcr.</p>\n<pre><code># Python 3\nfrom functools import reduce\n\nnumbers = [3, 4, 6, 9, 34, 12]\n\ndef custom_sum(first, second):\n    return first + second\n\nresult = reduce(custom_sum, numbers)\nprint(result)\n</code></pre>\n<p>Sonu\u00e7, bekledi\u011finiz gibi <code>68</code>'dir.</p>\n<p>Ne oldu?</p>\n<p>Her zamanki gibi, her \u015fey iterasyonlarla ilgili: <code>reduce</code>, <code>numbers</code> i\u00e7indeki ilk ve ikinci elemanlar\u0131 al\u0131r ve bunlar\u0131 s\u0131rayla <code>custom_sum</code>'a ge\u00e7irir. <code>custom_sum</code> bunlar\u0131n toplam\u0131n\u0131 hesaplar ve <code>reduce</code>'a d\u00f6nd\u00fcr\u00fcr. <code>reduce</code>, bu sonucu al\u0131r ve <code>custom_sum</code>'a birinci eleman olarak ve <code>numbers</code> i\u00e7indeki bir sonraki (\u00fc\u00e7\u00fcnc\u00fc) eleman\u0131 ikinci eleman olarak ge\u00e7irir. Bu i\u015flemi (k\u00fcm\u00fclatif olarak) <code>numbers</code>'\u0131n sonuna kadar s\u00fcrd\u00fcr\u00fcr.</p>\n<p>\u0130ste\u011fe ba\u011fl\u0131 <code>initial</code> de\u011ferini kullan\u0131nca ne olaca\u011f\u0131na bakal\u0131m.</p>\n<pre><code># Python 3\nfrom functools import reduce\n\nnumbers = [3, 4, 6, 9, 34, 12]\n\ndef custom_sum(first, second):\n    return first + second\n\nresult = reduce(custom_sum, numbers, 10)\nprint(result)\n</code></pre>\n<p>Sonu\u00e7, bekledi\u011finiz gibi <code>78</code> olacakt\u0131r \u00e7\u00fcnk\u00fc <code>reduce</code> ba\u015flang\u0131\u00e7ta <code>10</code>'u <code>custom_sum</code>'a ilk arg\u00fcman olarak kullan\u0131r.</p>\n<p>Python'un Map, Reduce ve Filter fonksiyonlar\u0131 hakk\u0131nda her \u015fey bu kadar. Her bir fonksiyonun anla\u015f\u0131lmas\u0131n\u0131 sa\u011flamak i\u00e7in a\u015fa\u011f\u0131daki al\u0131\u015ft\u0131rmalar\u0131 deneyin.</p>\n<h2>Al\u0131\u015ft\u0131rma</h2>\n<p>Bu al\u0131\u015ft\u0131rmada, bozuk kodu d\u00fczeltmek i\u00e7in <code>map</code>, <code>filter</code> ve <code>reduce</code>'yi kullanacaks\u0131n\u0131z.</p>", "code": "from functools import reduce \n\n# Use map to print the square of each numbers rounded\n# to three decimal places\nmy_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]\n\n# Use filter to print only the names that are less than \n# or equal to seven letters\nmy_names = [\"olumide\", \"akinremi\", \"josiah\", \"temidayo\", \"omoseun\"]\n\n# Use reduce to print the product of these numbers\nmy_numbers = [4, 6, 9, 23, 5]\n\n# Fix all three respectively.\nmap_result = list(map(lambda x: x, my_floats))\nfilter_result = list(filter(lambda name: name, my_names, my_names))\nreduce_result = reduce(lambda num1, num2: num1 * num2, my_numbers, 0)\n\nprint(map_result)\nprint(filter_result)\nprint(reduce_result)", "back_chapter": "Welcome", "previous_chapter": "Decorators", "next_chapter": "Parsing_CSV_Files", "output": "test_output_contains(\"[18.922, 37.088, 10.562, 95.453, 4.666, 78.854, 21.068]\")\ntest_output_contains(\"['olumide', 'josiah', 'omoseun']\")\ntest_output_contains(\"24840\")\nsuccess_msg(\"Congrats! Nice work.\")", "solution": "#### Map\nfrom functools import reduce \n\nmy_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]\nmy_names = [\"olumide\", \"akinremi\", \"josiah\", \"temidayo\", \"omoseun\"]\nmy_numbers = [4, 6, 9, 23, 5]\n\nmap_result = list(map(lambda x: round(x ** 2, 3), my_floats))\nfilter_result = list(filter(lambda name: len(name) <= 7, my_names))\nreduce_result = reduce(lambda num1, num2: num1 * num2, my_numbers)\n\nprint(map_result)\nprint(filter_result)\nprint(reduce_result)", "is_tutorial": true, "links": [["Merhaba, D\u00fcnya!", "/tr/Hello%2C_World%21"], ["De\u011fi\u015fkenler ve T\u00fcrler", "/tr/Variables_and_Types"], ["Listeler", "/tr/Lists"], ["Temel Operat\u00f6rler", "/tr/Basic_Operators"], ["String Bi\u00e7imlendirme", "/tr/String_Formatting"], ["Temel Dize \u0130\u015flemleri", "/tr/Basic_String_Operations"], ["Ko\u015fullar", "/tr/Conditions"], ["D\u00f6ng\u00fcler", "/tr/Loops"], ["Fonksiyonlar", "/tr/Functions"], ["S\u0131n\u0131flar ve Nesneler", "/tr/Classes_and_Objects"], ["S\u00f6zl\u00fckler", "/tr/Dictionaries"], ["Mod\u00fcller ve Paketler", "/tr/Modules_and_Packages"], ["Girdi ve \u00c7\u0131kt\u0131", "/tr/Input_and_Output"], ["Jenerat\u00f6rler", "/tr/Generators"], ["Liste Anlamalar\u0131", "/tr/List_Comprehensions"], ["Lambda fonksiyonlar\u0131", "/tr/Lambda_functions"], ["Birden Fazla Fonksiyon Arg\u00fcman\u0131", "/tr/Multiple_Function_Arguments"], ["D\u00fczenli \u0130fadeler", "/tr/Regular_Expressions"], ["\u0130stisna Y\u00f6netimi", "/tr/Exception_Handling"], ["K\u00fcmeleme", "/tr/Sets"], ["Serile\u015ftirme", "/tr/Serialization"], ["K\u0131smi fonksiyonlar", "/tr/Partial_functions"], ["Kod \u0130ncelemesi", "/tr/Code_Introspection"], ["Kapan\u0131\u015flar", "/tr/Closures"], ["Dekorat\u00f6rler", "/tr/Decorators"], ["Harita, Filtre, Azalt", "/tr/Map%2C_Filter%2C_Reduce"], ["CSV Dosyalar\u0131n\u0131 Ayr\u0131\u015ft\u0131rma", "/tr/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/tr/Map%2C_Filter%2C_Reduce by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:16:34 GMT -->
+</html>
