@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<!-- Mirrored from www.CodeCamp Python/pl/Modules_and_Packages by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:15:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Modules and Packages - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Moduły i pakiety - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">Moduły i pakiety</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>Moduły i pakiety</h1>
+                <hr/>
+                
+                <p>W programowaniu moduł to część oprogramowania mająca określona funkcjonalność. 
+Na przykład, podczas tworzenia gry w ping ponga, jeden moduł może być odpowiedzialny za logikę gry, a 
+inny moduł rysuje grę na ekranie. Każdy moduł składa się z innego
+pliku, który może być edytowany osobno.</p>
+<h3>Pisanie modułów</h3>
+<p>Moduły w Pythonie to po prostu pliki Pythonowe z rozszerzeniem .py. Nazwa modułu jest taka sama jak nazwa pliku.
+Pythonowy moduł może posiadać zestaw funkcji, klas, czy zmiennych zdefiniowanych i zaimplementowanych. 
+Powyższy przykład obejmuje dwa pliki:</p>
+<p>mygame/</p>
+<ul>
+<li>
+<p>mygame/game.py</p>
+</li>
+<li>
+<p>mygame/draw.py</p>
+</li>
+</ul>
+<p>Skrypt Pythona <code>game.py</code> implementuje grę. Używa funkcji <code>draw_game</code> z pliku <code>draw.py</code>,
+czyli inaczej mówiąc modułu <code>draw</code>, który implementuje logikę rysowania gry na ekranie.</p>
+<p>Moduły są importowane z innych modułów przy użyciu polecenia <code>import</code>. W tym przypadku skrypt <code>game.py</code> może wyglądać tak:</p>
+<pre><code># game.py
+# importujemy moduł draw
+import draw
+
+def play_game():
+    ...
+
+def main():
+    result = play_game()
+    draw.draw_game(result)
+
+# to oznacza, że jeśli ten skrypt zostanie uruchomiony, to
+# main() zostanie wykonana
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p>Moduł <code>draw</code> może wyglądać w ten sposób:</p>
+<pre><code># draw.py
+
+def draw_game():
+    ...
+
+def clear_screen(screen):
+    ...
+</code></pre>
+<p>W tym przypadku moduł <code>game</code> importuje moduł <code>draw</code>, co umożliwia używanie funkcji zaimplementowanych 
+w tym module. Funkcja <code>main</code> używa lokalnej funkcji <code>play_game</code> do uruchomienia gry, a następnie 
+rysuje wynik gry używając funkcji zaimplementowanej w module <code>draw</code> o nazwie <code>draw_game</code>. Aby użyć
+funkcji <code>draw_game</code> z modułu <code>draw</code>, musimy określić w którym module funkcja jest
+zaimplementowana, używając operatora kropki. Aby odwołać się do funkcji <code>draw_game</code> z modułu <code>game</code>,
+musimy zaimportować moduł <code>draw</code>, a następnie wywołać <code>draw.draw_game()</code>. </p>
+<p>Gdy dyrektywa <code>import draw</code> jest uruchamiana, interpreter Python szuka pliku w katalogu, w którym skrypt był uruchamiany z nazwą modułu i sufiksem <code>.py</code>. W tym przypadku będzie szukał <code>draw.py</code>. Jeśli zostanie odnaleziony, zostanie zaimportowany. Jeśli nie zostanie odnaleziony, kontynuuje poszukiwania wśród modułów wbudowanych.</p>
+<p>Możliwe, że zauważyłeś, że przy importowaniu modułu, tworzony jest plik <code>.pyc</code>. To jest skompilowany plik Pythona. 
+Python kompiluje pliki do bajtkodu Pythona, aby nie musiał analizować plików za każdym razem, gdy moduły są ładowane. Jeśli istnieje plik <code>.pyc</code>, zostaje załadowany zamiast pliku <code>.py</code>. Proces ten jest przejrzysty dla użytkownika.</p>
+<h3>Importowanie obiektów modułu do obecnej przestrzeni nazw</h3>
+<p>Przestrzeń nazw to system w którym każdy obiekt jest nazwany i może być dostępny w Pythonie. Importujemy funkcję <code>draw_game</code> do przestrzeni nazw głównego skryptu używając polecenia <code>from</code>.</p>
+<pre><code># game.py
+# importujemy moduł draw
+from draw import draw_game
+
+def main():
+    result = play_game()
+    draw_game(result)
+</code></pre>
+<p>Możliwe, że zauważyłeś, że w tym przykładzie, nazwa modułu nie poprzedza <code>draw_game</code>, ponieważ określiliśmy nazwę modułu używając polecenia <code>import</code>.</p>
+<p>Zaletą tej notacji jest to, że nie musisz za każdym razem odnosić się do modułu. Jednak, przestrzeń nazw nie może mieć dwóch obiektów o tej samej nazwie, więc polecenie <code>import</code> może zastąpić istniejący obiekt w przestrzeni nazw.</p>
+<h3>Importowanie wszystkich obiektów z modułu</h3>
+<p>Możesz użyć polecenia <code>import *</code> do zaimportowania wszystkich obiektów w module w ten sposób:</p>
+<pre><code># game.py
+# importujemy moduł draw
+from draw import *
+
+def main():
+    result = play_game()
+    draw_game(result)
+</code></pre>
+<p>To może być nieco ryzykowne, ponieważ zmiany w module mogą wpływać na moduł, który go importuje, ale jest 
+to krótsze i nie wymaga od Ciebie specyfikowania każdego obiektu, który chcesz zaimportować z modułu.</p>
+<h3>Niestandardowa nazwa importu</h3>
+<p>Moduły mogą być ładowane pod dowolną nazwą, którą chcesz. Jest to przydatne, gdy importujesz moduł warunkowo,
+aby użyć tej samej nazwy w reszcie kodu. </p>
+<p>Na przykład, jeśli masz dwa moduły <code>draw</code> z nieco innymi nazwami, możesz zrobić to w ten sposób:</p>
+<pre><code># game.py
+# importujemy moduł draw
+if visual_mode:
+    # w trybie wizualnym rysujemy używając grafiki
+    import draw_visual as draw
+else:
+    # w trybie tekstowym wypisujemy tekst
+    import draw_textual as draw
+
+def main():
+    result = play_game()
+    # to może być wizualne lub tekstowe w zależności od visual_mode
+    draw.draw_game(result)
+</code></pre>
+<h3>Inicjalizacja modułu</h3>
+<p>Gdy moduł jest ładowany do działającego skryptu Pythona po raz pierwszy, jest inicjalizowany przez wykonanie kodu w module raz. Jeśli inny moduł w Twoim kodzie ponownie importuje ten sam moduł, nie zostanie on załadowany ponownie, więc lokalne zmienne wewnątrz modułu działają jako "singleton", co oznacza, że są inicjalizowane tylko raz.</p>
+<p>Możesz wtedy użyć tego do inicjalizacji obiektów. 
+Na przykład:</p>
+<pre><code># draw.py
+
+def draw_game():
+    # przy czyszczeniu ekranu możemy użyć głównego obiektu ekranu inicjalizowanego w tym module
+    clear_screen(main_screen)
+    ...
+
+def clear_screen(screen):
+    ...
+
+class Screen():
+    ...
+
+# inicjalizujemy main_screen jako singleton
+main_screen = Screen()
+</code></pre>
+<h3>Rozszerzanie ścieżki ładowania modułu</h3>
+<p>Istnieje kilka sposobów, aby powiedzieć interpreterowi Pythona, gdzie szukać modułów, poza
+domyślnym lokalnym katalogiem i modułami wbudowanymi. Możesz użyć zmiennej środowiskowej <code>PYTHONPATH</code>, aby określić dodatkowe katalogi, w których szukać modułów w ten sposób:</p>
+<pre><code>PYTHONPATH=/foo python game.py
+</code></pre>
+<p>To wykonuje <code>game.py</code>, i umożliwia skryptowi ładowanie modułów z katalogu <code>foo</code>, jak i
+z katalogu lokalnego.</p>
+<p>Możesz również użyć funkcji <code>sys.path.append</code>. Wykonaj ją <em>przed</em> uruchomieniem polecenia <code>import</code>:</p>
+<pre><code>sys.path.append("/foo")
+</code></pre>
+<p>Teraz katalog <code>foo</code> został dodany do listy ścieżek, w których szuka się modułów.</p>
+<h3>Odkrywanie modułów wbudowanych</h3>
+<p>Sprawdź pełną listę modułów wbudowanych w standardowej bibliotece Pythona <a href="https://docs.python.org/3/library/">tutaj</a>.</p>
+<p>Dwie bardzo ważne funkcje są przydatne podczas odkrywania modułów w Pythonie - funkcje <code>dir</code> i <code>help</code>.</p>
+<p>Aby zaimportować moduł <code>urllib</code>, który umożliwia nam tworzenie oraz czytanie danych z URLi, <code>importujemy</code> moduł:</p>
+<pre><code># importujemy bibliotekę
+import urllib
+
+# używamy jej
+urllib.urlopen(...)
+</code></pre>
+<p>Możemy sprawdzić, które funkcje są zaimplementowane w każdym module, używając funkcji <code>dir</code>:</p>
+<pre><code>&gt;&gt;&gt; import urllib
+&gt;&gt;&gt; dir(urllib)
+['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', 
+'__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', 
+'_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', 
+'_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', 
+'_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', 
+'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', 
+'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', 
+'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', 
+'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', 
+'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', 
+'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 
+'urlopen', 'urlretrieve']
+</code></pre>
+<p>Kiedy znajdziemy funkcję w module, którą chcemy użyć, możemy przeczytać o niej więcej używając funkcji <code>help</code>, korzystając z interpretera Python:</p>
+<pre><code>help(urllib.urlopen)
+</code></pre>
+<h3>Pisanie pakietów</h3>
+<p>Pakiety są przestrzeniami nazw zawierającymi wiele pakietów i modułów. To są po prostu katalogi, ale z pewnymi wymaganiami.</p>
+<p>Każdy pakiet w Pythonie to katalog, który <strong>MUSI</strong> zawierać specjalny plik o nazwie <code>__init__.py</code>. Ten plik, który może być pusty, wskazuje że katalog w którym się znajduje jest pakietem Pythona. Dzięki temu może być importowany w ten sam sposób, co moduł.</p>
+<p>Jeśli tworzymy katalog o nazwie <code>foo</code>, który wskazuje nazwę pakietu, możemy wtedy stworzyć moduł wewnątrz tego 
+pakietu o nazwie <code>bar</code>. Następnie dodajemy plik <code>__init__.py</code> w środku katalogu <code>foo</code>.</p>
+<p>Aby używać modułu <code>bar</code>, możemy zaimportować go na dwa sposoby:</p>
+<pre><code>import foo.bar
+</code></pre>
+<p>lub:</p>
+<pre><code>from foo import bar
+</code></pre>
+<p>W pierwszym przykładzie powyżej, musimy używać prefiksu <code>foo</code> za każdym razem, gdy uzyskujemy dostęp do modułu <code>bar</code>. W drugim przykładzie, nie musimy, ponieważ zaimportowaliśmy moduł do przestrzeni nazw naszego modułu.</p>
+<p>Plik <code>__init__.py</code> może również decydować, które moduły pakiet eksportuje jako API, zachowując inne moduły jako wewnętrzne, przez nadpisanie zmiennej <code>__all__</code> w ten sposób:</p>
+<pre><code>__init__.py:
+
+__all__ = ["bar"]
+</code></pre>
+<h2>Ćwiczenie</h2>
+<p>W tym ćwiczeniu wypisz alfabetycznie posortowaną listę wszystkich funkcji w module <code>re</code> zawierających słowo <code>find</code>.</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">import re
+
+# Your code goes here
+find_members = []</code>
+              <code data-type="solution">import re
+
+# Your code goes here
+find_members = []
+for member in dir(re):
+    if &#34;find&#34; in member:
+        find_members.append(member)
+
+print(sorted(find_members))</code>
+              <code data-type="sct">test_object(&#39;find_members&#39;)
+success_msg(&#39;Great work!&#39;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Dictionaries.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Input_and_Output.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=Modu%c5%82y%20i%20pakiety&amp;language=pl" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Witaj, świecie!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">Zmienne i typy</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">Listy</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">Podstawowe operatory</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">Formatowanie ciągów</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">Podstawowe operacje na ciągach znaków</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">Warunki</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">Pętle</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">Funkcje</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">Klasy i Obiekty</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">Słowniki</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">Moduły i pakiety</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">Wejście i Wyjście</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">Generatory</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">Skrócona składnia listy</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Funkcje lambda</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">Wiele argumentów funkcji</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">Wyrażenia regularne</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">Obsługa wyjątków</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">Zbiory</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">Serializacja</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">Funkcje częściowe</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">Analiza Kodu</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">Zamykania</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">Dekoratory</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">Mapa, Filtr, Redukcja</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">Parsowanie plików CSV</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "pl"};
+        var nextChapter = "/pl/Input_and_Output";
+        var previousChapter = "/pl/Dictionaries";
+        var backChapter = "/pl/Welcome";
+        var tutorialData = {"page_title": "Modu\u0142y i pakiety", "text": "<p>W programowaniu modu\u0142 to cz\u0119\u015b\u0107 oprogramowania maj\u0105ca okre\u015blona funkcjonalno\u015b\u0107. \nNa przyk\u0142ad, podczas tworzenia gry w ping ponga, jeden modu\u0142 mo\u017ce by\u0107 odpowiedzialny za logik\u0119 gry, a \ninny modu\u0142 rysuje gr\u0119 na ekranie. Ka\u017cdy modu\u0142 sk\u0142ada si\u0119 z innego\npliku, kt\u00f3ry mo\u017ce by\u0107 edytowany osobno.</p>\n<h3>Pisanie modu\u0142\u00f3w</h3>\n<p>Modu\u0142y w Pythonie to po prostu pliki Pythonowe z rozszerzeniem .py. Nazwa modu\u0142u jest taka sama jak nazwa pliku.\nPythonowy modu\u0142 mo\u017ce posiada\u0107 zestaw funkcji, klas, czy zmiennych zdefiniowanych i zaimplementowanych. \nPowy\u017cszy przyk\u0142ad obejmuje dwa pliki:</p>\n<p>mygame/</p>\n<ul>\n<li>\n<p>mygame/game.py</p>\n</li>\n<li>\n<p>mygame/draw.py</p>\n</li>\n</ul>\n<p>Skrypt Pythona <code>game.py</code> implementuje gr\u0119. U\u017cywa funkcji <code>draw_game</code> z pliku <code>draw.py</code>,\nczyli inaczej m\u00f3wi\u0105c modu\u0142u <code>draw</code>, kt\u00f3ry implementuje logik\u0119 rysowania gry na ekranie.</p>\n<p>Modu\u0142y s\u0105 importowane z innych modu\u0142\u00f3w przy u\u017cyciu polecenia <code>import</code>. W tym przypadku skrypt <code>game.py</code> mo\u017ce wygl\u0105da\u0107 tak:</p>\n<pre><code># game.py\n# importujemy modu\u0142 draw\nimport draw\n\ndef play_game():\n    ...\n\ndef main():\n    result = play_game()\n    draw.draw_game(result)\n\n# to oznacza, \u017ce je\u015bli ten skrypt zostanie uruchomiony, to\n# main() zostanie wykonana\nif __name__ == '__main__':\n    main()\n</code></pre>\n<p>Modu\u0142 <code>draw</code> mo\u017ce wygl\u0105da\u0107 w ten spos\u00f3b:</p>\n<pre><code># draw.py\n\ndef draw_game():\n    ...\n\ndef clear_screen(screen):\n    ...\n</code></pre>\n<p>W tym przypadku modu\u0142 <code>game</code> importuje modu\u0142 <code>draw</code>, co umo\u017cliwia u\u017cywanie funkcji zaimplementowanych \nw tym module. Funkcja <code>main</code> u\u017cywa lokalnej funkcji <code>play_game</code> do uruchomienia gry, a nast\u0119pnie \nrysuje wynik gry u\u017cywaj\u0105c funkcji zaimplementowanej w module <code>draw</code> o nazwie <code>draw_game</code>. Aby u\u017cy\u0107\nfunkcji <code>draw_game</code> z modu\u0142u <code>draw</code>, musimy okre\u015bli\u0107 w kt\u00f3rym module funkcja jest\nzaimplementowana, u\u017cywaj\u0105c operatora kropki. Aby odwo\u0142a\u0107 si\u0119 do funkcji <code>draw_game</code> z modu\u0142u <code>game</code>,\nmusimy zaimportowa\u0107 modu\u0142 <code>draw</code>, a nast\u0119pnie wywo\u0142a\u0107 <code>draw.draw_game()</code>. </p>\n<p>Gdy dyrektywa <code>import draw</code> jest uruchamiana, interpreter Python szuka pliku w katalogu, w kt\u00f3rym skrypt by\u0142 uruchamiany z nazw\u0105 modu\u0142u i sufiksem <code>.py</code>. W tym przypadku b\u0119dzie szuka\u0142 <code>draw.py</code>. Je\u015bli zostanie odnaleziony, zostanie zaimportowany. Je\u015bli nie zostanie odnaleziony, kontynuuje poszukiwania w\u015br\u00f3d modu\u0142\u00f3w wbudowanych.</p>\n<p>Mo\u017cliwe, \u017ce zauwa\u017cy\u0142e\u015b, \u017ce przy importowaniu modu\u0142u, tworzony jest plik <code>.pyc</code>. To jest skompilowany plik Pythona. \nPython kompiluje pliki do bajtkodu Pythona, aby nie musia\u0142 analizowa\u0107 plik\u00f3w za ka\u017cdym razem, gdy modu\u0142y s\u0105 \u0142adowane. Je\u015bli istnieje plik <code>.pyc</code>, zostaje za\u0142adowany zamiast pliku <code>.py</code>. Proces ten jest przejrzysty dla u\u017cytkownika.</p>\n<h3>Importowanie obiekt\u00f3w modu\u0142u do obecnej przestrzeni nazw</h3>\n<p>Przestrze\u0144 nazw to system w kt\u00f3rym ka\u017cdy obiekt jest nazwany i mo\u017ce by\u0107 dost\u0119pny w Pythonie. Importujemy funkcj\u0119 <code>draw_game</code> do przestrzeni nazw g\u0142\u00f3wnego skryptu u\u017cywaj\u0105c polecenia <code>from</code>.</p>\n<pre><code># game.py\n# importujemy modu\u0142 draw\nfrom draw import draw_game\n\ndef main():\n    result = play_game()\n    draw_game(result)\n</code></pre>\n<p>Mo\u017cliwe, \u017ce zauwa\u017cy\u0142e\u015b, \u017ce w tym przyk\u0142adzie, nazwa modu\u0142u nie poprzedza <code>draw_game</code>, poniewa\u017c okre\u015blili\u015bmy nazw\u0119 modu\u0142u u\u017cywaj\u0105c polecenia <code>import</code>.</p>\n<p>Zalet\u0105 tej notacji jest to, \u017ce nie musisz za ka\u017cdym razem odnosi\u0107 si\u0119 do modu\u0142u. Jednak, przestrze\u0144 nazw nie mo\u017ce mie\u0107 dw\u00f3ch obiekt\u00f3w o tej samej nazwie, wi\u0119c polecenie <code>import</code> mo\u017ce zast\u0105pi\u0107 istniej\u0105cy obiekt w przestrzeni nazw.</p>\n<h3>Importowanie wszystkich obiekt\u00f3w z modu\u0142u</h3>\n<p>Mo\u017cesz u\u017cy\u0107 polecenia <code>import *</code> do zaimportowania wszystkich obiekt\u00f3w w module w ten spos\u00f3b:</p>\n<pre><code># game.py\n# importujemy modu\u0142 draw\nfrom draw import *\n\ndef main():\n    result = play_game()\n    draw_game(result)\n</code></pre>\n<p>To mo\u017ce by\u0107 nieco ryzykowne, poniewa\u017c zmiany w module mog\u0105 wp\u0142ywa\u0107 na modu\u0142, kt\u00f3ry go importuje, ale jest \nto kr\u00f3tsze i nie wymaga od Ciebie specyfikowania ka\u017cdego obiektu, kt\u00f3ry chcesz zaimportowa\u0107 z modu\u0142u.</p>\n<h3>Niestandardowa nazwa importu</h3>\n<p>Modu\u0142y mog\u0105 by\u0107 \u0142adowane pod dowoln\u0105 nazw\u0105, kt\u00f3r\u0105 chcesz. Jest to przydatne, gdy importujesz modu\u0142 warunkowo,\naby u\u017cy\u0107 tej samej nazwy w reszcie kodu. </p>\n<p>Na przyk\u0142ad, je\u015bli masz dwa modu\u0142y <code>draw</code> z nieco innymi nazwami, mo\u017cesz zrobi\u0107 to w ten spos\u00f3b:</p>\n<pre><code># game.py\n# importujemy modu\u0142 draw\nif visual_mode:\n    # w trybie wizualnym rysujemy u\u017cywaj\u0105c grafiki\n    import draw_visual as draw\nelse:\n    # w trybie tekstowym wypisujemy tekst\n    import draw_textual as draw\n\ndef main():\n    result = play_game()\n    # to mo\u017ce by\u0107 wizualne lub tekstowe w zale\u017cno\u015bci od visual_mode\n    draw.draw_game(result)\n</code></pre>\n<h3>Inicjalizacja modu\u0142u</h3>\n<p>Gdy modu\u0142 jest \u0142adowany do dzia\u0142aj\u0105cego skryptu Pythona po raz pierwszy, jest inicjalizowany przez wykonanie kodu w module raz. Je\u015bli inny modu\u0142 w Twoim kodzie ponownie importuje ten sam modu\u0142, nie zostanie on za\u0142adowany ponownie, wi\u0119c lokalne zmienne wewn\u0105trz modu\u0142u dzia\u0142aj\u0105 jako \"singleton\", co oznacza, \u017ce s\u0105 inicjalizowane tylko raz.</p>\n<p>Mo\u017cesz wtedy u\u017cy\u0107 tego do inicjalizacji obiekt\u00f3w. \nNa przyk\u0142ad:</p>\n<pre><code># draw.py\n\ndef draw_game():\n    # przy czyszczeniu ekranu mo\u017cemy u\u017cy\u0107 g\u0142\u00f3wnego obiektu ekranu inicjalizowanego w tym module\n    clear_screen(main_screen)\n    ...\n\ndef clear_screen(screen):\n    ...\n\nclass Screen():\n    ...\n\n# inicjalizujemy main_screen jako singleton\nmain_screen = Screen()\n</code></pre>\n<h3>Rozszerzanie \u015bcie\u017cki \u0142adowania modu\u0142u</h3>\n<p>Istnieje kilka sposob\u00f3w, aby powiedzie\u0107 interpreterowi Pythona, gdzie szuka\u0107 modu\u0142\u00f3w, poza\ndomy\u015blnym lokalnym katalogiem i modu\u0142ami wbudowanymi. Mo\u017cesz u\u017cy\u0107 zmiennej \u015brodowiskowej <code>PYTHONPATH</code>, aby okre\u015bli\u0107 dodatkowe katalogi, w kt\u00f3rych szuka\u0107 modu\u0142\u00f3w w ten spos\u00f3b:</p>\n<pre><code>PYTHONPATH=/foo python game.py\n</code></pre>\n<p>To wykonuje <code>game.py</code>, i umo\u017cliwia skryptowi \u0142adowanie modu\u0142\u00f3w z katalogu <code>foo</code>, jak i\nz katalogu lokalnego.</p>\n<p>Mo\u017cesz r\u00f3wnie\u017c u\u017cy\u0107 funkcji <code>sys.path.append</code>. Wykonaj j\u0105 <em>przed</em> uruchomieniem polecenia <code>import</code>:</p>\n<pre><code>sys.path.append(\"/foo\")\n</code></pre>\n<p>Teraz katalog <code>foo</code> zosta\u0142 dodany do listy \u015bcie\u017cek, w kt\u00f3rych szuka si\u0119 modu\u0142\u00f3w.</p>\n<h3>Odkrywanie modu\u0142\u00f3w wbudowanych</h3>\n<p>Sprawd\u017a pe\u0142n\u0105 list\u0119 modu\u0142\u00f3w wbudowanych w standardowej bibliotece Pythona <a href=\"https://docs.python.org/3/library/\">tutaj</a>.</p>\n<p>Dwie bardzo wa\u017cne funkcje s\u0105 przydatne podczas odkrywania modu\u0142\u00f3w w Pythonie - funkcje <code>dir</code> i <code>help</code>.</p>\n<p>Aby zaimportowa\u0107 modu\u0142 <code>urllib</code>, kt\u00f3ry umo\u017cliwia nam tworzenie oraz czytanie danych z URLi, <code>importujemy</code> modu\u0142:</p>\n<pre><code># importujemy bibliotek\u0119\nimport urllib\n\n# u\u017cywamy jej\nurllib.urlopen(...)\n</code></pre>\n<p>Mo\u017cemy sprawdzi\u0107, kt\u00f3re funkcje s\u0105 zaimplementowane w ka\u017cdym module, u\u017cywaj\u0105c funkcji <code>dir</code>:</p>\n<pre><code>&gt;&gt;&gt; import urllib\n&gt;&gt;&gt; dir(urllib)\n['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', \n'__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', \n'_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', \n'_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', \n'_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', \n'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', \n'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', \n'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', \n'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', \n'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', \n'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', \n'urlopen', 'urlretrieve']\n</code></pre>\n<p>Kiedy znajdziemy funkcj\u0119 w module, kt\u00f3r\u0105 chcemy u\u017cy\u0107, mo\u017cemy przeczyta\u0107 o niej wi\u0119cej u\u017cywaj\u0105c funkcji <code>help</code>, korzystaj\u0105c z interpretera Python:</p>\n<pre><code>help(urllib.urlopen)\n</code></pre>\n<h3>Pisanie pakiet\u00f3w</h3>\n<p>Pakiety s\u0105 przestrzeniami nazw zawieraj\u0105cymi wiele pakiet\u00f3w i modu\u0142\u00f3w. To s\u0105 po prostu katalogi, ale z pewnymi wymaganiami.</p>\n<p>Ka\u017cdy pakiet w Pythonie to katalog, kt\u00f3ry <strong>MUSI</strong> zawiera\u0107 specjalny plik o nazwie <code>__init__.py</code>. Ten plik, kt\u00f3ry mo\u017ce by\u0107 pusty, wskazuje \u017ce katalog w kt\u00f3rym si\u0119 znajduje jest pakietem Pythona. Dzi\u0119ki temu mo\u017ce by\u0107 importowany w ten sam spos\u00f3b, co modu\u0142.</p>\n<p>Je\u015bli tworzymy katalog o nazwie <code>foo</code>, kt\u00f3ry wskazuje nazw\u0119 pakietu, mo\u017cemy wtedy stworzy\u0107 modu\u0142 wewn\u0105trz tego \npakietu o nazwie <code>bar</code>. Nast\u0119pnie dodajemy plik <code>__init__.py</code> w \u015brodku katalogu <code>foo</code>.</p>\n<p>Aby u\u017cywa\u0107 modu\u0142u <code>bar</code>, mo\u017cemy zaimportowa\u0107 go na dwa sposoby:</p>\n<pre><code>import foo.bar\n</code></pre>\n<p>lub:</p>\n<pre><code>from foo import bar\n</code></pre>\n<p>W pierwszym przyk\u0142adzie powy\u017cej, musimy u\u017cywa\u0107 prefiksu <code>foo</code> za ka\u017cdym razem, gdy uzyskujemy dost\u0119p do modu\u0142u <code>bar</code>. W drugim przyk\u0142adzie, nie musimy, poniewa\u017c zaimportowali\u015bmy modu\u0142 do przestrzeni nazw naszego modu\u0142u.</p>\n<p>Plik <code>__init__.py</code> mo\u017ce r\u00f3wnie\u017c decydowa\u0107, kt\u00f3re modu\u0142y pakiet eksportuje jako API, zachowuj\u0105c inne modu\u0142y jako wewn\u0119trzne, przez nadpisanie zmiennej <code>__all__</code> w ten spos\u00f3b:</p>\n<pre><code>__init__.py:\n\n__all__ = [\"bar\"]\n</code></pre>\n<h2>\u0106wiczenie</h2>\n<p>W tym \u0107wiczeniu wypisz alfabetycznie posortowan\u0105 list\u0119 wszystkich funkcji w module <code>re</code> zawieraj\u0105cych s\u0142owo <code>find</code>.</p>", "code": "import re\n\n# Your code goes here\nfind_members = []", "back_chapter": "Welcome", "previous_chapter": "Dictionaries", "next_chapter": "Input_and_Output", "output": "test_object('find_members')\nsuccess_msg('Great work!')", "solution": "import re\n\n# Your code goes here\nfind_members = []\nfor member in dir(re):\n    if \"find\" in member:\n        find_members.append(member)\n\nprint(sorted(find_members))", "is_tutorial": true, "links": [["Witaj, \u015bwiecie!", "/pl/Hello%2C_World%21"], ["Zmienne i typy", "/pl/Variables_and_Types"], ["Listy", "/pl/Lists"], ["Podstawowe operatory", "/pl/Basic_Operators"], ["Formatowanie ci\u0105g\u00f3w", "/pl/String_Formatting"], ["Podstawowe operacje na ci\u0105gach znak\u00f3w", "/pl/Basic_String_Operations"], ["Warunki", "/pl/Conditions"], ["P\u0119tle", "/pl/Loops"], ["Funkcje", "/pl/Functions"], ["Klasy i Obiekty", "/pl/Classes_and_Objects"], ["S\u0142owniki", "/pl/Dictionaries"], ["Modu\u0142y i pakiety", "/pl/Modules_and_Packages"], ["Wej\u015bcie i Wyj\u015bcie", "/pl/Input_and_Output"], ["Generatory", "/pl/Generators"], ["Skr\u00f3cona sk\u0142adnia listy", "/pl/List_Comprehensions"], ["Funkcje lambda", "/pl/Lambda_functions"], ["Wiele argument\u00f3w funkcji", "/pl/Multiple_Function_Arguments"], ["Wyra\u017cenia regularne", "/pl/Regular_Expressions"], ["Obs\u0142uga wyj\u0105tk\u00f3w", "/pl/Exception_Handling"], ["Zbiory", "/pl/Sets"], ["Serializacja", "/pl/Serialization"], ["Funkcje cz\u0119\u015bciowe", "/pl/Partial_functions"], ["Analiza Kodu", "/pl/Code_Introspection"], ["Zamykania", "/pl/Closures"], ["Dekoratory", "/pl/Decorators"], ["Mapa, Filtr, Redukcja", "/pl/Map%2C_Filter%2C_Reduce"], ["Parsowanie plik\u00f3w CSV", "/pl/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/pl/Modules_and_Packages by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:15:37 GMT -->
+</html>
