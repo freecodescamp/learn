@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from www.CodeCamp Python/vi/Regular Expressions by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:16:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Regular Expressions - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Biểu thức Chính quy - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">Biểu thức Chính quy</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>Biểu thức Chính quy</h1>
+                <hr/>
+                
+                <p>```
+Regular Expressions (giảm đi đôi chút để regexp, regex, hay re) là một công
+cụ để tìm kiếm mẫu nội dung trong văn bản. Trong Python, ta có module re.
+Ứng dụng của các biểu thức chính quy rất phong phú, nhưng chúng khá phức
+tạp, nên khi suy nghĩ về việc sử dụng regex cho một nhiệm vụ nào đó, hãy nghĩ
+tới các phương pháp khác và coi regex như là sự lựa chọn cuối cùng.</p>
+<p>Một regex ví dụ là <code>r"^(From|To|Cc).*<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="efd09f969b878081c283869c9baf9f969b878081c1809d88">[email&#160;protected]</a>"</code> Giờ là phần giải
+thích: ký tự mũ <code>^</code> khớp với văn bản ở đầu dòng. Nhóm tiếp theo, phần có
+<code>(From|To|Cc)</code> nghĩa là dòng phải bắt đầu với một trong những từ được tách
+bởi ký tự ống <code>|</code>. Đây được gọi là toán tử HOẶC, và regex sẽ khớp nếu dòng bắt
+đầu bằng bất kỳ từ nào trong nhóm. Ký tự <code>.*?</code> mang ý nghĩa khớp không
+thường xuyên với bất kỳ số lượng ký tự nào, ngoại trừ ký tự dòng mới <code>\n</code>.
+Phần không tham lam nghĩa là khớp với số lần lặp lại ít nhất có thể. Ký tự
+<code>.</code> đại diện cho bất kỳ ký tự nào không phải là dòng mới, ký tự <code>*</code> nghĩa là
+lặp lại 0 hoặc nhiều lần, và ký tự <code>?</code> khiến nó trở nên không tham lam.</p>
+<p>Vì vậy, các dòng sau đây sẽ được regex đó khớp:
+<code>From: <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="cabab3bea2a5a4e7a6a3b9be8abab3bea2a5a4e4a5b8ad">[email&#160;protected]</a></code>
+<code>To: !asp]&lt;,.      <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="2e5e575a4641400342475d5a6e5e575a46414000415c49">[email&#160;protected]</a></code></p>
+<p>Có tham khảo đầy đủ cho cú pháp re tại <a href="http://docs.python.org/library/re.html#regular-expression-syntax&quot;RE syntax">python docs</a>.</p>
+<p>Như một ví dụ của một regex "đúng" để khớp email (như cái trong bài tập), xem thêm
+<a href="http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html">tại đây</a>
+```</p>
+<p><code>vi
+    Bài tập--------</code></p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code"># Example: 
+import re
+pattern = re.compile(r&#34;\[(on|off)\]&#34;) # Slight optimization
+print(re.search(pattern, &#34;Mono: Playback 65 [75%] [-16.50dB] [on]&#34;))
+# Returns a Match object!
+print(re.search(pattern, &#34;Nada...:-(&#34;))
+# Doesn&#39;t return anything.
+# End Example
+
+# Exercise: make a regular expression that will match an email
+def test_email(your_pattern):
+    pattern = re.compile(your_pattern)
+    emails = [&#34;<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="23494c4b4d63465b424e534f460d404c4e">[email&#160;protected]</a>&#34;, &#34;<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="0979707d6166672465607a7d4979707d61666727667b6e">[email&#160;protected]</a>&#34;, &#34;wha.t.`1an?ug{}<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="690510290c04080005470a0604">[email&#160;protected]</a>&#34;]
+    for email in emails:
+        if not re.match(pattern, email):
+            print(&#34;You failed to match %s&#34; % (email))
+        elif not your_pattern:
+            print(&#34;Forgot to enter a pattern!&#34;)
+        else:
+            print(&#34;Pass&#34;)
+pattern = r&#34;&#34; # Your pattern here!
+test_email(pattern)
+    </code>
+              <code data-type="solution"># Exercise: make a regular expression that will match an email
+import re
+def test_email(your_pattern):
+    pattern = re.compile(your_pattern)
+    emails = [&#34;<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="8ae0e5e2e4caeff2ebe7fae6efa4e9e5e7">[email&#160;protected]</a>&#34;, &#34;<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="a2d2dbd6cacdcc8fcecbd1d6e2d2dbd6cacdcc8ccdd0c5">[email&#160;protected]</a>&#34;, &#34;wha.t.`1an?ug{}<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="462a3f06232b272f2a6825292b">[email&#160;protected]</a>&#34;]
+    for email in emails:
+        if not re.match(pattern, email):
+            print(&#34;You failed to match %s&#34; % (email))
+        elif not your_pattern:
+            print(&#34;Forgot to enter a pattern!&#34;)
+        else:
+            print(&#34;Pass&#34;)
+# Your pattern here!
+pattern = r&#34;\&#34;?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\&#34;?&#34;
+test_email(pattern)</code>
+              <code data-type="sct">test_output_contains(&#34;Pass&#34;)
+success_msg(&#34;Great work!&#34;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Multiple_Function_Arguments.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Exception_Handling.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=Bi%e1%bb%83u%20th%e1%bb%a9c%20Ch%c3%adnh%20quy&amp;language=vi" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Xin chào, Thế giới!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">Biến và Kiểu dữ liệu</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">Danh sách</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">Toán Tử Cơ Bản</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">Định dạng Chuỗi</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">Các thao tác chuỗi cơ bản</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">Điều kiện</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">Vòng lặp</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">Chức năng</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">Các Lớp và Đối Tượng</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">Từ điển</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">Mô-đun và Gói</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">Nhập và Xuất</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">Máy phát điện</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">Hiểu Biểu Thức Danh Sách</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Hàm Lambda</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">Nhiều Đối Số Hàm</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">Biểu thức Chính quy</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">Xử lý Ngoại lệ</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">Tập hợp</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">Tuần tự hóa</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">Hàm một phần</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">Khám Phá Mã Nguồn</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">Đóng gói</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">Trình trang trí</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">Bản đồ, Bộ lọc, Giảm thiểu</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">Phân Tích Tệp CSV</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "vi"};
+        var nextChapter = "/vi/Exception_Handling";
+        var previousChapter = "/vi/Multiple_Function_Arguments";
+        var backChapter = "/vi/Welcome";
+        var tutorialData = {"page_title": "Bi\u1ec3u th\u1ee9c Ch\u00ednh quy", "text": "<p>```\nRegular Expressions (gi\u1ea3m \u0111i \u0111\u00f4i ch\u00fat \u0111\u1ec3 regexp, regex, hay re) l\u00e0 m\u1ed9t c\u00f4ng\nc\u1ee5 \u0111\u1ec3 t\u00ecm ki\u1ebfm m\u1eabu n\u1ed9i dung trong v\u0103n b\u1ea3n. Trong Python, ta c\u00f3 module re.\n\u1ee8ng d\u1ee5ng c\u1ee7a c\u00e1c bi\u1ec3u th\u1ee9c ch\u00ednh quy r\u1ea5t phong ph\u00fa, nh\u01b0ng ch\u00fang kh\u00e1 ph\u1ee9c\nt\u1ea1p, n\u00ean khi suy ngh\u0129 v\u1ec1 vi\u1ec7c s\u1eed d\u1ee5ng regex cho m\u1ed9t nhi\u1ec7m v\u1ee5 n\u00e0o \u0111\u00f3, h\u00e3y ngh\u0129\nt\u1edbi c\u00e1c ph\u01b0\u01a1ng ph\u00e1p kh\u00e1c v\u00e0 coi regex nh\u01b0 l\u00e0 s\u1ef1 l\u1ef1a ch\u1ecdn cu\u1ed1i c\u00f9ng.</p>\n<p>M\u1ed9t regex v\u00ed d\u1ee5 l\u00e0 <code>r\"^(From|To|Cc).*?python-list@python.org\"</code> Gi\u1edd l\u00e0 ph\u1ea7n gi\u1ea3i\nth\u00edch: k\u00fd t\u1ef1 m\u0169 <code>^</code> kh\u1edbp v\u1edbi v\u0103n b\u1ea3n \u1edf \u0111\u1ea7u d\u00f2ng. Nh\u00f3m ti\u1ebfp theo, ph\u1ea7n c\u00f3\n<code>(From|To|Cc)</code> ngh\u0129a l\u00e0 d\u00f2ng ph\u1ea3i b\u1eaft \u0111\u1ea7u v\u1edbi m\u1ed9t trong nh\u1eefng t\u1eeb \u0111\u01b0\u1ee3c t\u00e1ch\nb\u1edfi k\u00fd t\u1ef1 \u1ed1ng <code>|</code>. \u0110\u00e2y \u0111\u01b0\u1ee3c g\u1ecdi l\u00e0 to\u00e1n t\u1eed HO\u1eb6C, v\u00e0 regex s\u1ebd kh\u1edbp n\u1ebfu d\u00f2ng b\u1eaft\n\u0111\u1ea7u b\u1eb1ng b\u1ea5t k\u1ef3 t\u1eeb n\u00e0o trong nh\u00f3m. K\u00fd t\u1ef1 <code>.*?</code> mang \u00fd ngh\u0129a kh\u1edbp kh\u00f4ng\nth\u01b0\u1eddng xuy\u00ean v\u1edbi b\u1ea5t k\u1ef3 s\u1ed1 l\u01b0\u1ee3ng k\u00fd t\u1ef1 n\u00e0o, ngo\u1ea1i tr\u1eeb k\u00fd t\u1ef1 d\u00f2ng m\u1edbi <code>\\n</code>.\nPh\u1ea7n kh\u00f4ng tham lam ngh\u0129a l\u00e0 kh\u1edbp v\u1edbi s\u1ed1 l\u1ea7n l\u1eb7p l\u1ea1i \u00edt nh\u1ea5t c\u00f3 th\u1ec3. K\u00fd t\u1ef1\n<code>.</code> \u0111\u1ea1i di\u1ec7n cho b\u1ea5t k\u1ef3 k\u00fd t\u1ef1 n\u00e0o kh\u00f4ng ph\u1ea3i l\u00e0 d\u00f2ng m\u1edbi, k\u00fd t\u1ef1 <code>*</code> ngh\u0129a l\u00e0\nl\u1eb7p l\u1ea1i 0 ho\u1eb7c nhi\u1ec1u l\u1ea7n, v\u00e0 k\u00fd t\u1ef1 <code>?</code> khi\u1ebfn n\u00f3 tr\u1edf n\u00ean kh\u00f4ng tham lam.</p>\n<p>V\u00ec v\u1eady, c\u00e1c d\u00f2ng sau \u0111\u00e2y s\u1ebd \u0111\u01b0\u1ee3c regex \u0111\u00f3 kh\u1edbp:\n<code>From: python-list@python.org</code>\n<code>To: !asp]&lt;,.      python-list@python.org</code></p>\n<p>C\u00f3 tham kh\u1ea3o \u0111\u1ea7y \u0111\u1ee7 cho c\u00fa ph\u00e1p re t\u1ea1i <a href=\"http://docs.python.org/library/re.html#regular-expression-syntax&quot;RE syntax\">python docs</a>.</p>\n<p>Nh\u01b0 m\u1ed9t v\u00ed d\u1ee5 c\u1ee7a m\u1ed9t regex \"\u0111\u00fang\" \u0111\u1ec3 kh\u1edbp email (nh\u01b0 c\u00e1i trong b\u00e0i t\u1eadp), xem th\u00eam\n<a href=\"http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html\">t\u1ea1i \u0111\u00e2y</a>\n```</p>\n<p><code>vi\n    B\u00e0i t\u1eadp--------</code></p>", "code": "# Example: \nimport re\npattern = re.compile(r\"\\[(on|off)\\]\") # Slight optimization\nprint(re.search(pattern, \"Mono: Playback 65 [75%] [-16.50dB] [on]\"))\n# Returns a Match object!\nprint(re.search(pattern, \"Nada...:-(\"))\n# Doesn't return anything.\n# End Example\n\n# Exercise: make a regular expression that will match an email\ndef test_email(your_pattern):\n    pattern = re.compile(your_pattern)\n    emails = [\"john@example.com\", \"python-list@python.org\", \"wha.t.`1an?ug{}ly@email.com\"]\n    for email in emails:\n        if not re.match(pattern, email):\n            print(\"You failed to match %s\" % (email))\n        elif not your_pattern:\n            print(\"Forgot to enter a pattern!\")\n        else:\n            print(\"Pass\")\npattern = r\"\" # Your pattern here!\ntest_email(pattern)\n    ", "back_chapter": "Welcome", "previous_chapter": "Multiple_Function_Arguments", "next_chapter": "Exception_Handling", "output": "test_output_contains(\"Pass\")\nsuccess_msg(\"Great work!\")", "solution": "# Exercise: make a regular expression that will match an email\nimport re\ndef test_email(your_pattern):\n    pattern = re.compile(your_pattern)\n    emails = [\"john@example.com\", \"python-list@python.org\", \"wha.t.`1an?ug{}ly@email.com\"]\n    for email in emails:\n        if not re.match(pattern, email):\n            print(\"You failed to match %s\" % (email))\n        elif not your_pattern:\n            print(\"Forgot to enter a pattern!\")\n        else:\n            print(\"Pass\")\n# Your pattern here!\npattern = r\"\\\"?([-a-zA-Z0-9.`?{}]+@\\w+\\.\\w+)\\\"?\"\ntest_email(pattern)", "is_tutorial": true, "links": [["Xin ch\u00e0o, Th\u1ebf gi\u1edbi!", "/vi/Hello%2C_World%21"], ["Bi\u1ebfn v\u00e0 Ki\u1ec3u d\u1eef li\u1ec7u", "/vi/Variables_and_Types"], ["Danh s\u00e1ch", "/vi/Lists"], ["To\u00e1n T\u1eed C\u01a1 B\u1ea3n", "/vi/Basic_Operators"], ["\u0110\u1ecbnh d\u1ea1ng Chu\u1ed7i", "/vi/String_Formatting"], ["C\u00e1c thao t\u00e1c chu\u1ed7i c\u01a1 b\u1ea3n", "/vi/Basic_String_Operations"], ["\u0110i\u1ec1u ki\u1ec7n", "/vi/Conditions"], ["V\u00f2ng l\u1eb7p", "/vi/Loops"], ["Ch\u1ee9c n\u0103ng", "/vi/Functions"], ["C\u00e1c L\u1edbp v\u00e0 \u0110\u1ed1i T\u01b0\u1ee3ng", "/vi/Classes_and_Objects"], ["T\u1eeb \u0111i\u1ec3n", "/vi/Dictionaries"], ["M\u00f4-\u0111un v\u00e0 G\u00f3i", "/vi/Modules_and_Packages"], ["Nh\u1eadp v\u00e0 Xu\u1ea5t", "/vi/Input_and_Output"], ["M\u00e1y ph\u00e1t \u0111i\u1ec7n", "/vi/Generators"], ["Hi\u1ec3u Bi\u1ec3u Th\u1ee9c Danh S\u00e1ch", "/vi/List_Comprehensions"], ["H\u00e0m Lambda", "/vi/Lambda_functions"], ["Nhi\u1ec1u \u0110\u1ed1i S\u1ed1 H\u00e0m", "/vi/Multiple_Function_Arguments"], ["Bi\u1ec3u th\u1ee9c Ch\u00ednh quy", "/vi/Regular_Expressions"], ["X\u1eed l\u00fd Ngo\u1ea1i l\u1ec7", "/vi/Exception_Handling"], ["T\u1eadp h\u1ee3p", "/vi/Sets"], ["Tu\u1ea7n t\u1ef1 h\u00f3a", "/vi/Serialization"], ["H\u00e0m m\u1ed9t ph\u1ea7n", "/vi/Partial_functions"], ["Kh\u00e1m Ph\u00e1 M\u00e3 Ngu\u1ed3n", "/vi/Code_Introspection"], ["\u0110\u00f3ng g\u00f3i", "/vi/Closures"], ["Tr\u00ecnh trang tr\u00ed", "/vi/Decorators"], ["B\u1ea3n \u0111\u1ed3, B\u1ed9 l\u1ecdc, Gi\u1ea3m thi\u1ec3u", "/vi/Map%2C_Filter%2C_Reduce"], ["Ph\u00e2n T\u00edch T\u1ec7p CSV", "/vi/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/vi/Regular Expressions by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:16:46 GMT -->
+</html>
