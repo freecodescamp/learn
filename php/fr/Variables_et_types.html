@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from www.codescamp/fr/Variables_et_types by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Feb 2025 00:57:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Variables et types - Learn PHP - Free Interactive PHP Tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="codescamp is a free interactive PHP tutorial for people who want to learn PHP, fast." />
+    <meta name="keywords" content="Learn,PHP,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Variables et types - Learn PHP - Free
+    Interactive PHP Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/codescamp.png" />
+
+    <link rel="icon" href="../static/img/favicons/codescamp.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/codescamp.ico" style="height: 24px">
+        codescamp
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://freecodescamp.github.io/shop">Shop</a>
+            </li>
+
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="https://freecodescamp.github.io/codescamp" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CodesCamp
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item" href="../python/default.html">Python</a>
+                    
+		                <a class="dropdown-item" href="../java/default.html">Java</a>
+                    
+		                <a class="dropdown-item" href="../html/default.html">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://freecodescamp.github.io/Spaces/">Spaces</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item disabled" href="../index.html">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../fa/index.html">None</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Français</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+               <a class="github-button" href="https://github.com/freecodescamp" data-icon="octicon-star"  aria-label="Star freecodescamptutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/freecodescamp" data-icon="octicon-repo-forked" aria-label="Fork freecodescamp/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                       <li class="nav-item"><a class="nav-link" href="../../python/default.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="../../java/default.html">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="../../html/default.html">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://freecodescamp.github.io/spaces/">Space</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="../../c/default.html">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">CodeIT</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="../../js/default.html">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="../../typescript/default.html">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link active" href="index.html">PHP</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-none d-lg-block">
+            <a href="https://youtube.com/@codescamp" target="_blank">
+              <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+            
+                <ul class="breadcrumb" style="margin-top: 10px">
+                    
+                        <li><a href="Welcome.html">Welcome</a> <span
+                                class="divider mr-1">/</span></li>
+                    
+                    <li class="active">Variables et types</li>
+                </ul>
+            
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col col-lg-10">
+            
+
+            <div id="inner-text">
+                
+                    <h1>Variables et types</h1>
+                    <hr/>
+                
+                <p>Pour définir une variable, utilisez simplement la syntaxe suivante :</p>
+<pre><code>$x = 1;
+$y = "foo";
+$z = True;
+</code></pre>
+<p>Nous avons juste défini une variable nommée <code>x</code> avec le nombre 1, une variable
+nommée <code>y</code> avec la chaîne "foo" et une variable nommée <code>z</code> avec la
+valeur booléenne True (vrai). Une fois qu'elles sont définies, on peut
+les utiliser dans le code.</p>
+<p>PHP a de nombreux types de variables, mais les types les plus basiques
+pour les variables sont les entiers (nombres entiers), flottants
+(nombres réels), chaînes et booléens.</p>
+<p>PHP a aussi des tableaux et des objets que nous expliquerons dans
+d'autres tutoriels.</p>
+<p>Les variables peuvent aussi être mises à NULL, ce qui signifie que ces
+variables existent, mais ne contiennent aucune valeur.</p>
+<h3>Opérateurs</h3>
+<p>Nous pouvons utiliser des opérateurs d'arithmétique simple pour
+ajouter, soustraire ou concaténer entre variables.</p>
+<p>Nous pouvons aussi afficher des variables PHP en utilisant la commande
+<code>echo</code> (vous pouvez l'essayer maintenant).</p>
+<p>Par exemple, faisons l'addition de deux nombres, mettons le résultat
+dans une nouvelle variable, et affichons ce résultat.</p>
+<pre><code>$x = 1;
+$y = 2;
+$sum = $x + $y;
+echo $sum;       // afficher 3
+</code></pre>
+<h3>Formattage de chaîne</h3>
+<p>En PHP, comme en Perl, les chaînes avec double quotes peuvent
+formatter des chaînes en utilisant des variables définies. Par exemple :</p>
+<pre><code>$name = "Jacques";
+echo "Votre nom est $name";    // affiche Votre nom est Jacques
+</code></pre>
+<h2>Exercise</h2>
+<h4>Partie 1</h4>
+<p>Définissez des variables <code>name</code> (nom) et <code>age</code> de façon à afficher une
+ligne correspondant à la phrase suivante :</p>
+<p><code>Salut Jacques. Vous avez 20 ans.</code></p>
+<p>Remarquez que le code contient une séquence de caractère spécial à la
+fin appelée retour à la ligne - <code>\n</code>. Cette séquence fera en sorte que
+la prochaine ligne affichée le soit sur la ligne suivante. Pour le
+développement Web, cela n'est pas important, puisque nous utiliserons
+les balises HTML pour ce besoin.</p>
+<h4>Partie 2</h4>
+<p>Faites la somme de deux variables x et y et mettez le résultat dans la
+variable sum.</p>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <button id="start-exercise" class="btn btn-success pull-left mt-2" onclick="reset()">
+                        <i class="fas fa-play"></i> Start Exercise
+                    </button>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row mt-2 mb-2">
+                <div class="col">
+                    
+                        <a class="btn btn-primary pull-left" href="Salut%2c_tout_le_monde_%21-2.html">
+                            <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                        </a>
+                    
+
+
+                    
+                        <a class="btn btn-primary pull-right" href="Tableaux_simples.html">
+                            Next Tutorial <i class="fas fa-angle-double-right"></i>
+                        </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                  <a href="https://youtube.com/@codescamp" target="_blank">
+                      <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-2 d-none d-lg-block mt-2">
+            <div id="google-ad-right">
+                
+
+                <h4>Sponsors</h4>
+                <hr/>
+
+
+
+                <div class="mt-3">
+                  <a href="https://youtube.com/@codescamp" target="_blank">
+                    <img src="../static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="mt-3">
+                    <a href="../index.html" target="_blank" >
+                        <img src="../static/img/banners/codescamp.png" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <a href="https://codescamp.github.io/codescamp?utm_campaign=permanent&amp;utm_medium=banner&amp;utm_source=learnx" target="_blank">
+                        <img src="../static/img/logos/spoj.png" style="width: 160px" alt="Sphere Engine">
+                    </a>
+                </div>
+                <div class="mt-3">
+
+                  <a href="#" data-toggle="modal" data-target="#masterschoolModal">
+                    <img src="../static/img/masterschool.png" style="width: 150px;"/>
+                  </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Salut%2c_tout_le_monde_%21.html">Salut, tout le monde !</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_et_types.html">Variables et types</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Tableaux_simples.html">Tableaux simples</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Tableaux_%c3%a0_cl%c3%a9s.html">Tableaux à clés</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Tableaux_multidimensionnels.html">Tableaux multidimensionnels</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Chaines.html">Chaines</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Boucles_for.html">Boucles for</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Boucles_while.html">Boucles while</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Fonctions.html">Fonctions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Objets.html">Objets</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exceptions.html">Exceptions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Proposer_des_tutoriels.html">Proposer des tutoriels</a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- row -->
+
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; codescamp. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="dock">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="code-window">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h5>Code</h5>
+                        </div>
+
+                        <div class="col-10 text-right">
+                            <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
+                                <i class="fas fa-play"></i> Run
+                            </button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">
+                                <i class="fas fa-sync-alt"></i> Reset</button>
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
+
+                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
+                                <span class="maximized">
+                                    <i class="fas fa-angle-double-down"></i>
+                                </span>
+                                <span class="minimized">
+                                    <i class="fas fa-angle-double-up"></i>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <textarea id="code">&lt;?php
+// Partie 1: ajoutez les variables name et age.
+echo &#34;Salut $name. Vous avez $age.\n&#34;;
+
+// Part 2: faites la somme des variables x et y
+// et mettez le résultat dans la variable sum.
+$x = 195793;
+$y = 256836;
+$sum = NULL;
+
+echo &#34;La somme de $x et $y est $sum.&#34;
+?&gt;</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="output-window">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <h5>Output</h5>
+                        </div>
+                        <div class="col-9 text-right">
+                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
+                                Expected Output
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <div id="text-output">
+                                <textarea id="output"></textarea>
+                                <div class="powered-by-sphere">
+                                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                                </div>
+                            </div>
+                            <iframe id="html-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                            <iframe id="expected-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+
+
+<script src="../static/js/codemirror/mode/php/php.js"></script>
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'codescamp');
+  ga('create', 'UA-22741967-9', 'codescamp');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<script>
+    var domainData = {"language": "php", "language_id": 29, "codemirror_mode": "application/x-httpd-php", "prism_mode": "language-php", "analytics": "UA-22741967-9", "language_uppercase": "PHP", "default_code": "<?php\n// Welcome to the Interactive PHP Tutorial.\n// Start by choosing a chapter and\n// write your code in this window.\n\necho \"Hello, World!\";\n?>\n", "container_word": "<?", "container_indent": "", "container": "<?php\n{code}\n?>", "namespace": "codescamp", "full_url": "https://www.codescamp", "contact_email": "admin@codescamp", "support_email": "support@codescamp", "logo": "/static/img/logos/codescamp.png", "share_logo": "/static/img/share-logos/codescamp.png", "favicon": "/static/img/favicons/codescamp.ico", "styled_domain": "codescamp", "sender": "codescamp <admin@codescamp>", "courses": [{"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/1188176_a4be_2.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1188176&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fspotify-clone%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1188176&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fspotify-clone%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1188176_a4be_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1188176&type=2&subid=0\" >", "link_id": "1188176", "link_name": "Create a Spotify Clone from Scratch - JavaScript, PHP, MySQL", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1188176&type=2&subid=0", "retail_price": 50.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/1236794_1aba_7.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1236794&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-beginners-r%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1236794&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-beginners-r%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1236794_1aba_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1236794&type=2&subid=0\" >", "link_id": "1236794", "link_name": "PHP For Absolute Beginners", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1236794&type=2&subid=0", "retail_price": 100.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/818958_2069_3.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.818958&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-wordpress-development%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.818958&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-wordpress-development%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/818958_2069_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.818958&type=2&subid=0\" >", "link_id": "818958", "link_name": "PHP For WordPress Development", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.818958&type=2&subid=0", "retail_price": 35.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/424864_ab6e_3.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.424864&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-mvc-from-scratch%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.424864&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-mvc-from-scratch%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/424864_ab6e_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.424864&type=2&subid=0\" >", "link_id": "424864", "link_name": "Write PHP Like a Pro: Build a PHP MVC Framework From Scratch", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.424864&type=2&subid=0", "retail_price": 70.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/580466_3100_2.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.580466&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-php-course%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.580466&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-php-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/580466_3100_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.580466&type=2&subid=0\" >", "link_id": "580466", "link_name": "Complete PHP Course With Bootstrap3 CMS System & Admin Panel", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.580466&type=2&subid=0", "retail_price": 195.0}], "language_code": "fr"};
+    var nextChapter = "/fr/Tableaux_simples";
+    var previousChapter = "/fr/Salut,_tout_le_monde_!";
+    var backChapter = "/fr/Welcome";
+    var tutorialData = {"page_title": "Variables et types", "text": "<p>Pour d\u00e9finir une variable, utilisez simplement la syntaxe suivante :</p>\n<pre><code>$x = 1;\n$y = \"foo\";\n$z = True;\n</code></pre>\n<p>Nous avons juste d\u00e9fini une variable nomm\u00e9e <code>x</code> avec le nombre 1, une variable\nnomm\u00e9e <code>y</code> avec la cha\u00eene \"foo\" et une variable nomm\u00e9e <code>z</code> avec la\nvaleur bool\u00e9enne True (vrai). Une fois qu'elles sont d\u00e9finies, on peut\nles utiliser dans le code.</p>\n<p>PHP a de nombreux types de variables, mais les types les plus basiques\npour les variables sont les entiers (nombres entiers), flottants\n(nombres r\u00e9els), cha\u00eenes et bool\u00e9ens.</p>\n<p>PHP a aussi des tableaux et des objets que nous expliquerons dans\nd'autres tutoriels.</p>\n<p>Les variables peuvent aussi \u00eatre mises \u00e0 NULL, ce qui signifie que ces\nvariables existent, mais ne contiennent aucune valeur.</p>\n<h3>Op\u00e9rateurs</h3>\n<p>Nous pouvons utiliser des op\u00e9rateurs d'arithm\u00e9tique simple pour\najouter, soustraire ou concat\u00e9ner entre variables.</p>\n<p>Nous pouvons aussi afficher des variables PHP en utilisant la commande\n<code>echo</code> (vous pouvez l'essayer maintenant).</p>\n<p>Par exemple, faisons l'addition de deux nombres, mettons le r\u00e9sultat\ndans une nouvelle variable, et affichons ce r\u00e9sultat.</p>\n<pre><code>$x = 1;\n$y = 2;\n$sum = $x + $y;\necho $sum;       // afficher 3\n</code></pre>\n<h3>Formattage de cha\u00eene</h3>\n<p>En PHP, comme en Perl, les cha\u00eenes avec double quotes peuvent\nformatter des cha\u00eenes en utilisant des variables d\u00e9finies. Par exemple :</p>\n<pre><code>$name = \"Jacques\";\necho \"Votre nom est $name\";    // affiche Votre nom est Jacques\n</code></pre>\n<h2>Exercise</h2>\n<h4>Partie 1</h4>\n<p>D\u00e9finissez des variables <code>name</code> (nom) et <code>age</code> de fa\u00e7on \u00e0 afficher une\nligne correspondant \u00e0 la phrase suivante :</p>\n<p><code>Salut Jacques. Vous avez 20 ans.</code></p>\n<p>Remarquez que le code contient une s\u00e9quence de caract\u00e8re sp\u00e9cial \u00e0 la\nfin appel\u00e9e retour \u00e0 la ligne - <code>\\n</code>. Cette s\u00e9quence fera en sorte que\nla prochaine ligne affich\u00e9e le soit sur la ligne suivante. Pour le\nd\u00e9veloppement Web, cela n'est pas important, puisque nous utiliserons\nles balises HTML pour ce besoin.</p>\n<h4>Partie 2</h4>\n<p>Faites la somme de deux variables x et y et mettez le r\u00e9sultat dans la\nvariable sum.</p>", "code": "<?php\n// Partie 1: ajoutez les variables name et age.\necho \"Salut $name. Vous avez $age.\\n\";\n\n// Part 2: faites la somme des variables x et y\n// et mettez le r\u00e9sultat dans la variable sum.\n$x = 195793;\n$y = 256836;\n$sum = NULL;\n\necho \"La somme de $x et $y est $sum.\"\n?>", "back_chapter": "Welcome", "previous_chapter": "Salut,_tout_le_monde_!", "next_chapter": "Tableaux_simples", "links": [], "output": "Salut Jacques. Vous avez 20 ans.\nLa somme de 195793 et 256836 est 452629.", "solution": "<?php\n$name = \"Jacques\";\n$age = 20;\necho \"Salut $name. Vous avez $age ans.\\n\";\n\n$x = 195793;\n$y = 256836;\n$sum = $x + $y;\n\necho \"La somme de $x et $y est $sum.\"\n?>", "is_tutorial": true};
+</script>
+
+<script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.codescamp/fr/Variables_et_types by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Feb 2025 00:57:28 GMT -->
+</html>
