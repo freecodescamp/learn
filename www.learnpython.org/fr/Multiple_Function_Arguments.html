@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from www.CodeCamp Python/fr/Multiple_Function_Arguments by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:13:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Multiple Function Arguments - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Arguments Multiples de Fonction - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">Arguments Multiples de Fonction</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>Arguments Multiples de Fonction</h1>
+                <hr/>
+                
+                <p>Chaque fonction en Python reçoit un nombre prédéfini d'arguments, si elle est déclarée normalement, comme ceci :</p>
+<p>Il est possible de déclarer des fonctions qui reçoivent un nombre variable d'arguments, en utilisant la syntaxe suivante :</p>
+<p>La variable "therest" est une liste de variables, qui reçoit tous les arguments donnés à la fonction "foo" après les 3 premiers arguments. Ainsi, appeler <code>foo(1, 2, 3, 4, 5)</code> affichera :</p>
+<p>Il est également possible d'envoyer des arguments de fonction par mot-clé, de sorte que l'ordre des arguments n'a pas d'importance, en utilisant la syntaxe suivante. Le code suivant produit l'affichage suivant : 
+<code>The sum is: 6
+    Result: 1</code></p>
+<p>La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu, et qu'il indique de sommer les nombres, alors la somme est affichée. Alternativement, la fonction sait également qu'elle doit renvoyer le premier argument si la valeur du paramètre "number", passé dans la fonction, est égale à "first".</p>
+<h2>Exercise</h2>
+<p>Remplissez les fonctions <code>foo</code> et <code>bar</code> afin qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus) La fonction <code>foo</code> doit retourner la quantité d'arguments supplémentaires reçus. La <code>bar</code> doit retourner <code>True</code> si l'argument avec le mot-clé <code>magicnumber</code> vaut 7, et <code>False</code> sinon.</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code"># edit the functions prototype and implementation
+def foo(a, b, c):
+    pass
+
+def bar(a, b, c):
+    pass
+
+
+# test code
+if foo(1, 2, 3, 4) == 1:
+    print(&#34;Good.&#34;)
+if foo(1, 2, 3, 4, 5) == 2:
+    print(&#34;Better.&#34;)
+if bar(1, 2, 3, magicnumber=6) == False:
+    print(&#34;Great.&#34;)
+if bar(1, 2, 3, magicnumber=7) == True:
+    print(&#34;Awesome!&#34;)</code>
+              <code data-type="solution"># edit the functions prototype and implementation
+def foo(a, b, c, *args):
+    return len(args)
+
+def bar(a, b, c, **kwargs):
+    return kwargs[&#34;magicnumber&#34;] == 7
+
+
+# test code
+if foo(1, 2, 3, 4) == 1:
+    print(&#34;Good.&#34;)
+if foo(1, 2, 3, 4, 5) == 2:
+    print(&#34;Better.&#34;)
+if bar(1, 2, 3, magicnumber=6) == False:
+    print(&#34;Great.&#34;)
+if bar(1, 2, 3, magicnumber=7) == True:
+    print(&#34;Awesome!&#34;)</code>
+              <code data-type="sct">test_output_contains(&#34;Good.&#34;)
+test_output_contains(&#34;Better.&#34;)
+test_output_contains(&#34;Great.&#34;)
+test_output_contains(&#34;Awesome!&#34;)
+success_msg(&#34;Great work!&#34;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Lambda_functions.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Regular_Expressions.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=Arguments%20Multiples%20de%20Fonction&amp;language=fr" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Bonjour, le monde !</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">Variables et Types</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">Listes</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">Opérateurs de base</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">Mise en forme de chaînes</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">Opérations de Base sur les Chaînes de Caractères</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">Conditions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">Boucles</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">Fonctions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">Classes et Objets</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">Dictionnaires</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">Modules et packages</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">Entrée et sortie</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">Générateurs</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">Compréhensions de listes</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Fonctions Lambda</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">Arguments Multiples de Fonction</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">Expressions régulières</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">Gestion des exceptions</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">Ensembles</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">Sérialisation</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">Fonctions partielles</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">Introspection de Code</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">Fermetures</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">Décorateurs</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">Carte, Filtre, Réduire</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">Analyser des fichiers CSV</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "fr"};
+        var nextChapter = "/fr/Regular_Expressions";
+        var previousChapter = "/fr/Lambda_functions";
+        var backChapter = "/fr/Welcome";
+        var tutorialData = {"page_title": "Arguments Multiples de Fonction", "text": "<p>Chaque fonction en Python re\u00e7oit un nombre pr\u00e9d\u00e9fini d'arguments, si elle est d\u00e9clar\u00e9e normalement, comme ceci :</p>\n<p>Il est possible de d\u00e9clarer des fonctions qui re\u00e7oivent un nombre variable d'arguments, en utilisant la syntaxe suivante :</p>\n<p>La variable \"therest\" est une liste de variables, qui re\u00e7oit tous les arguments donn\u00e9s \u00e0 la fonction \"foo\" apr\u00e8s les 3 premiers arguments. Ainsi, appeler <code>foo(1, 2, 3, 4, 5)</code> affichera :</p>\n<p>Il est \u00e9galement possible d'envoyer des arguments de fonction par mot-cl\u00e9, de sorte que l'ordre des arguments n'a pas d'importance, en utilisant la syntaxe suivante. Le code suivant produit l'affichage suivant : \n<code>The sum is: 6\n    Result: 1</code></p>\n<p>La fonction \"bar\" re\u00e7oit 3 arguments. Si un argument suppl\u00e9mentaire \"action\" est re\u00e7u, et qu'il indique de sommer les nombres, alors la somme est affich\u00e9e. Alternativement, la fonction sait \u00e9galement qu'elle doit renvoyer le premier argument si la valeur du param\u00e8tre \"number\", pass\u00e9 dans la fonction, est \u00e9gale \u00e0 \"first\".</p>\n<h2>Exercise</h2>\n<p>Remplissez les fonctions <code>foo</code> et <code>bar</code> afin qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus) La fonction <code>foo</code> doit retourner la quantit\u00e9 d'arguments suppl\u00e9mentaires re\u00e7us. La <code>bar</code> doit retourner <code>True</code> si l'argument avec le mot-cl\u00e9 <code>magicnumber</code> vaut 7, et <code>False</code> sinon.</p>", "code": "# edit the functions prototype and implementation\ndef foo(a, b, c):\n    pass\n\ndef bar(a, b, c):\n    pass\n\n\n# test code\nif foo(1, 2, 3, 4) == 1:\n    print(\"Good.\")\nif foo(1, 2, 3, 4, 5) == 2:\n    print(\"Better.\")\nif bar(1, 2, 3, magicnumber=6) == False:\n    print(\"Great.\")\nif bar(1, 2, 3, magicnumber=7) == True:\n    print(\"Awesome!\")", "back_chapter": "Welcome", "previous_chapter": "Lambda_functions", "next_chapter": "Regular_Expressions", "output": "test_output_contains(\"Good.\")\ntest_output_contains(\"Better.\")\ntest_output_contains(\"Great.\")\ntest_output_contains(\"Awesome!\")\nsuccess_msg(\"Great work!\")", "solution": "# edit the functions prototype and implementation\ndef foo(a, b, c, *args):\n    return len(args)\n\ndef bar(a, b, c, **kwargs):\n    return kwargs[\"magicnumber\"] == 7\n\n\n# test code\nif foo(1, 2, 3, 4) == 1:\n    print(\"Good.\")\nif foo(1, 2, 3, 4, 5) == 2:\n    print(\"Better.\")\nif bar(1, 2, 3, magicnumber=6) == False:\n    print(\"Great.\")\nif bar(1, 2, 3, magicnumber=7) == True:\n    print(\"Awesome!\")", "is_tutorial": true, "links": [["Bonjour, le monde !", "/fr/Hello%2C_World%21"], ["Variables et Types", "/fr/Variables_and_Types"], ["Listes", "/fr/Lists"], ["Op\u00e9rateurs de base", "/fr/Basic_Operators"], ["Mise en forme de cha\u00eenes", "/fr/String_Formatting"], ["Op\u00e9rations de Base sur les Cha\u00eenes de Caract\u00e8res", "/fr/Basic_String_Operations"], ["Conditions", "/fr/Conditions"], ["Boucles", "/fr/Loops"], ["Fonctions", "/fr/Functions"], ["Classes et Objets", "/fr/Classes_and_Objects"], ["Dictionnaires", "/fr/Dictionaries"], ["Modules et packages", "/fr/Modules_and_Packages"], ["Entr\u00e9e et sortie", "/fr/Input_and_Output"], ["G\u00e9n\u00e9rateurs", "/fr/Generators"], ["Compr\u00e9hensions de listes", "/fr/List_Comprehensions"], ["Fonctions Lambda", "/fr/Lambda_functions"], ["Arguments Multiples de Fonction", "/fr/Multiple_Function_Arguments"], ["Expressions r\u00e9guli\u00e8res", "/fr/Regular_Expressions"], ["Gestion des exceptions", "/fr/Exception_Handling"], ["Ensembles", "/fr/Sets"], ["S\u00e9rialisation", "/fr/Serialization"], ["Fonctions partielles", "/fr/Partial_functions"], ["Introspection de Code", "/fr/Code_Introspection"], ["Fermetures", "/fr/Closures"], ["D\u00e9corateurs", "/fr/Decorators"], ["Carte, Filtre, R\u00e9duire", "/fr/Map%2C_Filter%2C_Reduce"], ["Analyser des fichiers CSV", "/fr/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/fr/Multiple_Function_Arguments by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:13:48 GMT -->
+</html>
