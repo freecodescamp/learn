@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<!-- Mirrored from www.CodeCamp Python/no/Classes and Objects by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:15:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Classes and Objects - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Klasser og objekter - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">Klasser og objekter</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>Klasser og objekter</h1>
+                <hr/>
+                
+                <p>In JavaScript kan variabler og funksjoner bli innkapslet i et objekt. Dette kan gjøres ved bruk av klasser i ny syntax (ES6), eller med konstruktørfunksjoner i eldre i JavaScript.</p>
+<p>Et objekt får sine variabler og funksjoner fra klasser. Klasser er i bunn og grunn en mal for å lage objekter.</p>
+<p>En veldig enkel klasse kan se slik ut:</p>
+<pre><code>class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("Dette er en melding inni klassen.")
+</code></pre>
+<p>Vi skal forklare hvorfor du må inkludere "self" som en parameter litt senere. Først, for å tildele den ovenstående klassen (malen) til et objekt, vil du gjøre følgende:</p>
+<pre><code>class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("Dette er en melding inni klassen.")
+
+myobjectx = MyClass()
+</code></pre>
+<p>Nå holder variabelen "myobjectx" et objekt av klassen "MyClass" som inneholder variabelen og funksjonen definert innenfor klassen kalt "MyClass".</p>
+<h3>Tilgang til objektvariabler</h3>
+<p>For å få tilgang til variabelen inne i det nyopprettede objektet "myobjectx" vil du gjøre følgende:</p>
+<pre><code>class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("Dette er en melding inni klassen.")
+
+myobjectx = MyClass()
+
+myobjectx.variable
+</code></pre>
+<p>For eksempel, vil det nedenfor skrive ut strengen "blah":</p>
+<pre><code>class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("Dette er en melding inni klassen.")
+
+myobjectx = MyClass()
+
+print(myobjectx.variable)
+</code></pre>
+<p>Du kan lage flere ulike objekter av samme klasse (som har de samme variabler og funksjoner definert). Men, hvert objekt inneholder uavhengige kopier av variablene definert i klassen. For eksempel, hvis vi definerer et annet objekt med "MyClass" klassen og deretter endrer strengen i variabelen ovenfor:</p>
+<pre><code>class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("Dette er en melding inni klassen.")
+
+myobjectx = MyClass()
+myobjecty = MyClass()
+
+myobjecty.variable = "yackity"
+
+# Så skriv ut begge verdiene
+print(myobjectx.variable)
+print(myobjecty.variable)
+</code></pre>
+<h3>Tilgang til objektfunksjoner</h3>
+<p>For å få tilgang til en funksjon inni et objekt bruker du en notasjon lik den for å få tilgang til en variabel:</p>
+<pre><code>class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("Dette er en melding inni klassen.")
+
+myobjectx = MyClass()
+
+myobjectx.function()
+</code></pre>
+<p>Det ovenstående vil skrive ut meldingen, "Dette er en melding inni klassen."</p>
+<h3><strong>init</strong>()</h3>
+<p><code>__init__()</code> funksjonen er en spesiell funksjon som kalles når klassen initieres.
+Den brukes til å gi verdier i en klasse.</p>
+<pre><code>class NumberHolder:
+
+   def __init__(self, number):
+       self.number = number
+
+   def returnNumber(self):
+       return self.number
+
+var = NumberHolder(7)
+print(var.returnNumber()) #Skriver ut '7'
+</code></pre>
+<h2>Øvelse</h2>
+<p>Vi har en klasse definert for kjøretøy. Lag to nye kjøretøy kalt car1 og car2.
+Sett car1 til å være en rød kabriolet verdt $60,000.00 med navnet Fer, 
+og car2 til å være en blå van kalt Jump som er verdt $10,000.00.</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code"># define the Vehicle class
+class Vehicle:
+    name = &#34;&#34;
+    kind = &#34;car&#34;
+    color = &#34;&#34;
+    value = 100.00
+    def description(self):
+        desc_str = &#34;%s is a %s %s worth $%.2f.&#34; % (self.name, self.color, self.kind, self.value)
+        return desc_str
+# your code goes here
+
+# test code
+print(car1.description())
+print(car2.description())</code>
+              <code data-type="solution"># define the Vehicle class
+class Vehicle:
+    name = &#34;&#34;
+    kind = &#34;car&#34;
+    color = &#34;&#34;
+    value = 100.00
+    def description(self):
+        desc_str = &#34;%s is a %s %s worth $%.2f.&#34; % (self.name, self.color, self.kind, self.value)
+        return desc_str
+
+# your code goes here
+car1 = Vehicle()
+car1.name = &#34;Fer&#34;
+car1.color = &#34;red&#34;
+car1.kind = &#34;convertible&#34;
+car1.value = 60000.00
+
+car2 = Vehicle()
+car2.name = &#34;Jump&#34;
+car2.color = &#34;blue&#34;
+car2.kind = &#34;van&#34;
+car2.value = 10000.00
+
+# test code
+print(car1.description())
+print(car2.description())</code>
+              <code data-type="sct">#test_output_contains(&#39;Fer is a red convertible worth $60000.00.&#39;)
+#test_output_contains(&#39;Jump is a blue van worth $10000.00.&#39;)
+success_msg(&#34;Great job!&#34;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Functions.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Dictionaries.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=Klasser%20og%20objekter&amp;language=no" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Hallo, Verden!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">Variabler og typer</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">Lister</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">Grunnleggende Operatører</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">Strengformatering</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">Grunnleggende String-operasjoner</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">Betingelser</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">Løkker</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">Funksjoner</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">Klasser og objekter</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">Ordbøker</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">Moduler og Pakker</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">Inndata og utdata</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">Generatorer</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">Listforståelse</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Lambda-funksjoner</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">Flere Funksjonsargumenter</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">Regulære uttrykk</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">Unntakshåndtering</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">Mengder</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">Serialisering</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">Partialfunksjoner</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">Kodeintrospeksjon</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">Lukkefunksjoner</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">Dekoratorer</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">Kartlegg, Filtrer, Reduser</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">Parsing av CSV-filer</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "no"};
+        var nextChapter = "/no/Dictionaries";
+        var previousChapter = "/no/Functions";
+        var backChapter = "/no/Welcome";
+        var tutorialData = {"page_title": "Klasser og objekter", "text": "<p>In JavaScript kan variabler og funksjoner bli innkapslet i et objekt. Dette kan gj\u00f8res ved bruk av klasser i ny syntax (ES6), eller med konstrukt\u00f8rfunksjoner i eldre i JavaScript.</p>\n<p>Et objekt f\u00e5r sine variabler og funksjoner fra klasser. Klasser er i bunn og grunn en mal for \u00e5 lage objekter.</p>\n<p>En veldig enkel klasse kan se slik ut:</p>\n<pre><code>class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"Dette er en melding inni klassen.\")\n</code></pre>\n<p>Vi skal forklare hvorfor du m\u00e5 inkludere \"self\" som en parameter litt senere. F\u00f8rst, for \u00e5 tildele den ovenst\u00e5ende klassen (malen) til et objekt, vil du gj\u00f8re f\u00f8lgende:</p>\n<pre><code>class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"Dette er en melding inni klassen.\")\n\nmyobjectx = MyClass()\n</code></pre>\n<p>N\u00e5 holder variabelen \"myobjectx\" et objekt av klassen \"MyClass\" som inneholder variabelen og funksjonen definert innenfor klassen kalt \"MyClass\".</p>\n<h3>Tilgang til objektvariabler</h3>\n<p>For \u00e5 f\u00e5 tilgang til variabelen inne i det nyopprettede objektet \"myobjectx\" vil du gj\u00f8re f\u00f8lgende:</p>\n<pre><code>class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"Dette er en melding inni klassen.\")\n\nmyobjectx = MyClass()\n\nmyobjectx.variable\n</code></pre>\n<p>For eksempel, vil det nedenfor skrive ut strengen \"blah\":</p>\n<pre><code>class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"Dette er en melding inni klassen.\")\n\nmyobjectx = MyClass()\n\nprint(myobjectx.variable)\n</code></pre>\n<p>Du kan lage flere ulike objekter av samme klasse (som har de samme variabler og funksjoner definert). Men, hvert objekt inneholder uavhengige kopier av variablene definert i klassen. For eksempel, hvis vi definerer et annet objekt med \"MyClass\" klassen og deretter endrer strengen i variabelen ovenfor:</p>\n<pre><code>class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"Dette er en melding inni klassen.\")\n\nmyobjectx = MyClass()\nmyobjecty = MyClass()\n\nmyobjecty.variable = \"yackity\"\n\n# S\u00e5 skriv ut begge verdiene\nprint(myobjectx.variable)\nprint(myobjecty.variable)\n</code></pre>\n<h3>Tilgang til objektfunksjoner</h3>\n<p>For \u00e5 f\u00e5 tilgang til en funksjon inni et objekt bruker du en notasjon lik den for \u00e5 f\u00e5 tilgang til en variabel:</p>\n<pre><code>class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"Dette er en melding inni klassen.\")\n\nmyobjectx = MyClass()\n\nmyobjectx.function()\n</code></pre>\n<p>Det ovenst\u00e5ende vil skrive ut meldingen, \"Dette er en melding inni klassen.\"</p>\n<h3><strong>init</strong>()</h3>\n<p><code>__init__()</code> funksjonen er en spesiell funksjon som kalles n\u00e5r klassen initieres.\nDen brukes til \u00e5 gi verdier i en klasse.</p>\n<pre><code>class NumberHolder:\n\n   def __init__(self, number):\n       self.number = number\n\n   def returnNumber(self):\n       return self.number\n\nvar = NumberHolder(7)\nprint(var.returnNumber()) #Skriver ut '7'\n</code></pre>\n<h2>\u00d8velse</h2>\n<p>Vi har en klasse definert for kj\u00f8ret\u00f8y. Lag to nye kj\u00f8ret\u00f8y kalt car1 og car2.\nSett car1 til \u00e5 v\u00e6re en r\u00f8d kabriolet verdt $60,000.00 med navnet Fer, \nog car2 til \u00e5 v\u00e6re en bl\u00e5 van kalt Jump som er verdt $10,000.00.</p>", "code": "# define the Vehicle class\nclass Vehicle:\n    name = \"\"\n    kind = \"car\"\n    color = \"\"\n    value = 100.00\n    def description(self):\n        desc_str = \"%s is a %s %s worth $%.2f.\" % (self.name, self.color, self.kind, self.value)\n        return desc_str\n# your code goes here\n\n# test code\nprint(car1.description())\nprint(car2.description())", "back_chapter": "Welcome", "previous_chapter": "Functions", "next_chapter": "Dictionaries", "output": "#test_output_contains('Fer is a red convertible worth $60000.00.')\n#test_output_contains('Jump is a blue van worth $10000.00.')\nsuccess_msg(\"Great job!\")", "solution": "# define the Vehicle class\nclass Vehicle:\n    name = \"\"\n    kind = \"car\"\n    color = \"\"\n    value = 100.00\n    def description(self):\n        desc_str = \"%s is a %s %s worth $%.2f.\" % (self.name, self.color, self.kind, self.value)\n        return desc_str\n\n# your code goes here\ncar1 = Vehicle()\ncar1.name = \"Fer\"\ncar1.color = \"red\"\ncar1.kind = \"convertible\"\ncar1.value = 60000.00\n\ncar2 = Vehicle()\ncar2.name = \"Jump\"\ncar2.color = \"blue\"\ncar2.kind = \"van\"\ncar2.value = 10000.00\n\n# test code\nprint(car1.description())\nprint(car2.description())", "is_tutorial": true, "links": [["Hallo, Verden!", "/no/Hello%2C_World%21"], ["Variabler og typer", "/no/Variables_and_Types"], ["Lister", "/no/Lists"], ["Grunnleggende Operat\u00f8rer", "/no/Basic_Operators"], ["Strengformatering", "/no/String_Formatting"], ["Grunnleggende String-operasjoner", "/no/Basic_String_Operations"], ["Betingelser", "/no/Conditions"], ["L\u00f8kker", "/no/Loops"], ["Funksjoner", "/no/Functions"], ["Klasser og objekter", "/no/Classes_and_Objects"], ["Ordb\u00f8ker", "/no/Dictionaries"], ["Moduler og Pakker", "/no/Modules_and_Packages"], ["Inndata og utdata", "/no/Input_and_Output"], ["Generatorer", "/no/Generators"], ["Listforst\u00e5else", "/no/List_Comprehensions"], ["Lambda-funksjoner", "/no/Lambda_functions"], ["Flere Funksjonsargumenter", "/no/Multiple_Function_Arguments"], ["Regul\u00e6re uttrykk", "/no/Regular_Expressions"], ["Unntaksh\u00e5ndtering", "/no/Exception_Handling"], ["Mengder", "/no/Sets"], ["Serialisering", "/no/Serialization"], ["Partialfunksjoner", "/no/Partial_functions"], ["Kodeintrospeksjon", "/no/Code_Introspection"], ["Lukkefunksjoner", "/no/Closures"], ["Dekoratorer", "/no/Decorators"], ["Kartlegg, Filtrer, Reduser", "/no/Map%2C_Filter%2C_Reduce"], ["Parsing av CSV-filer", "/no/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/no/Classes and Objects by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:15:24 GMT -->
+</html>

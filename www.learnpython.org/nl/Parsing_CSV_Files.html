@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<!-- Mirrored from www.CodeCamp Python/nl/Parsing_CSV_Files by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:15:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Parsing CSV Files - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Parsen van CSV-bestanden - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">Parsen van CSV-bestanden</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>Parsen van CSV-bestanden</h1>
+                <hr/>
+                
+                <h3>Wat is CSV?</h3>
+<p>CSV staat voor 'Comma Separated Values'. Het CSV-formaat is het meest gebruikelijke import- en exportformaat voor databases en spreadsheets. Een CSV-bestand is een eenvoudig tekstbestand dat een lijst met gegevens bevat. Ze gebruiken meestal het komma (,) karakter om gegevens te scheiden, maar gebruiken soms andere karakters zoals puntkomma's of tabs.</p>
+<p>Voorbeeld CSV-gegevens:</p>
+<p>...
+kolomnaam 1, kolomnaam 2, kolomnaam 3
+gegevens eerste rij 1, gegevens eerste rij 2, gegevens eerste rij 3
+gegevens tweede rij 1, gegevens tweede rij 2, gegevens tweede rij 3
+...</p>
+<h3>CSV-module in Python</h3>
+<p>Hoewel Python de ingebouwde functie open() heeft om te werken met CSV-bestanden of andere platte tekstbestanden, is er een speciale csv-module die klassen implementeert om gegevens in CSV-formaat te lezen en te schrijven, wat het werken met CSV-bestanden veel eenvoudiger maakt.</p>
+<h3>CSV-module belangrijke functies</h3>
+<h3>Hoe gebruik je de csv-module?</h3>
+<p>importeer eerst de csv-module in je Python-programma.</p>
+<p>writer en reader functies stellen je in staat om de gegevens in een CSV-bestand te bewerken, te wijzigen en te transformeren.</p>
+<p>Hoe lees je een CSV-bestand :-</p>
+<p>Om gegevens uit CSV-bestanden te lezen, gebruiken we de reader functie om een reader object te genereren.</p>
+<p>Voorbeeld:</p>
+<p>Hier openen we eerst het CSV-bestand in LEESmodus en noemen we het bestand als csvfile. We gebruiken een contextmanager om het bestand te openen zodat we ons geen zorgen hoeven te maken over het sluiten van het bestand. De csv.reader functie neemt het bestandsobject als invoer en retourneert een iterabel object. We slaan het iterabele object op als csvreader.</p>
+<p>Zoals we weten, is csvreader een iterabel object en daarom kunnen we het itereren met behulp van een for-lus:</p>
+<p>voorbeeld 1:</p>
+<p>Bovenstaande code zal alle rijen die we uit het CSV-bestand lezen afdrukken. Merk op dat we het bestand openen met 'r' modus wanneer het al bestaat.</p>
+<p>Wat is de volgende stap?</p>
+<p>cvreader is een iterabel object. Daarom retourneert de .next() methode de huidige rij en verplaatst de iterator naar de volgende rij.</p>
+<p>voorbeeld 2:</p>
+<p>In voorbeeld 1 zou je alle rijen op de console zien afgedrukt samen met de header. In voorbeeld 2 leest de .next() methode de header in het veldenobject en verplaatst de iterator naar de volgende rij en daarom worden alle rijen afgedrukt behalve de header.</p>
+<p>Hoe schrijf je in een CSV-bestand-</p>
+<p>Om in een CSV-bestand te schrijven, biedt de csv-module de csv.writer functie. Om gegevens te schrijven openen we eerst het CSV-bestand in SCHRIJFmodus('w'). Het bestandsobject wordt csvfile genoemd. We slaan het csv.writer object op als csvwriter.</p>
+<p>Voorbeeld:</p>
+<h1>declareer header</h1>
+<p>velden = ['kolom1', 'kolom2', 'kolom3']</p>
+<h1>declareer rijen</h1>
+<p>rows = [["foo", "bar", "spam"],
+       ["oof", "rab", "maps"],
+       ["writerow", "isn't", "writerows"]]</p>
+<p>filename = "university_records.csv"</p>
+<p>In het bovenstaande voorbeeld zal de writerow() functie een enkele rij schrijven die een veldenobject is, terwijl de writerows() methode de gehele lijst van hierboven gedefinieerde rijen in het CSV-bestand zal schrijven.</p>
+<p>Laten we nu een stap verder gaan. Lees de inhoud van een CSV-bestand en schrijf het in een ander CSV-bestand.</p>
+<p>Voorbeeld:</p>
+<p>Hier openen we 'newfilename.csv' in 'W'-modus als f2 en openen we 'mycsvfile.csv' in 'r'-modus als f1. We maken gebruik van .next(), .reader(),.writer(), .writerow() functies van de csv-module. Met behulp van .next() verplaatsen we de reader pointer en met behulp van csvwriter.writerow() schrijven we binnenkomende rijen één voor één.</p>
+<h3>DictReader en DictWriter klassen in Python</h3>
+<p>Hieronder staan twee belangrijke klassen in Python om CSV-bestanden te lezen en te schrijven.</p>
+<p>csv.Dictwriter klasse
+csv.DictReader klasse</p>
+<p>De DictReader en DictWriter zijn klassen beschikbaar in Python voor het lezen en schrijven naar CSV. Hoewel ze vergelijkbaar zijn met de reader- en writer-functies, gebruiken deze klassen woordenboekobjecten om te lezen en te schrijven naar CSV-bestanden.</p>
+<p>DictReader:</p>
+<p>Het creëert een object dat de gelezen informatie omzet in een woordenboek waarvan de sleutels worden gegeven door de parameter veldnamen. Deze parameter is optioneel, maar wanneer deze niet in het bestand is gespecificeerd, worden de gegevens van de eerste rij de sleutels van het woordenboek.</p>
+<p>Voorbeeld csv(info.csv)</p>
+<p>.....
+voornaam, achternaam
+foo, bar
+foo1, bar1
+.....</p>
+<p>Voorbeeld:</p>
+<p>DictWriter:</p>
+<p>De csv.DictWriter klasse werkt als een reguliere schrijver maar zet Python woordenboeken om in CSV-rijen. De veldnamen parameter is een reeks sleutels die de volgorde identificeren waarin waarden in het woordenboek worden weergegeven naar de writerow() methode die worden geschreven naar het CSV-bestand. De klasse is gedefinieerd als csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', <em>args, </em>*kwds)</p>
+<p>Voorbeeld:</p>
+<h2>Oefening</h2>
+<p>In deze oefening ga je werken met CSV-gegevens. Je taak is om een Python-programma te maken dat gegevens leest uit een CSV-bestand en deze naar een ander CSV-bestand schrijft, waarbij ervoor wordt gezorgd dat alleen rijen worden opgenomen in het uitvoerbestand waar de waarde in de eerste kolom groter is dan 50.</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">import csv
+
+# Open the input CSV file
+with open(&#39;inputfile.csv&#39;, mode=&#39;r&#39;) as infile:
+    reader = csv.reader(infile)
+    # Open the output CSV file
+    with open(&#39;outputfile.csv&#39;, mode=&#39;w&#39;) as outfile:
+        writer = csv.writer(outfile)
+        # Write header
+        header = next(reader)
+        writer.writerow(header)
+        # Write rows where the value in the first column is greater than 50
+        for row in reader:
+            if int(row[0]) &gt; 50:  # Assuming the first column contains numeric values
+                writer.writerow(row)</code>
+              <code data-type="solution">import csv
+
+# Open the input CSV file
+with open(&#39;inputfile.csv&#39;, mode=&#39;r&#39;) as infile:
+    reader = csv.reader(infile)
+    # Open the output CSV file
+    with open(&#39;outputfile.csv&#39;, mode=&#39;w&#39;) as outfile:
+        writer = csv.writer(outfile)
+        # Write header
+        header = next(reader)
+        writer.writerow(header)
+        # Write rows where the value in the first column is greater than 50
+        for row in reader:
+            if int(row[0]) &gt; 50:  # Assuming the first column contains numeric values
+                writer.writerow(row)</code>
+              <code data-type="sct">Due to the limitations of this IDE, this solution cannot be tested here, as it requires access to external files. However, you should expect that a new file named `outputfile.csv` will be created, and it will contain the same rows as the input file, except only the rows where the first column contains a value greater than 50.</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Map%2c_Filter%2c_Reduce-2.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=Parsen%20van%20CSV-bestanden&amp;language=nl" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Hallo, Wereld!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">Variabelen en Typen</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">Lijsten</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">Basisoperatoren</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">Stringopmaak</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">Basisbewerkingen met Strings</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">Voorwaarden</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">Lussen</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">Functies</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">Klassen en Objecten</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">Woordenboeken</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">Modules en Pakketten</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">Invoer en Uitvoer</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">Generatoren</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">Lijstbegrippen</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Lambdafuncties</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">Meerdere Functie-Argumenten</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">Reguliere Expressies</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">Foutafhandeling</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">Verzamelingen</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">Serialisatie</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">Partiële functies</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">Code-introspectie</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">Sluitingen</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">Decorators</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">Kaart, Filter, Reduce</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">Parsen van CSV-bestanden</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "nl"};
+        var nextChapter = "index.html";
+        var previousChapter = "/nl/Map,_Filter,_Reduce";
+        var backChapter = "/nl/Welcome";
+        var tutorialData = {"page_title": "Parsen van CSV-bestanden", "text": "<h3>Wat is CSV?</h3>\n<p>CSV staat voor 'Comma Separated Values'. Het CSV-formaat is het meest gebruikelijke import- en exportformaat voor databases en spreadsheets. Een CSV-bestand is een eenvoudig tekstbestand dat een lijst met gegevens bevat. Ze gebruiken meestal het komma (,) karakter om gegevens te scheiden, maar gebruiken soms andere karakters zoals puntkomma's of tabs.</p>\n<p>Voorbeeld CSV-gegevens:</p>\n<p>...\nkolomnaam 1, kolomnaam 2, kolomnaam 3\ngegevens eerste rij 1, gegevens eerste rij 2, gegevens eerste rij 3\ngegevens tweede rij 1, gegevens tweede rij 2, gegevens tweede rij 3\n...</p>\n<h3>CSV-module in Python</h3>\n<p>Hoewel Python de ingebouwde functie open() heeft om te werken met CSV-bestanden of andere platte tekstbestanden, is er een speciale csv-module die klassen implementeert om gegevens in CSV-formaat te lezen en te schrijven, wat het werken met CSV-bestanden veel eenvoudiger maakt.</p>\n<h3>CSV-module belangrijke functies</h3>\n<h3>Hoe gebruik je de csv-module?</h3>\n<p>importeer eerst de csv-module in je Python-programma.</p>\n<p>writer en reader functies stellen je in staat om de gegevens in een CSV-bestand te bewerken, te wijzigen en te transformeren.</p>\n<p>Hoe lees je een CSV-bestand :-</p>\n<p>Om gegevens uit CSV-bestanden te lezen, gebruiken we de reader functie om een reader object te genereren.</p>\n<p>Voorbeeld:</p>\n<p>Hier openen we eerst het CSV-bestand in LEESmodus en noemen we het bestand als csvfile. We gebruiken een contextmanager om het bestand te openen zodat we ons geen zorgen hoeven te maken over het sluiten van het bestand. De csv.reader functie neemt het bestandsobject als invoer en retourneert een iterabel object. We slaan het iterabele object op als csvreader.</p>\n<p>Zoals we weten, is csvreader een iterabel object en daarom kunnen we het itereren met behulp van een for-lus:</p>\n<p>voorbeeld 1:</p>\n<p>Bovenstaande code zal alle rijen die we uit het CSV-bestand lezen afdrukken. Merk op dat we het bestand openen met 'r' modus wanneer het al bestaat.</p>\n<p>Wat is de volgende stap?</p>\n<p>cvreader is een iterabel object. Daarom retourneert de .next() methode de huidige rij en verplaatst de iterator naar de volgende rij.</p>\n<p>voorbeeld 2:</p>\n<p>In voorbeeld 1 zou je alle rijen op de console zien afgedrukt samen met de header. In voorbeeld 2 leest de .next() methode de header in het veldenobject en verplaatst de iterator naar de volgende rij en daarom worden alle rijen afgedrukt behalve de header.</p>\n<p>Hoe schrijf je in een CSV-bestand-</p>\n<p>Om in een CSV-bestand te schrijven, biedt de csv-module de csv.writer functie. Om gegevens te schrijven openen we eerst het CSV-bestand in SCHRIJFmodus('w'). Het bestandsobject wordt csvfile genoemd. We slaan het csv.writer object op als csvwriter.</p>\n<p>Voorbeeld:</p>\n<h1>declareer header</h1>\n<p>velden = ['kolom1', 'kolom2', 'kolom3']</p>\n<h1>declareer rijen</h1>\n<p>rows = [[\"foo\", \"bar\", \"spam\"],\n       [\"oof\", \"rab\", \"maps\"],\n       [\"writerow\", \"isn't\", \"writerows\"]]</p>\n<p>filename = \"university_records.csv\"</p>\n<p>In het bovenstaande voorbeeld zal de writerow() functie een enkele rij schrijven die een veldenobject is, terwijl de writerows() methode de gehele lijst van hierboven gedefinieerde rijen in het CSV-bestand zal schrijven.</p>\n<p>Laten we nu een stap verder gaan. Lees de inhoud van een CSV-bestand en schrijf het in een ander CSV-bestand.</p>\n<p>Voorbeeld:</p>\n<p>Hier openen we 'newfilename.csv' in 'W'-modus als f2 en openen we 'mycsvfile.csv' in 'r'-modus als f1. We maken gebruik van .next(), .reader(),.writer(), .writerow() functies van de csv-module. Met behulp van .next() verplaatsen we de reader pointer en met behulp van csvwriter.writerow() schrijven we binnenkomende rijen \u00e9\u00e9n voor \u00e9\u00e9n.</p>\n<h3>DictReader en DictWriter klassen in Python</h3>\n<p>Hieronder staan twee belangrijke klassen in Python om CSV-bestanden te lezen en te schrijven.</p>\n<p>csv.Dictwriter klasse\ncsv.DictReader klasse</p>\n<p>De DictReader en DictWriter zijn klassen beschikbaar in Python voor het lezen en schrijven naar CSV. Hoewel ze vergelijkbaar zijn met de reader- en writer-functies, gebruiken deze klassen woordenboekobjecten om te lezen en te schrijven naar CSV-bestanden.</p>\n<p>DictReader:</p>\n<p>Het cre\u00ebert een object dat de gelezen informatie omzet in een woordenboek waarvan de sleutels worden gegeven door de parameter veldnamen. Deze parameter is optioneel, maar wanneer deze niet in het bestand is gespecificeerd, worden de gegevens van de eerste rij de sleutels van het woordenboek.</p>\n<p>Voorbeeld csv(info.csv)</p>\n<p>.....\nvoornaam, achternaam\nfoo, bar\nfoo1, bar1\n.....</p>\n<p>Voorbeeld:</p>\n<p>DictWriter:</p>\n<p>De csv.DictWriter klasse werkt als een reguliere schrijver maar zet Python woordenboeken om in CSV-rijen. De veldnamen parameter is een reeks sleutels die de volgorde identificeren waarin waarden in het woordenboek worden weergegeven naar de writerow() methode die worden geschreven naar het CSV-bestand. De klasse is gedefinieerd als csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', <em>args, </em>*kwds)</p>\n<p>Voorbeeld:</p>\n<h2>Oefening</h2>\n<p>In deze oefening ga je werken met CSV-gegevens. Je taak is om een Python-programma te maken dat gegevens leest uit een CSV-bestand en deze naar een ander CSV-bestand schrijft, waarbij ervoor wordt gezorgd dat alleen rijen worden opgenomen in het uitvoerbestand waar de waarde in de eerste kolom groter is dan 50.</p>", "code": "import csv\n\n# Open the input CSV file\nwith open('inputfile.csv', mode='r') as infile:\n    reader = csv.reader(infile)\n    # Open the output CSV file\n    with open('outputfile.csv', mode='w') as outfile:\n        writer = csv.writer(outfile)\n        # Write header\n        header = next(reader)\n        writer.writerow(header)\n        # Write rows where the value in the first column is greater than 50\n        for row in reader:\n            if int(row[0]) > 50:  # Assuming the first column contains numeric values\n                writer.writerow(row)", "back_chapter": "Welcome", "previous_chapter": "Map,_Filter,_Reduce", "output": "Due to the limitations of this IDE, this solution cannot be tested here, as it requires access to external files. However, you should expect that a new file named `outputfile.csv` will be created, and it will contain the same rows as the input file, except only the rows where the first column contains a value greater than 50.", "solution": "import csv\n\n# Open the input CSV file\nwith open('inputfile.csv', mode='r') as infile:\n    reader = csv.reader(infile)\n    # Open the output CSV file\n    with open('outputfile.csv', mode='w') as outfile:\n        writer = csv.writer(outfile)\n        # Write header\n        header = next(reader)\n        writer.writerow(header)\n        # Write rows where the value in the first column is greater than 50\n        for row in reader:\n            if int(row[0]) > 50:  # Assuming the first column contains numeric values\n                writer.writerow(row)", "is_tutorial": true, "links": [["Hallo, Wereld!", "/nl/Hello%2C_World%21"], ["Variabelen en Typen", "/nl/Variables_and_Types"], ["Lijsten", "/nl/Lists"], ["Basisoperatoren", "/nl/Basic_Operators"], ["Stringopmaak", "/nl/String_Formatting"], ["Basisbewerkingen met Strings", "/nl/Basic_String_Operations"], ["Voorwaarden", "/nl/Conditions"], ["Lussen", "/nl/Loops"], ["Functies", "/nl/Functions"], ["Klassen en Objecten", "/nl/Classes_and_Objects"], ["Woordenboeken", "/nl/Dictionaries"], ["Modules en Pakketten", "/nl/Modules_and_Packages"], ["Invoer en Uitvoer", "/nl/Input_and_Output"], ["Generatoren", "/nl/Generators"], ["Lijstbegrippen", "/nl/List_Comprehensions"], ["Lambdafuncties", "/nl/Lambda_functions"], ["Meerdere Functie-Argumenten", "/nl/Multiple_Function_Arguments"], ["Reguliere Expressies", "/nl/Regular_Expressions"], ["Foutafhandeling", "/nl/Exception_Handling"], ["Verzamelingen", "/nl/Sets"], ["Serialisatie", "/nl/Serialization"], ["Parti\u00eble functies", "/nl/Partial_functions"], ["Code-introspectie", "/nl/Code_Introspection"], ["Sluitingen", "/nl/Closures"], ["Decorators", "/nl/Decorators"], ["Kaart, Filter, Reduce", "/nl/Map%2C_Filter%2C_Reduce"], ["Parsen van CSV-bestanden", "/nl/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/nl/Parsing_CSV_Files by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:15:21 GMT -->
+</html>
