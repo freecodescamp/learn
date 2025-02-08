@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Mirrored from www.CodeCamp Python/ko/Basic String Operations by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:14:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Basic String Operations - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="기본 문자열 연산 - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item" href="../zh/index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">기본 문자열 연산</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>기본 문자열 연산</h1>
+                <hr/>
+                
+                <p>```
+문자열은 텍스트의 일부분입니다. 큰따옴표 사이에 있는 모든 것으로 정의될 수 있습니다:</p>
+<pre><code>astring = "Hello world!"
+astring2 = 'Hello world!'
+</code></pre>
+<p>보시다시피, 첫 번째로 배운 것은 간단한 문장을 출력하는 것이었습니다. 이 문장은 Python에 의해 문자열로 저장되었습니다. 하지만 문자열을 즉시 출력하는 대신, 문자열에 대해 할 수 있는 다양한 것들을 탐색해 보겠습니다.
+문자열을 할당할 때, 작은따옴표를 사용할 수도 있습니다. 하지만 할당할 값 자체에 작은따옴표가 포함된 경우 문제가 발생합니다. 예를 들어, 다음과 같은 문자열을 할당하려면 (작은따옴표는 ' ') 반드시 큰따옴표를 사용해야 합니다.</p>
+<pre><code>astring = "Hello world!"
+print("single quotes are ' '")
+
+print(len(astring))
+</code></pre>
+<p>"Hello world!"는 구두점과 공백을 포함하여 12자이므로 12가 출력됩니다.</p>
+<pre><code>astring = "Hello world!"
+print(astring.index("o"))
+</code></pre>
+<p>첫 번째 "o"가 첫 번째 문자에서 4자리 떨어져 있는 위치이므로 4가 출력됩니다. 이 구절에는 실제로 두 개의 o가 있지만, 이 메소드는 첫 번째 것만 인식합니다.</p>
+<p>그런데 왜 5가 출력되지 않았을까요? 문자열에서 "o"가 다섯 번째 문자가 아니었던가요? 좀 더 단순하게 하기 위해, Python(및 대부분 다른 프로그래밍 언어)은 1 대신 0에서 시작합니다. 따라서 "o"의 인덱스는 4입니다.</p>
+<pre><code>astring = "Hello world!"
+print(astring.count("l"))
+</code></pre>
+<p>간혹 이상한 글꼴을 사용하는 분들을 위해 말씀드리는데, 이것은 소문자 L이며 숫자 1이 아닙니다. 이 함수는 문자열 내의 l의 개수를 셉니다. 따라서 3이 출력됩니다.</p>
+<pre><code>astring = "Hello world!"
+print(astring[3:7])
+</code></pre>
+<p>이것은 문자열의 일부를 인덱스 3부터 시작하여 인덱스 6에서 끝나는 부분을 출력합니다. 하지만 왜 6이고 7이 아닐까요? 대부분의 프로그래밍 언어가 이렇게 하는 이유는 괄호 안의 수학을 더 쉽게 하기 위함입니다.</p>
+<p>괄호 안에 숫자 하나만 있으면 그 인덱스의 단일 문자를 제공합니다. 첫 번째 숫자를 생략하지만 콜론을 유지하면 시작부터 괄호 안 숫자까지의 조각을 제공합니다. 두 번째 숫자를 생략하면 첫 번째 숫자부터 끝까지의 조각을 제공합니다.</p>
+<p>괄호 안에 음수를 넣을 수도 있습니다. 이는 문자열의 끝이 아닌 시작부터 시작하기 위한 쉬운 방법입니다. 이렇게 하면 -3은 문자열의 끝에서 "3번째 문자"를 의미합니다.</p>
+<pre><code>astring = "Hello world!"
+print(astring[3:7:2])
+</code></pre>
+<p>이것은 문자열의 인덱스 3부터 7까지의 문자를 하나 건너뛰며 출력합니다. 이것은 확장된 슬라이스 문법입니다. 일반 형식은 [start:stop:step] 입니다.</p>
+<pre><code>astring = "Hello world!"
+print(astring[3:7])
+print(astring[3:7:1])
+</code></pre>
+<p>둘 다 같은 출력을 생성한다는 점에 유의하세요.</p>
+<p>C에는 문자열을 뒤집는 strrev와 같은 함수가 존재하지 않습니다. 하지만 위에서 언급한 슬라이스 문법을 사용하여 쉽게 문자열을 뒤집을 수 있습니다:</p>
+<pre><code>astring = "Hello world!"
+print(astring[::-1])
+</code></pre>
+<p>이것은</p>
+<pre><code>astring = "Hello world!"
+print(astring.upper())
+print(astring.lower())
+</code></pre>
+<p>각각 모든 문자를 대문자와 소문자로 변환한 새 문자열을 만듭니다.</p>
+<pre><code>astring = "Hello world!"
+print(astring.startswith("Hello"))
+print(astring.endswith("asdfasdfasdf"))
+</code></pre>
+<p>이는 문자열이 어떤 것으로 시작하는지 또는 끝나는지를 결정하는 데 사용됩니다. 첫 번째는 문자열이 "Hello"로 시작하기 때문에 True를 출력합니다. 두 번째는 문자열이 "asdfasdfasdf"로 끝나지 않으므로 False를 출력합니다.</p>
+<pre><code>astring = "Hello world!"
+afewwords = astring.split(" ")
+</code></pre>
+<p>이는 문자열을 함께 그룹화한 문자열 목록으로 나눕니다. 이 예에서는 공백에서 분할하기 때문에, 목록의 첫 번째 항목은 "Hello"이고 두 번째 항목은 "world!"가 됩니다.</p>
+<h2>Exercise</h2>
+<p>문자열을 변경하여 올바른 정보를 출력하도록 코드를 수정해보세요.
+```</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">s = &#34;Hey there! what should this string be?&#34;
+# Length should be 20
+print(&#34;Length of s = %d&#34; % len(s))
+
+# First occurrence of &#34;a&#34; should be at index 8
+print(&#34;The first occurrence of the letter a = %d&#34; % s.index(&#34;a&#34;))
+
+# Number of a&#39;s should be 2
+print(&#34;a occurs %d times&#34; % s.count(&#34;a&#34;))
+
+# Slicing the string into bits
+print(&#34;The first five characters are &#39;%s&#39;&#34; % s[:5]) # Start to 5
+print(&#34;The next five characters are &#39;%s&#39;&#34; % s[5:10]) # 5 to 10
+print(&#34;The thirteenth character is &#39;%s&#39;&#34; % s[12]) # Just number 12
+print(&#34;The characters with odd index are &#39;%s&#39;&#34; %s[1::2]) #(0-based indexing)
+print(&#34;The last five characters are &#39;%s&#39;&#34; % s[-5:]) # 5th-from-last to end
+
+# Convert everything to uppercase
+print(&#34;String in uppercase: %s&#34; % s.upper())
+
+# Convert everything to lowercase
+print(&#34;String in lowercase: %s&#34; % s.lower())
+
+# Check how a string starts
+if s.startswith(&#34;Str&#34;):
+    print(&#34;String starts with &#39;Str&#39;. Good!&#34;)
+
+# Check how a string ends
+if s.endswith(&#34;ome!&#34;):
+    print(&#34;String ends with &#39;ome!&#39;. Good!&#34;)
+
+# Split the string into three separate strings,
+# each containing only a word
+print(&#34;Split the words of the string: %s&#34; % s.split(&#34; &#34;))</code>
+              <code data-type="solution">s = &#34;Strings are awesome!&#34;
+# Length should be 20
+print(&#34;Length of s = %d&#34; % len(s))
+
+# First occurrence of &#34;a&#34; should be at index 8
+print(&#34;The first occurrence of the letter a = %d&#34; % s.index(&#34;a&#34;))
+
+# Number of a&#39;s should be 2
+print(&#34;a occurs %d times&#34; % s.count(&#34;a&#34;))
+
+# Slicing the string into bits
+print(&#34;The first five characters are &#39;%s&#39;&#34; % s[:5]) # Start to 5
+print(&#34;The next five characters are &#39;%s&#39;&#34; % s[5:10]) # 5 to 10
+print(&#34;The thirteenth character is &#39;%s&#39;&#34; % s[12]) # Just number 12
+print(&#34;The characters with odd index are &#39;%s&#39;&#34; %s[1::2]) #(0-based indexing)
+print(&#34;The last five characters are &#39;%s&#39;&#34; % s[-5:]) # 5th-from-last to end
+
+# Convert everything to uppercase
+print(&#34;String in uppercase: %s&#34; % s.upper())
+
+# Convert everything to lowercase
+print(&#34;String in lowercase: %s&#34; % s.lower())
+
+# Check how a string starts
+if s.startswith(&#34;Str&#34;):
+    print(&#34;String starts with &#39;Str&#39;. Good!&#34;)
+
+# Check how a string ends
+if s.endswith(&#34;ome!&#34;):
+    print(&#34;String ends with &#39;ome!&#39;. Good!&#34;)
+
+# Split the string into three separate strings,
+# each containing only a word
+print(&#34;Split the words of the string: %s&#34; % s.split(&#34; &#34;))</code>
+              <code data-type="sct">test_object(&#34;s&#34;, incorrect_msg=&#34;Make sure you change the string assigned to `s` to match the exercise instructions.&#34;)
+success_msg(&#34;Great work!&#34;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="String_Formatting.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Conditions.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=%ea%b8%b0%eb%b3%b8%20%eb%ac%b8%ec%9e%90%ec%97%b4%20%ec%97%b0%ec%82%b0&amp;language=ko" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">안녕, 세상!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">변수와 타입</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">목록</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">기본 연산자</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">문자열 포맷팅</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">기본 문자열 연산</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">조건</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">루프</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">기능</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">클래스와 객체</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">사전</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">모듈과 패키지</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">입력과 출력</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">제너레이터</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">리스트 내포</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">람다 함수</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">여러 함수 인수</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">정규 표현식</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">예외 처리</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">집합</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">직렬화</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">부분 함수</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">코드 내성</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">클로저</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">데코레이터</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">맵, 필터, 리듀스</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">CSV 파일 파싱</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "ko"};
+        var nextChapter = "/ko/Conditions";
+        var previousChapter = "/ko/String_Formatting";
+        var backChapter = "/ko/Welcome";
+        var tutorialData = {"page_title": "\uae30\ubcf8 \ubb38\uc790\uc5f4 \uc5f0\uc0b0", "text": "<p>```\n\ubb38\uc790\uc5f4\uc740 \ud14d\uc2a4\ud2b8\uc758 \uc77c\ubd80\ubd84\uc785\ub2c8\ub2e4. \ud070\ub530\uc634\ud45c \uc0ac\uc774\uc5d0 \uc788\ub294 \ubaa8\ub4e0 \uac83\uc73c\ub85c \uc815\uc758\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4:</p>\n<pre><code>astring = \"Hello world!\"\nastring2 = 'Hello world!'\n</code></pre>\n<p>\ubcf4\uc2dc\ub2e4\uc2dc\ud53c, \uccab \ubc88\uc9f8\ub85c \ubc30\uc6b4 \uac83\uc740 \uac04\ub2e8\ud55c \ubb38\uc7a5\uc744 \ucd9c\ub825\ud558\ub294 \uac83\uc774\uc5c8\uc2b5\ub2c8\ub2e4. \uc774 \ubb38\uc7a5\uc740 Python\uc5d0 \uc758\ud574 \ubb38\uc790\uc5f4\ub85c \uc800\uc7a5\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ud558\uc9c0\ub9cc \ubb38\uc790\uc5f4\uc744 \uc989\uc2dc \ucd9c\ub825\ud558\ub294 \ub300\uc2e0, \ubb38\uc790\uc5f4\uc5d0 \ub300\ud574 \ud560 \uc218 \uc788\ub294 \ub2e4\uc591\ud55c \uac83\ub4e4\uc744 \ud0d0\uc0c9\ud574 \ubcf4\uaca0\uc2b5\ub2c8\ub2e4.\n\ubb38\uc790\uc5f4\uc744 \ud560\ub2f9\ud560 \ub54c, \uc791\uc740\ub530\uc634\ud45c\ub97c \uc0ac\uc6a9\ud560 \uc218\ub3c4 \uc788\uc2b5\ub2c8\ub2e4. \ud558\uc9c0\ub9cc \ud560\ub2f9\ud560 \uac12 \uc790\uccb4\uc5d0 \uc791\uc740\ub530\uc634\ud45c\uac00 \ud3ec\ud568\ub41c \uacbd\uc6b0 \ubb38\uc81c\uac00 \ubc1c\uc0dd\ud569\ub2c8\ub2e4. \uc608\ub97c \ub4e4\uc5b4, \ub2e4\uc74c\uacfc \uac19\uc740 \ubb38\uc790\uc5f4\uc744 \ud560\ub2f9\ud558\ub824\uba74 (\uc791\uc740\ub530\uc634\ud45c\ub294 ' ') \ubc18\ub4dc\uc2dc \ud070\ub530\uc634\ud45c\ub97c \uc0ac\uc6a9\ud574\uc57c \ud569\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(\"single quotes are ' '\")\n\nprint(len(astring))\n</code></pre>\n<p>\"Hello world!\"\ub294 \uad6c\ub450\uc810\uacfc \uacf5\ubc31\uc744 \ud3ec\ud568\ud558\uc5ec 12\uc790\uc774\ubbc0\ub85c 12\uac00 \ucd9c\ub825\ub429\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring.index(\"o\"))\n</code></pre>\n<p>\uccab \ubc88\uc9f8 \"o\"\uac00 \uccab \ubc88\uc9f8 \ubb38\uc790\uc5d0\uc11c 4\uc790\ub9ac \ub5a8\uc5b4\uc838 \uc788\ub294 \uc704\uce58\uc774\ubbc0\ub85c 4\uac00 \ucd9c\ub825\ub429\ub2c8\ub2e4. \uc774 \uad6c\uc808\uc5d0\ub294 \uc2e4\uc81c\ub85c \ub450 \uac1c\uc758 o\uac00 \uc788\uc9c0\ub9cc, \uc774 \uba54\uc18c\ub4dc\ub294 \uccab \ubc88\uc9f8 \uac83\ub9cc \uc778\uc2dd\ud569\ub2c8\ub2e4.</p>\n<p>\uadf8\ub7f0\ub370 \uc65c 5\uac00 \ucd9c\ub825\ub418\uc9c0 \uc54a\uc558\uc744\uae4c\uc694? \ubb38\uc790\uc5f4\uc5d0\uc11c \"o\"\uac00 \ub2e4\uc12f \ubc88\uc9f8 \ubb38\uc790\uac00 \uc544\ub2c8\uc5c8\ub358\uac00\uc694? \uc880 \ub354 \ub2e8\uc21c\ud558\uac8c \ud558\uae30 \uc704\ud574, Python(\ubc0f \ub300\ubd80\ubd84 \ub2e4\ub978 \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4)\uc740 1 \ub300\uc2e0 0\uc5d0\uc11c \uc2dc\uc791\ud569\ub2c8\ub2e4. \ub530\ub77c\uc11c \"o\"\uc758 \uc778\ub371\uc2a4\ub294 4\uc785\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring.count(\"l\"))\n</code></pre>\n<p>\uac04\ud639 \uc774\uc0c1\ud55c \uae00\uaf34\uc744 \uc0ac\uc6a9\ud558\ub294 \ubd84\ub4e4\uc744 \uc704\ud574 \ub9d0\uc500\ub4dc\ub9ac\ub294\ub370, \uc774\uac83\uc740 \uc18c\ubb38\uc790 L\uc774\uba70 \uc22b\uc790 1\uc774 \uc544\ub2d9\ub2c8\ub2e4. \uc774 \ud568\uc218\ub294 \ubb38\uc790\uc5f4 \ub0b4\uc758 l\uc758 \uac1c\uc218\ub97c \uc149\ub2c8\ub2e4. \ub530\ub77c\uc11c 3\uc774 \ucd9c\ub825\ub429\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring[3:7])\n</code></pre>\n<p>\uc774\uac83\uc740 \ubb38\uc790\uc5f4\uc758 \uc77c\ubd80\ub97c \uc778\ub371\uc2a4 3\ubd80\ud130 \uc2dc\uc791\ud558\uc5ec \uc778\ub371\uc2a4 6\uc5d0\uc11c \ub05d\ub098\ub294 \ubd80\ubd84\uc744 \ucd9c\ub825\ud569\ub2c8\ub2e4. \ud558\uc9c0\ub9cc \uc65c 6\uc774\uace0 7\uc774 \uc544\ub2d0\uae4c\uc694? \ub300\ubd80\ubd84\uc758 \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4\uac00 \uc774\ub807\uac8c \ud558\ub294 \uc774\uc720\ub294 \uad04\ud638 \uc548\uc758 \uc218\ud559\uc744 \ub354 \uc27d\uac8c \ud558\uae30 \uc704\ud568\uc785\ub2c8\ub2e4.</p>\n<p>\uad04\ud638 \uc548\uc5d0 \uc22b\uc790 \ud558\ub098\ub9cc \uc788\uc73c\uba74 \uadf8 \uc778\ub371\uc2a4\uc758 \ub2e8\uc77c \ubb38\uc790\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4. \uccab \ubc88\uc9f8 \uc22b\uc790\ub97c \uc0dd\ub7b5\ud558\uc9c0\ub9cc \ucf5c\ub860\uc744 \uc720\uc9c0\ud558\uba74 \uc2dc\uc791\ubd80\ud130 \uad04\ud638 \uc548 \uc22b\uc790\uae4c\uc9c0\uc758 \uc870\uac01\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4. \ub450 \ubc88\uc9f8 \uc22b\uc790\ub97c \uc0dd\ub7b5\ud558\uba74 \uccab \ubc88\uc9f8 \uc22b\uc790\ubd80\ud130 \ub05d\uae4c\uc9c0\uc758 \uc870\uac01\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4.</p>\n<p>\uad04\ud638 \uc548\uc5d0 \uc74c\uc218\ub97c \ub123\uc744 \uc218\ub3c4 \uc788\uc2b5\ub2c8\ub2e4. \uc774\ub294 \ubb38\uc790\uc5f4\uc758 \ub05d\uc774 \uc544\ub2cc \uc2dc\uc791\ubd80\ud130 \uc2dc\uc791\ud558\uae30 \uc704\ud55c \uc26c\uc6b4 \ubc29\ubc95\uc785\ub2c8\ub2e4. \uc774\ub807\uac8c \ud558\uba74 -3\uc740 \ubb38\uc790\uc5f4\uc758 \ub05d\uc5d0\uc11c \"3\ubc88\uc9f8 \ubb38\uc790\"\ub97c \uc758\ubbf8\ud569\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring[3:7:2])\n</code></pre>\n<p>\uc774\uac83\uc740 \ubb38\uc790\uc5f4\uc758 \uc778\ub371\uc2a4 3\ubd80\ud130 7\uae4c\uc9c0\uc758 \ubb38\uc790\ub97c \ud558\ub098 \uac74\ub108\ub6f0\uba70 \ucd9c\ub825\ud569\ub2c8\ub2e4. \uc774\uac83\uc740 \ud655\uc7a5\ub41c \uc2ac\ub77c\uc774\uc2a4 \ubb38\ubc95\uc785\ub2c8\ub2e4. \uc77c\ubc18 \ud615\uc2dd\uc740 [start:stop:step] \uc785\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring[3:7])\nprint(astring[3:7:1])\n</code></pre>\n<p>\ub458 \ub2e4 \uac19\uc740 \ucd9c\ub825\uc744 \uc0dd\uc131\ud55c\ub2e4\ub294 \uc810\uc5d0 \uc720\uc758\ud558\uc138\uc694.</p>\n<p>C\uc5d0\ub294 \ubb38\uc790\uc5f4\uc744 \ub4a4\uc9d1\ub294 strrev\uc640 \uac19\uc740 \ud568\uc218\uac00 \uc874\uc7ac\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \ud558\uc9c0\ub9cc \uc704\uc5d0\uc11c \uc5b8\uae09\ud55c \uc2ac\ub77c\uc774\uc2a4 \ubb38\ubc95\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc27d\uac8c \ubb38\uc790\uc5f4\uc744 \ub4a4\uc9d1\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4:</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring[::-1])\n</code></pre>\n<p>\uc774\uac83\uc740</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring.upper())\nprint(astring.lower())\n</code></pre>\n<p>\uac01\uac01 \ubaa8\ub4e0 \ubb38\uc790\ub97c \ub300\ubb38\uc790\uc640 \uc18c\ubb38\uc790\ub85c \ubcc0\ud658\ud55c \uc0c8 \ubb38\uc790\uc5f4\uc744 \ub9cc\ub4ed\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nprint(astring.startswith(\"Hello\"))\nprint(astring.endswith(\"asdfasdfasdf\"))\n</code></pre>\n<p>\uc774\ub294 \ubb38\uc790\uc5f4\uc774 \uc5b4\ub5a4 \uac83\uc73c\ub85c \uc2dc\uc791\ud558\ub294\uc9c0 \ub610\ub294 \ub05d\ub098\ub294\uc9c0\ub97c \uacb0\uc815\ud558\ub294 \ub370 \uc0ac\uc6a9\ub429\ub2c8\ub2e4. \uccab \ubc88\uc9f8\ub294 \ubb38\uc790\uc5f4\uc774 \"Hello\"\ub85c \uc2dc\uc791\ud558\uae30 \ub54c\ubb38\uc5d0 True\ub97c \ucd9c\ub825\ud569\ub2c8\ub2e4. \ub450 \ubc88\uc9f8\ub294 \ubb38\uc790\uc5f4\uc774 \"asdfasdfasdf\"\ub85c \ub05d\ub098\uc9c0 \uc54a\uc73c\ubbc0\ub85c False\ub97c \ucd9c\ub825\ud569\ub2c8\ub2e4.</p>\n<pre><code>astring = \"Hello world!\"\nafewwords = astring.split(\" \")\n</code></pre>\n<p>\uc774\ub294 \ubb38\uc790\uc5f4\uc744 \ud568\uaed8 \uadf8\ub8f9\ud654\ud55c \ubb38\uc790\uc5f4 \ubaa9\ub85d\uc73c\ub85c \ub098\ub215\ub2c8\ub2e4. \uc774 \uc608\uc5d0\uc11c\ub294 \uacf5\ubc31\uc5d0\uc11c \ubd84\ud560\ud558\uae30 \ub54c\ubb38\uc5d0, \ubaa9\ub85d\uc758 \uccab \ubc88\uc9f8 \ud56d\ubaa9\uc740 \"Hello\"\uc774\uace0 \ub450 \ubc88\uc9f8 \ud56d\ubaa9\uc740 \"world!\"\uac00 \ub429\ub2c8\ub2e4.</p>\n<h2>Exercise</h2>\n<p>\ubb38\uc790\uc5f4\uc744 \ubcc0\uacbd\ud558\uc5ec \uc62c\ubc14\ub978 \uc815\ubcf4\ub97c \ucd9c\ub825\ud558\ub3c4\ub85d \ucf54\ub4dc\ub97c \uc218\uc815\ud574\ubcf4\uc138\uc694.\n```</p>", "code": "s = \"Hey there! what should this string be?\"\n# Length should be 20\nprint(\"Length of s = %d\" % len(s))\n\n# First occurrence of \"a\" should be at index 8\nprint(\"The first occurrence of the letter a = %d\" % s.index(\"a\"))\n\n# Number of a's should be 2\nprint(\"a occurs %d times\" % s.count(\"a\"))\n\n# Slicing the string into bits\nprint(\"The first five characters are '%s'\" % s[:5]) # Start to 5\nprint(\"The next five characters are '%s'\" % s[5:10]) # 5 to 10\nprint(\"The thirteenth character is '%s'\" % s[12]) # Just number 12\nprint(\"The characters with odd index are '%s'\" %s[1::2]) #(0-based indexing)\nprint(\"The last five characters are '%s'\" % s[-5:]) # 5th-from-last to end\n\n# Convert everything to uppercase\nprint(\"String in uppercase: %s\" % s.upper())\n\n# Convert everything to lowercase\nprint(\"String in lowercase: %s\" % s.lower())\n\n# Check how a string starts\nif s.startswith(\"Str\"):\n    print(\"String starts with 'Str'. Good!\")\n\n# Check how a string ends\nif s.endswith(\"ome!\"):\n    print(\"String ends with 'ome!'. Good!\")\n\n# Split the string into three separate strings,\n# each containing only a word\nprint(\"Split the words of the string: %s\" % s.split(\" \"))", "back_chapter": "Welcome", "previous_chapter": "String_Formatting", "next_chapter": "Conditions", "output": "test_object(\"s\", incorrect_msg=\"Make sure you change the string assigned to `s` to match the exercise instructions.\")\nsuccess_msg(\"Great work!\")", "solution": "s = \"Strings are awesome!\"\n# Length should be 20\nprint(\"Length of s = %d\" % len(s))\n\n# First occurrence of \"a\" should be at index 8\nprint(\"The first occurrence of the letter a = %d\" % s.index(\"a\"))\n\n# Number of a's should be 2\nprint(\"a occurs %d times\" % s.count(\"a\"))\n\n# Slicing the string into bits\nprint(\"The first five characters are '%s'\" % s[:5]) # Start to 5\nprint(\"The next five characters are '%s'\" % s[5:10]) # 5 to 10\nprint(\"The thirteenth character is '%s'\" % s[12]) # Just number 12\nprint(\"The characters with odd index are '%s'\" %s[1::2]) #(0-based indexing)\nprint(\"The last five characters are '%s'\" % s[-5:]) # 5th-from-last to end\n\n# Convert everything to uppercase\nprint(\"String in uppercase: %s\" % s.upper())\n\n# Convert everything to lowercase\nprint(\"String in lowercase: %s\" % s.lower())\n\n# Check how a string starts\nif s.startswith(\"Str\"):\n    print(\"String starts with 'Str'. Good!\")\n\n# Check how a string ends\nif s.endswith(\"ome!\"):\n    print(\"String ends with 'ome!'. Good!\")\n\n# Split the string into three separate strings,\n# each containing only a word\nprint(\"Split the words of the string: %s\" % s.split(\" \"))", "is_tutorial": true, "links": [["\uc548\ub155, \uc138\uc0c1!", "/ko/Hello%2C_World%21"], ["\ubcc0\uc218\uc640 \ud0c0\uc785", "/ko/Variables_and_Types"], ["\ubaa9\ub85d", "/ko/Lists"], ["\uae30\ubcf8 \uc5f0\uc0b0\uc790", "/ko/Basic_Operators"], ["\ubb38\uc790\uc5f4 \ud3ec\ub9f7\ud305", "/ko/String_Formatting"], ["\uae30\ubcf8 \ubb38\uc790\uc5f4 \uc5f0\uc0b0", "/ko/Basic_String_Operations"], ["\uc870\uac74", "/ko/Conditions"], ["\ub8e8\ud504", "/ko/Loops"], ["\uae30\ub2a5", "/ko/Functions"], ["\ud074\ub798\uc2a4\uc640 \uac1d\uccb4", "/ko/Classes_and_Objects"], ["\uc0ac\uc804", "/ko/Dictionaries"], ["\ubaa8\ub4c8\uacfc \ud328\ud0a4\uc9c0", "/ko/Modules_and_Packages"], ["\uc785\ub825\uacfc \ucd9c\ub825", "/ko/Input_and_Output"], ["\uc81c\ub108\ub808\uc774\ud130", "/ko/Generators"], ["\ub9ac\uc2a4\ud2b8 \ub0b4\ud3ec", "/ko/List_Comprehensions"], ["\ub78c\ub2e4 \ud568\uc218", "/ko/Lambda_functions"], ["\uc5ec\ub7ec \ud568\uc218 \uc778\uc218", "/ko/Multiple_Function_Arguments"], ["\uc815\uaddc \ud45c\ud604\uc2dd", "/ko/Regular_Expressions"], ["\uc608\uc678 \ucc98\ub9ac", "/ko/Exception_Handling"], ["\uc9d1\ud569", "/ko/Sets"], ["\uc9c1\ub82c\ud654", "/ko/Serialization"], ["\ubd80\ubd84 \ud568\uc218", "/ko/Partial_functions"], ["\ucf54\ub4dc \ub0b4\uc131", "/ko/Code_Introspection"], ["\ud074\ub85c\uc800", "/ko/Closures"], ["\ub370\ucf54\ub808\uc774\ud130", "/ko/Decorators"], ["\ub9f5, \ud544\ud130, \ub9ac\ub4c0\uc2a4", "/ko/Map%2C_Filter%2C_Reduce"], ["CSV \ud30c\uc77c \ud30c\uc2f1", "/ko/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/ko/Basic String Operations by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:14:55 GMT -->
+</html>
