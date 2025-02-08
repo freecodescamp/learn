@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<!-- Mirrored from www.CodeCamp Python/zh/Modules and Packages by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:16:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Modules and Packages - Learn Python - CodesCamp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CodeCamp Python is a free interactive Python tutorial for people who want to learn Python, fast." />
+    <meta name="keywords" content="Learn,Python,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="模块和包 - Learn Python - Free Interactive Python Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/CodeCamp Python.png" />
+
+    <link rel="icon" href="../static/img/favicons/CodeCamp Python.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/CodeCamp Python.ico" style="height: 24px">
+        CodeCamp Python
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Python</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnjavaonline.org/">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item" href="../ar/index.html">العربية</a><br>
+		            
+		                <a class="dropdown-item" href="../bg/index.html">Български</a><br>
+		            
+		                <a class="dropdown-item" href="../cs/index.html">Čeština</a><br>
+		            
+		                <a class="dropdown-item" href="../da/index.html">Dansk</a><br>
+		            
+		                <a class="dropdown-item" href="../de/index.html">Deutsch</a><br>
+		            
+		                <a class="dropdown-item" href="../el/index.html">Ελληνικά</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+		                <a class="dropdown-item" href="../es/index.html">Español</a><br>
+		            
+		                <a class="dropdown-item" href="../fi/index.html">Suomi</a><br>
+		            
+		                <a class="dropdown-item" href="../fr/index.html">Français</a><br>
+		            
+		                <a class="dropdown-item" href="../he/index.html">עברית</a><br>
+		            
+		                <a class="dropdown-item" href="../hi/index.html">हिन्दी</a><br>
+		            
+		                <a class="dropdown-item" href="../hu/index.html">Magyar</a><br>
+		            
+		                <a class="dropdown-item" href="../id/index.html">Bahasa Indonesia</a><br>
+		            
+		                <a class="dropdown-item" href="../it/index.html">Italiano</a><br>
+		            
+		                <a class="dropdown-item" href="../ja/index.html">日本語</a><br>
+		            
+		                <a class="dropdown-item" href="../ko/index.html">한국어</a><br>
+		            
+		                <a class="dropdown-item" href="../ms/index.html">Bahasa Melayu</a><br>
+		            
+		                <a class="dropdown-item" href="../nl/index.html">Nederlands</a><br>
+		            
+		                <a class="dropdown-item" href="../no/index.html">Norsk</a><br>
+		            
+		                <a class="dropdown-item" href="../pl/index.html">Polski</a><br>
+		            
+		                <a class="dropdown-item" href="../pt/index.html">Português</a><br>
+		            
+		                <a class="dropdown-item" href="../ro/index.html">Română</a><br>
+		            
+		                <a class="dropdown-item" href="../ru/index.html">Русский</a><br>
+		            
+		                <a class="dropdown-item" href="../sv/index.html">Svenska</a><br>
+		            
+		                <a class="dropdown-item" href="../th/index.html">ไทย</a><br>
+		            
+		                <a class="dropdown-item" href="../tr/index.html">Türkçe</a><br>
+		            
+		                <a class="dropdown-item" href="../uk/index.html">Українська</a><br>
+		            
+		                <a class="dropdown-item" href="../vi/index.html">Tiếng Việt</a><br>
+		            
+		                <a class="dropdown-item disabled" href="index.html">中文</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnjavaonline.org/">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython"
+        target="_blank">
+        <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col">
+            
+            <ul class="breadcrumb" style="margin-top: 10px">
+              
+              <li><a href="Welcome.html">Welcome</a> <span class="divider mr-1">/</span></li>
+              
+              <li class="active">模块和包</li>
+            </ul>
+            
+
+            <div class="clearfix">
+
+                <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Start Now</a>!</p>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
+                <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount</a></p>
+            </div>
+
+            <div id="inner-text">
+                
+                <h1>模块和包</h1>
+                <hr/>
+                
+                <p>在编程中，模块是具有特定功能的软件部分。例如，在构建乒乓球游戏时，一个模块可能负责游戏逻辑，而另一个模块负责在屏幕上绘制游戏。每个模块由不同的文件组成，可以分别进行编辑。</p>
+<h3>Writing modules</h3>
+<p>Python 中的模块只是带有 .py 扩展名的 Python 文件。模块的名称与文件名相同。一个 Python 模块可以定义和实现一组函数、类或变量。上面的例子包括两个文件：</p>
+<p>mygame/</p>
+<ul>
+<li>
+<p>mygame/game.py</p>
+</li>
+<li>
+<p>mygame/draw.py</p>
+</li>
+</ul>
+<p>Python 脚本 <code>game.py</code> 实现了游戏。它使用文件 <code>draw.py</code> 中的函数 <code>draw_game</code>，或者换句话说，使用实现了在屏幕上绘制游戏逻辑的 <code>draw</code> 模块。</p>
+<p>模块是通过 <code>import</code> 命令从其他模块导入的。在这个例子中，<code>game.py</code> 脚本可能如下所示：</p>
+<pre><code># game.py
+# import the draw module
+import draw
+
+def play_game():
+    ...
+
+def main():
+    result = play_game()
+    draw.draw_game(result)
+
+# this means that if this script is executed, then 
+# main() will be executed
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p><code>draw</code> 模块可能如下所示：</p>
+<pre><code># draw.py
+
+def draw_game():
+    ...
+
+def clear_screen(screen):
+    ...
+</code></pre>
+<p>在这个例子中，<code>game</code> 模块导入了 <code>draw</code> 模块，使其能够使用在该模块中实现的函数。<code>main</code> 函数使用本地函数 <code>play_game</code> 来运行游戏，然后使用在 <code>draw</code> 模块中实现的函数 <code>draw_game</code> 绘制游戏的结果。要使用 <code>draw</code> 模块中的 <code>draw_game</code> 函数，我们需要指定函数实现的模块，使用点操作符。要从 <code>game</code> 模块引用 <code>draw_game</code> 函数，我们需要导入 <code>draw</code> 模块，然后调用 <code>draw.draw_game()</code>。</p>
+<p>当执行 <code>import draw</code> 指令时，Python 解释器会在执行脚本的目录中查找具有模块名称和 <code>.py</code> 后缀的文件。在这个例子中，它会查找 <code>draw.py</code>。如果找到，它将被导入。如果找不到，它将继续查找内置模块。</p>
+<p>您可能已经注意到，在导入模块时，会创建一个 <code>.pyc</code> 文件。它是一个编译后的 Python 文件。Python 将文件编译为 Python 字节码，这样每次加载模块时就不必解析文件。如果 <code>.pyc</code> 文件存在，它将被加载而不是 <code>.py</code> 文件。这个过程对用户是透明的。</p>
+<h3>Importing module objects to the current namespace</h3>
+<p>命名空间是一个系统，在这个系统中，每个对象都有名字，可以在 Python 中被访问。我们使用 <code>from</code> 命令将函数 <code>draw_game</code> 导入到主脚本的命名空间中。</p>
+<pre><code># game.py
+# import the draw module
+from draw import draw_game
+
+def main():
+    result = play_game()
+    draw_game(result)
+</code></pre>
+<p>您可能已经注意到，在这个例子中，模块名不在 <code>draw_game</code> 之前，因为我们已经使用 <code>import</code> 命令指定了模块名。</p>
+<p>这种表示法的优点是您不必一遍又一遍地引用模块。但是，一个命名空间不能有两个同名对象，因此 <code>import</code> 命令可能会替换命名空间中已有的对象。</p>
+<h3>Importing all objects from a module</h3>
+<p>可以使用 <code>import *</code> 命令导入模块中的所有对象，如下所示：</p>
+<pre><code># game.py
+# import the draw module
+from draw import *
+
+def main():
+    result = play_game()
+    draw_game(result)
+</code></pre>
+<p>这可能有些风险，因为模块的变化可能会影响导入它的模块，但这样更简短，并且不需要您指定要从模块中导入的每个对象。</p>
+<h3>Custom import name</h3>
+<p>模块可以在任何您想要的名称下加载。这在有条件地导入模块以在其余代码中使用相同名称时很有用。</p>
+<p>例如，如果您有两个稍微不同名称的 <code>draw</code> 模块，您可以执行以下操作：</p>
+<pre><code># game.py
+# import the draw module
+if visual_mode:
+    # in visual mode, we draw using graphics
+    import draw_visual as draw
+else:
+    # in textual mode, we print out text
+    import draw_textual as draw
+
+def main():
+    result = play_game()
+    # this can either be visual or textual depending on visual_mode
+    draw.draw_game(result)
+</code></pre>
+<h3>Module initialization</h3>
+<p>模块第一次被加载到正在运行的 Python 脚本中时，模块会通过执行模块中的代码一次进行初始化。如果代码中的另一个模块再次导入相同的模块，它将不会再次被加载，因此模块内部的局部变量充当“单例”，意味着它们只被初始化一次。</p>
+<p>然后您可以使用它来初始化对象。例如：</p>
+<pre><code># draw.py
+
+def draw_game():
+    # when clearing the screen we can use the main screen object initialized in this module
+    clear_screen(main_screen)
+    ...
+
+def clear_screen(screen):
+    ...
+
+class Screen():
+    ...
+
+# initialize main_screen as a singleton
+main_screen = Screen()
+</code></pre>
+<h3>Extending module load path</h3>
+<p>除了默认的本地目录和内置模块，还有几种方法可以告诉 Python 解释器在哪里查找模块。您可以使用环境变量 <code>PYTHONPATH</code> 来指定模块的其他目录，如下所示：</p>
+<pre><code>PYTHONPATH=/foo python game.py
+</code></pre>
+<p>这样执行 <code>game.py</code>，并使脚本能够从 <code>foo</code> 目录以及本地目录加载模块。</p>
+<p>您还可以使用 <code>sys.path.append</code> 方法。它需要在执行 <code>import</code> 命令之前使用：</p>
+<pre><code>sys.path.append("/foo")
+</code></pre>
+<p>现在，<code>foo</code> 目录已被添加到查找模块路径的列表中。</p>
+<h3>Exploring built-in modules</h3>
+<p>浏览完整的 Python 标准库中的内置模块列表 <a href="https://docs.python.org/3/library/">here</a>.</p>
+<p>在探索 Python 模块时，有两个非常重要的函数 - <code>dir</code> 和 <code>help</code>。</p>
+<p>要导入模块 <code>urllib</code>，该模块允许我们从 URL 创建数据读取，我们 <code>import</code> 模块：</p>
+<pre><code># import the library
+import urllib
+
+# use it
+urllib.urlopen(...)
+</code></pre>
+<p>我们可以通过使用 <code>dir</code> 函数查看每个模块中实现了哪些函数：</p>
+<pre><code>&gt;&gt;&gt; import urllib
+&gt;&gt;&gt; dir(urllib)
+['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', 
+'__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', 
+'_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', 
+'_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', 
+'_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', 
+'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', 
+'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', 
+'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', 
+'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', 
+'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', 
+'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 
+'urlopen', 'urlretrieve']
+</code></pre>
+<p>当我们找到模块中我们想要使用的函数时，可以使用 Python 解释器中的 <code>help</code> 函数阅读更多关于它的信息：</p>
+<pre><code>help(urllib.urlopen)
+</code></pre>
+<h3>Writing packages</h3>
+<p>包是包含多个包和模块的命名空间。它们只是目录，但有一定的要求。</p>
+<p>Python 中的每个包都是一个目录，它<strong>必须</strong>包含一个名为 <code>__init__.py</code> 的特殊文件。这个文件可以是空的，表明它所在的目录是一个 Python 包。这样它可以像模块一样被导入。</p>
+<p>如果我们创建一个名为 <code>foo</code> 的目录，它标志着包名，然后我们可以在该包中创建一个名为 <code>bar</code> 的模块。接着，我们在 <code>foo</code> 目录中添加 <code>__init__.py</code> 文件。</p>
+<p>要使用模块 <code>bar</code>，我们有两种方式导入它：</p>
+<pre><code>import foo.bar
+</code></pre>
+<p>或：</p>
+<pre><code>from foo import bar
+</code></pre>
+<p>在上面的第一个例子中，我们每次访问模块 <code>bar</code> 时都要使用 <code>foo</code> 前缀。在第二个例子中，我们不需要，因为我们已经将模块导入到我们模块的命名空间中。</p>
+<p><code>__init__.py</code> 文件还可以通过重写 <code>__all__</code> 变量来决定包作为 API 导出的模块，同时使其他模块保持内部使用：</p>
+<pre><code>__init__.py:
+
+__all__ = ["bar"]
+</code></pre>
+<h2>练习</h2>
+<p>在这个练习中，打印 <code>re</code> 模块中所有函数的按字母顺序排列的列表，这些函数包含单词 <code>find</code>。</p>
+            </div>
+
+            <!-- DataCamp-Light exercise -->
+            
+            <div data-datacamp-exercise data-lang="python" data-height="400" data-impact-tracking-link="/c/67577/1012793/13294">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">import re
+
+# Your code goes here
+find_members = []</code>
+              <code data-type="solution">import re
+
+# Your code goes here
+find_members = []
+for member in dir(re):
+    if &#34;find&#34; in member:
+        find_members.append(member)
+
+print(sorted(find_members))</code>
+              <code data-type="sct">test_object(&#39;find_members&#39;)
+success_msg(&#39;Great work!&#39;)</code>
+            </div>
+            
+
+            <div>
+                <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=CodeCamp Python">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+
+                <a href="https://coddy.tech/landing/python?from=CodeCamp Python" target="_blank">
+                  <img src="../static/img/banners/coddy/coddy-billboard-bottom-python.png" style="width: 100%; margin-bottom: 10px"/>
+                </a>
+
+                <div style="display: flex; gap: 8px">
+                
+                <a class="btn btn-primary pull-left" href="Dictionaries.html">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                
+
+                
+                <a class="btn btn-primary pull-right" href="Input_and_Output.html">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                
+
+
+
+
+
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org/" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
+            </div>
+
+            <div class="hidden-phone">
+
+            
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block">
+            <div id="google-ad-right">
+
+
+
+                <iframe src="https://learnpython-ads.datacamp.com/?page=%e6%a8%a1%e5%9d%97%e5%92%8c%e5%8c%85&amp;language=zh" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.href
+                        });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
+                    }
+
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">你好，世界！</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Variables_and_Types.html">变量和类型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lists.html">列表</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_Operators.html">基本运算符</a>
+                        </div>
+                    
+                        <div>
+                            <a href="String_Formatting.html">字符串格式化</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Basic_String_Operations.html">基本字符串操作</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Conditions.html">条件</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Loops.html">循环</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Functions.html">函数</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Classes_and_Objects.html">类和对象</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Dictionaries.html">字典</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Modules_and_Packages.html">模块和包</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Input_and_Output.html">输入和输出</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Generators.html">生成器</a>
+                        </div>
+                    
+                        <div>
+                            <a href="List_Comprehensions.html">列表推导式</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Lambda_functions.html">Lambda 函数</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Multiple_Function_Arguments.html">多个函数参数</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Regular_Expressions.html">正则表达式</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Exception_Handling.html">异常处理</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Sets.html">集合</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Serialization.html">序列化</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Partial_functions.html">偏函数</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Code_Introspection.html">代码自省</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Closures.html">闭包</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Decorators.html">装饰器</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Map%2c_Filter%2c_Reduce.html">映射、过滤、归约</a>
+                        </div>
+                    
+                        <div>
+                            <a href="Parsing_CSV_Files.html">解析CSV文件</a>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; CodeCamp Python. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+<script src="../static/js/codemirror/mode/python/python.js"></script>
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+<script type="text/javascript" src="http://cdn.datacamp.com/dcl-react.js.gz"></script>
+<script src="../static/js/datacamp.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'CodeCamp Python');
+  ga('create', 'UA-22741967-1', 'CodeCamp Python');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    <script>
+        var domainData = {"language": "python", "language_id": 116, "codemirror_mode": "python", "prism_mode": "language-python", "analytics": "UA-22741967-1", "language_uppercase": "Python", "default_code": "# Welcome to the Interactive Python Tutorial.\n# Start by choosing a chapter and\n# write your code in this window.\n\nprint(\"Hello, World!\")\n    ", "namespace": "CodeCamp Python", "full_url": "https://www.CodeCamp Python", "contact_email": "admin@CodeCamp Python", "support_email": "support@CodeCamp Python", "logo": "/static/img/logos/CodeCamp Python.png", "share_logo": "/static/img/share-logos/CodeCamp Python.png", "favicon": "/static/img/favicons/CodeCamp Python.ico", "styled_domain": "CodeCamp Python", "sender": "CodeCamp Python <admin@CodeCamp Python>", "courses": null, "language_code": "zh"};
+        var nextChapter = "/zh/Input_and_Output";
+        var previousChapter = "/zh/Dictionaries";
+        var backChapter = "/zh/Welcome";
+        var tutorialData = {"page_title": "\u6a21\u5757\u548c\u5305", "text": "<p>\u5728\u7f16\u7a0b\u4e2d\uff0c\u6a21\u5757\u662f\u5177\u6709\u7279\u5b9a\u529f\u80fd\u7684\u8f6f\u4ef6\u90e8\u5206\u3002\u4f8b\u5982\uff0c\u5728\u6784\u5efa\u4e52\u4e53\u7403\u6e38\u620f\u65f6\uff0c\u4e00\u4e2a\u6a21\u5757\u53ef\u80fd\u8d1f\u8d23\u6e38\u620f\u903b\u8f91\uff0c\u800c\u53e6\u4e00\u4e2a\u6a21\u5757\u8d1f\u8d23\u5728\u5c4f\u5e55\u4e0a\u7ed8\u5236\u6e38\u620f\u3002\u6bcf\u4e2a\u6a21\u5757\u7531\u4e0d\u540c\u7684\u6587\u4ef6\u7ec4\u6210\uff0c\u53ef\u4ee5\u5206\u522b\u8fdb\u884c\u7f16\u8f91\u3002</p>\n<h3>Writing modules</h3>\n<p>Python \u4e2d\u7684\u6a21\u5757\u53ea\u662f\u5e26\u6709 .py \u6269\u5c55\u540d\u7684 Python \u6587\u4ef6\u3002\u6a21\u5757\u7684\u540d\u79f0\u4e0e\u6587\u4ef6\u540d\u76f8\u540c\u3002\u4e00\u4e2a Python \u6a21\u5757\u53ef\u4ee5\u5b9a\u4e49\u548c\u5b9e\u73b0\u4e00\u7ec4\u51fd\u6570\u3001\u7c7b\u6216\u53d8\u91cf\u3002\u4e0a\u9762\u7684\u4f8b\u5b50\u5305\u62ec\u4e24\u4e2a\u6587\u4ef6\uff1a</p>\n<p>mygame/</p>\n<ul>\n<li>\n<p>mygame/game.py</p>\n</li>\n<li>\n<p>mygame/draw.py</p>\n</li>\n</ul>\n<p>Python \u811a\u672c <code>game.py</code> \u5b9e\u73b0\u4e86\u6e38\u620f\u3002\u5b83\u4f7f\u7528\u6587\u4ef6 <code>draw.py</code> \u4e2d\u7684\u51fd\u6570 <code>draw_game</code>\uff0c\u6216\u8005\u6362\u53e5\u8bdd\u8bf4\uff0c\u4f7f\u7528\u5b9e\u73b0\u4e86\u5728\u5c4f\u5e55\u4e0a\u7ed8\u5236\u6e38\u620f\u903b\u8f91\u7684 <code>draw</code> \u6a21\u5757\u3002</p>\n<p>\u6a21\u5757\u662f\u901a\u8fc7 <code>import</code> \u547d\u4ee4\u4ece\u5176\u4ed6\u6a21\u5757\u5bfc\u5165\u7684\u3002\u5728\u8fd9\u4e2a\u4f8b\u5b50\u4e2d\uff0c<code>game.py</code> \u811a\u672c\u53ef\u80fd\u5982\u4e0b\u6240\u793a\uff1a</p>\n<pre><code># game.py\n# import the draw module\nimport draw\n\ndef play_game():\n    ...\n\ndef main():\n    result = play_game()\n    draw.draw_game(result)\n\n# this means that if this script is executed, then \n# main() will be executed\nif __name__ == '__main__':\n    main()\n</code></pre>\n<p><code>draw</code> \u6a21\u5757\u53ef\u80fd\u5982\u4e0b\u6240\u793a\uff1a</p>\n<pre><code># draw.py\n\ndef draw_game():\n    ...\n\ndef clear_screen(screen):\n    ...\n</code></pre>\n<p>\u5728\u8fd9\u4e2a\u4f8b\u5b50\u4e2d\uff0c<code>game</code> \u6a21\u5757\u5bfc\u5165\u4e86 <code>draw</code> \u6a21\u5757\uff0c\u4f7f\u5176\u80fd\u591f\u4f7f\u7528\u5728\u8be5\u6a21\u5757\u4e2d\u5b9e\u73b0\u7684\u51fd\u6570\u3002<code>main</code> \u51fd\u6570\u4f7f\u7528\u672c\u5730\u51fd\u6570 <code>play_game</code> \u6765\u8fd0\u884c\u6e38\u620f\uff0c\u7136\u540e\u4f7f\u7528\u5728 <code>draw</code> \u6a21\u5757\u4e2d\u5b9e\u73b0\u7684\u51fd\u6570 <code>draw_game</code> \u7ed8\u5236\u6e38\u620f\u7684\u7ed3\u679c\u3002\u8981\u4f7f\u7528 <code>draw</code> \u6a21\u5757\u4e2d\u7684 <code>draw_game</code> \u51fd\u6570\uff0c\u6211\u4eec\u9700\u8981\u6307\u5b9a\u51fd\u6570\u5b9e\u73b0\u7684\u6a21\u5757\uff0c\u4f7f\u7528\u70b9\u64cd\u4f5c\u7b26\u3002\u8981\u4ece <code>game</code> \u6a21\u5757\u5f15\u7528 <code>draw_game</code> \u51fd\u6570\uff0c\u6211\u4eec\u9700\u8981\u5bfc\u5165 <code>draw</code> \u6a21\u5757\uff0c\u7136\u540e\u8c03\u7528 <code>draw.draw_game()</code>\u3002</p>\n<p>\u5f53\u6267\u884c <code>import draw</code> \u6307\u4ee4\u65f6\uff0cPython \u89e3\u91ca\u5668\u4f1a\u5728\u6267\u884c\u811a\u672c\u7684\u76ee\u5f55\u4e2d\u67e5\u627e\u5177\u6709\u6a21\u5757\u540d\u79f0\u548c <code>.py</code> \u540e\u7f00\u7684\u6587\u4ef6\u3002\u5728\u8fd9\u4e2a\u4f8b\u5b50\u4e2d\uff0c\u5b83\u4f1a\u67e5\u627e <code>draw.py</code>\u3002\u5982\u679c\u627e\u5230\uff0c\u5b83\u5c06\u88ab\u5bfc\u5165\u3002\u5982\u679c\u627e\u4e0d\u5230\uff0c\u5b83\u5c06\u7ee7\u7eed\u67e5\u627e\u5185\u7f6e\u6a21\u5757\u3002</p>\n<p>\u60a8\u53ef\u80fd\u5df2\u7ecf\u6ce8\u610f\u5230\uff0c\u5728\u5bfc\u5165\u6a21\u5757\u65f6\uff0c\u4f1a\u521b\u5efa\u4e00\u4e2a <code>.pyc</code> \u6587\u4ef6\u3002\u5b83\u662f\u4e00\u4e2a\u7f16\u8bd1\u540e\u7684 Python \u6587\u4ef6\u3002Python \u5c06\u6587\u4ef6\u7f16\u8bd1\u4e3a Python \u5b57\u8282\u7801\uff0c\u8fd9\u6837\u6bcf\u6b21\u52a0\u8f7d\u6a21\u5757\u65f6\u5c31\u4e0d\u5fc5\u89e3\u6790\u6587\u4ef6\u3002\u5982\u679c <code>.pyc</code> \u6587\u4ef6\u5b58\u5728\uff0c\u5b83\u5c06\u88ab\u52a0\u8f7d\u800c\u4e0d\u662f <code>.py</code> \u6587\u4ef6\u3002\u8fd9\u4e2a\u8fc7\u7a0b\u5bf9\u7528\u6237\u662f\u900f\u660e\u7684\u3002</p>\n<h3>Importing module objects to the current namespace</h3>\n<p>\u547d\u540d\u7a7a\u95f4\u662f\u4e00\u4e2a\u7cfb\u7edf\uff0c\u5728\u8fd9\u4e2a\u7cfb\u7edf\u4e2d\uff0c\u6bcf\u4e2a\u5bf9\u8c61\u90fd\u6709\u540d\u5b57\uff0c\u53ef\u4ee5\u5728 Python \u4e2d\u88ab\u8bbf\u95ee\u3002\u6211\u4eec\u4f7f\u7528 <code>from</code> \u547d\u4ee4\u5c06\u51fd\u6570 <code>draw_game</code> \u5bfc\u5165\u5230\u4e3b\u811a\u672c\u7684\u547d\u540d\u7a7a\u95f4\u4e2d\u3002</p>\n<pre><code># game.py\n# import the draw module\nfrom draw import draw_game\n\ndef main():\n    result = play_game()\n    draw_game(result)\n</code></pre>\n<p>\u60a8\u53ef\u80fd\u5df2\u7ecf\u6ce8\u610f\u5230\uff0c\u5728\u8fd9\u4e2a\u4f8b\u5b50\u4e2d\uff0c\u6a21\u5757\u540d\u4e0d\u5728 <code>draw_game</code> \u4e4b\u524d\uff0c\u56e0\u4e3a\u6211\u4eec\u5df2\u7ecf\u4f7f\u7528 <code>import</code> \u547d\u4ee4\u6307\u5b9a\u4e86\u6a21\u5757\u540d\u3002</p>\n<p>\u8fd9\u79cd\u8868\u793a\u6cd5\u7684\u4f18\u70b9\u662f\u60a8\u4e0d\u5fc5\u4e00\u904d\u53c8\u4e00\u904d\u5730\u5f15\u7528\u6a21\u5757\u3002\u4f46\u662f\uff0c\u4e00\u4e2a\u547d\u540d\u7a7a\u95f4\u4e0d\u80fd\u6709\u4e24\u4e2a\u540c\u540d\u5bf9\u8c61\uff0c\u56e0\u6b64 <code>import</code> \u547d\u4ee4\u53ef\u80fd\u4f1a\u66ff\u6362\u547d\u540d\u7a7a\u95f4\u4e2d\u5df2\u6709\u7684\u5bf9\u8c61\u3002</p>\n<h3>Importing all objects from a module</h3>\n<p>\u53ef\u4ee5\u4f7f\u7528 <code>import *</code> \u547d\u4ee4\u5bfc\u5165\u6a21\u5757\u4e2d\u7684\u6240\u6709\u5bf9\u8c61\uff0c\u5982\u4e0b\u6240\u793a\uff1a</p>\n<pre><code># game.py\n# import the draw module\nfrom draw import *\n\ndef main():\n    result = play_game()\n    draw_game(result)\n</code></pre>\n<p>\u8fd9\u53ef\u80fd\u6709\u4e9b\u98ce\u9669\uff0c\u56e0\u4e3a\u6a21\u5757\u7684\u53d8\u5316\u53ef\u80fd\u4f1a\u5f71\u54cd\u5bfc\u5165\u5b83\u7684\u6a21\u5757\uff0c\u4f46\u8fd9\u6837\u66f4\u7b80\u77ed\uff0c\u5e76\u4e14\u4e0d\u9700\u8981\u60a8\u6307\u5b9a\u8981\u4ece\u6a21\u5757\u4e2d\u5bfc\u5165\u7684\u6bcf\u4e2a\u5bf9\u8c61\u3002</p>\n<h3>Custom import name</h3>\n<p>\u6a21\u5757\u53ef\u4ee5\u5728\u4efb\u4f55\u60a8\u60f3\u8981\u7684\u540d\u79f0\u4e0b\u52a0\u8f7d\u3002\u8fd9\u5728\u6709\u6761\u4ef6\u5730\u5bfc\u5165\u6a21\u5757\u4ee5\u5728\u5176\u4f59\u4ee3\u7801\u4e2d\u4f7f\u7528\u76f8\u540c\u540d\u79f0\u65f6\u5f88\u6709\u7528\u3002</p>\n<p>\u4f8b\u5982\uff0c\u5982\u679c\u60a8\u6709\u4e24\u4e2a\u7a0d\u5fae\u4e0d\u540c\u540d\u79f0\u7684 <code>draw</code> \u6a21\u5757\uff0c\u60a8\u53ef\u4ee5\u6267\u884c\u4ee5\u4e0b\u64cd\u4f5c\uff1a</p>\n<pre><code># game.py\n# import the draw module\nif visual_mode:\n    # in visual mode, we draw using graphics\n    import draw_visual as draw\nelse:\n    # in textual mode, we print out text\n    import draw_textual as draw\n\ndef main():\n    result = play_game()\n    # this can either be visual or textual depending on visual_mode\n    draw.draw_game(result)\n</code></pre>\n<h3>Module initialization</h3>\n<p>\u6a21\u5757\u7b2c\u4e00\u6b21\u88ab\u52a0\u8f7d\u5230\u6b63\u5728\u8fd0\u884c\u7684 Python \u811a\u672c\u4e2d\u65f6\uff0c\u6a21\u5757\u4f1a\u901a\u8fc7\u6267\u884c\u6a21\u5757\u4e2d\u7684\u4ee3\u7801\u4e00\u6b21\u8fdb\u884c\u521d\u59cb\u5316\u3002\u5982\u679c\u4ee3\u7801\u4e2d\u7684\u53e6\u4e00\u4e2a\u6a21\u5757\u518d\u6b21\u5bfc\u5165\u76f8\u540c\u7684\u6a21\u5757\uff0c\u5b83\u5c06\u4e0d\u4f1a\u518d\u6b21\u88ab\u52a0\u8f7d\uff0c\u56e0\u6b64\u6a21\u5757\u5185\u90e8\u7684\u5c40\u90e8\u53d8\u91cf\u5145\u5f53\u201c\u5355\u4f8b\u201d\uff0c\u610f\u5473\u7740\u5b83\u4eec\u53ea\u88ab\u521d\u59cb\u5316\u4e00\u6b21\u3002</p>\n<p>\u7136\u540e\u60a8\u53ef\u4ee5\u4f7f\u7528\u5b83\u6765\u521d\u59cb\u5316\u5bf9\u8c61\u3002\u4f8b\u5982\uff1a</p>\n<pre><code># draw.py\n\ndef draw_game():\n    # when clearing the screen we can use the main screen object initialized in this module\n    clear_screen(main_screen)\n    ...\n\ndef clear_screen(screen):\n    ...\n\nclass Screen():\n    ...\n\n# initialize main_screen as a singleton\nmain_screen = Screen()\n</code></pre>\n<h3>Extending module load path</h3>\n<p>\u9664\u4e86\u9ed8\u8ba4\u7684\u672c\u5730\u76ee\u5f55\u548c\u5185\u7f6e\u6a21\u5757\uff0c\u8fd8\u6709\u51e0\u79cd\u65b9\u6cd5\u53ef\u4ee5\u544a\u8bc9 Python \u89e3\u91ca\u5668\u5728\u54ea\u91cc\u67e5\u627e\u6a21\u5757\u3002\u60a8\u53ef\u4ee5\u4f7f\u7528\u73af\u5883\u53d8\u91cf <code>PYTHONPATH</code> \u6765\u6307\u5b9a\u6a21\u5757\u7684\u5176\u4ed6\u76ee\u5f55\uff0c\u5982\u4e0b\u6240\u793a\uff1a</p>\n<pre><code>PYTHONPATH=/foo python game.py\n</code></pre>\n<p>\u8fd9\u6837\u6267\u884c <code>game.py</code>\uff0c\u5e76\u4f7f\u811a\u672c\u80fd\u591f\u4ece <code>foo</code> \u76ee\u5f55\u4ee5\u53ca\u672c\u5730\u76ee\u5f55\u52a0\u8f7d\u6a21\u5757\u3002</p>\n<p>\u60a8\u8fd8\u53ef\u4ee5\u4f7f\u7528 <code>sys.path.append</code> \u65b9\u6cd5\u3002\u5b83\u9700\u8981\u5728\u6267\u884c <code>import</code> \u547d\u4ee4\u4e4b\u524d\u4f7f\u7528\uff1a</p>\n<pre><code>sys.path.append(\"/foo\")\n</code></pre>\n<p>\u73b0\u5728\uff0c<code>foo</code> \u76ee\u5f55\u5df2\u88ab\u6dfb\u52a0\u5230\u67e5\u627e\u6a21\u5757\u8def\u5f84\u7684\u5217\u8868\u4e2d\u3002</p>\n<h3>Exploring built-in modules</h3>\n<p>\u6d4f\u89c8\u5b8c\u6574\u7684 Python \u6807\u51c6\u5e93\u4e2d\u7684\u5185\u7f6e\u6a21\u5757\u5217\u8868 <a href=\"https://docs.python.org/3/library/\">here</a>.</p>\n<p>\u5728\u63a2\u7d22 Python \u6a21\u5757\u65f6\uff0c\u6709\u4e24\u4e2a\u975e\u5e38\u91cd\u8981\u7684\u51fd\u6570 - <code>dir</code> \u548c <code>help</code>\u3002</p>\n<p>\u8981\u5bfc\u5165\u6a21\u5757 <code>urllib</code>\uff0c\u8be5\u6a21\u5757\u5141\u8bb8\u6211\u4eec\u4ece URL \u521b\u5efa\u6570\u636e\u8bfb\u53d6\uff0c\u6211\u4eec <code>import</code> \u6a21\u5757\uff1a</p>\n<pre><code># import the library\nimport urllib\n\n# use it\nurllib.urlopen(...)\n</code></pre>\n<p>\u6211\u4eec\u53ef\u4ee5\u901a\u8fc7\u4f7f\u7528 <code>dir</code> \u51fd\u6570\u67e5\u770b\u6bcf\u4e2a\u6a21\u5757\u4e2d\u5b9e\u73b0\u4e86\u54ea\u4e9b\u51fd\u6570\uff1a</p>\n<pre><code>&gt;&gt;&gt; import urllib\n&gt;&gt;&gt; dir(urllib)\n['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', \n'__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', \n'_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', \n'_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', \n'_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', \n'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', \n'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', \n'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', \n'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', \n'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', \n'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', \n'urlopen', 'urlretrieve']\n</code></pre>\n<p>\u5f53\u6211\u4eec\u627e\u5230\u6a21\u5757\u4e2d\u6211\u4eec\u60f3\u8981\u4f7f\u7528\u7684\u51fd\u6570\u65f6\uff0c\u53ef\u4ee5\u4f7f\u7528 Python \u89e3\u91ca\u5668\u4e2d\u7684 <code>help</code> \u51fd\u6570\u9605\u8bfb\u66f4\u591a\u5173\u4e8e\u5b83\u7684\u4fe1\u606f\uff1a</p>\n<pre><code>help(urllib.urlopen)\n</code></pre>\n<h3>Writing packages</h3>\n<p>\u5305\u662f\u5305\u542b\u591a\u4e2a\u5305\u548c\u6a21\u5757\u7684\u547d\u540d\u7a7a\u95f4\u3002\u5b83\u4eec\u53ea\u662f\u76ee\u5f55\uff0c\u4f46\u6709\u4e00\u5b9a\u7684\u8981\u6c42\u3002</p>\n<p>Python \u4e2d\u7684\u6bcf\u4e2a\u5305\u90fd\u662f\u4e00\u4e2a\u76ee\u5f55\uff0c\u5b83<strong>\u5fc5\u987b</strong>\u5305\u542b\u4e00\u4e2a\u540d\u4e3a <code>__init__.py</code> \u7684\u7279\u6b8a\u6587\u4ef6\u3002\u8fd9\u4e2a\u6587\u4ef6\u53ef\u4ee5\u662f\u7a7a\u7684\uff0c\u8868\u660e\u5b83\u6240\u5728\u7684\u76ee\u5f55\u662f\u4e00\u4e2a Python \u5305\u3002\u8fd9\u6837\u5b83\u53ef\u4ee5\u50cf\u6a21\u5757\u4e00\u6837\u88ab\u5bfc\u5165\u3002</p>\n<p>\u5982\u679c\u6211\u4eec\u521b\u5efa\u4e00\u4e2a\u540d\u4e3a <code>foo</code> \u7684\u76ee\u5f55\uff0c\u5b83\u6807\u5fd7\u7740\u5305\u540d\uff0c\u7136\u540e\u6211\u4eec\u53ef\u4ee5\u5728\u8be5\u5305\u4e2d\u521b\u5efa\u4e00\u4e2a\u540d\u4e3a <code>bar</code> \u7684\u6a21\u5757\u3002\u63a5\u7740\uff0c\u6211\u4eec\u5728 <code>foo</code> \u76ee\u5f55\u4e2d\u6dfb\u52a0 <code>__init__.py</code> \u6587\u4ef6\u3002</p>\n<p>\u8981\u4f7f\u7528\u6a21\u5757 <code>bar</code>\uff0c\u6211\u4eec\u6709\u4e24\u79cd\u65b9\u5f0f\u5bfc\u5165\u5b83\uff1a</p>\n<pre><code>import foo.bar\n</code></pre>\n<p>\u6216\uff1a</p>\n<pre><code>from foo import bar\n</code></pre>\n<p>\u5728\u4e0a\u9762\u7684\u7b2c\u4e00\u4e2a\u4f8b\u5b50\u4e2d\uff0c\u6211\u4eec\u6bcf\u6b21\u8bbf\u95ee\u6a21\u5757 <code>bar</code> \u65f6\u90fd\u8981\u4f7f\u7528 <code>foo</code> \u524d\u7f00\u3002\u5728\u7b2c\u4e8c\u4e2a\u4f8b\u5b50\u4e2d\uff0c\u6211\u4eec\u4e0d\u9700\u8981\uff0c\u56e0\u4e3a\u6211\u4eec\u5df2\u7ecf\u5c06\u6a21\u5757\u5bfc\u5165\u5230\u6211\u4eec\u6a21\u5757\u7684\u547d\u540d\u7a7a\u95f4\u4e2d\u3002</p>\n<p><code>__init__.py</code> \u6587\u4ef6\u8fd8\u53ef\u4ee5\u901a\u8fc7\u91cd\u5199 <code>__all__</code> \u53d8\u91cf\u6765\u51b3\u5b9a\u5305\u4f5c\u4e3a API \u5bfc\u51fa\u7684\u6a21\u5757\uff0c\u540c\u65f6\u4f7f\u5176\u4ed6\u6a21\u5757\u4fdd\u6301\u5185\u90e8\u4f7f\u7528\uff1a</p>\n<pre><code>__init__.py:\n\n__all__ = [\"bar\"]\n</code></pre>\n<h2>\u7ec3\u4e60</h2>\n<p>\u5728\u8fd9\u4e2a\u7ec3\u4e60\u4e2d\uff0c\u6253\u5370 <code>re</code> \u6a21\u5757\u4e2d\u6240\u6709\u51fd\u6570\u7684\u6309\u5b57\u6bcd\u987a\u5e8f\u6392\u5217\u7684\u5217\u8868\uff0c\u8fd9\u4e9b\u51fd\u6570\u5305\u542b\u5355\u8bcd <code>find</code>\u3002</p>", "code": "import re\n\n# Your code goes here\nfind_members = []", "back_chapter": "Welcome", "previous_chapter": "Dictionaries", "next_chapter": "Input_and_Output", "output": "test_object('find_members')\nsuccess_msg('Great work!')", "solution": "import re\n\n# Your code goes here\nfind_members = []\nfor member in dir(re):\n    if \"find\" in member:\n        find_members.append(member)\n\nprint(sorted(find_members))", "is_tutorial": true, "links": [["\u4f60\u597d\uff0c\u4e16\u754c\uff01", "/zh/Hello%2C_World%21"], ["\u53d8\u91cf\u548c\u7c7b\u578b", "/zh/Variables_and_Types"], ["\u5217\u8868", "/zh/Lists"], ["\u57fa\u672c\u8fd0\u7b97\u7b26", "/zh/Basic_Operators"], ["\u5b57\u7b26\u4e32\u683c\u5f0f\u5316", "/zh/String_Formatting"], ["\u57fa\u672c\u5b57\u7b26\u4e32\u64cd\u4f5c", "/zh/Basic_String_Operations"], ["\u6761\u4ef6", "/zh/Conditions"], ["\u5faa\u73af", "/zh/Loops"], ["\u51fd\u6570", "/zh/Functions"], ["\u7c7b\u548c\u5bf9\u8c61", "/zh/Classes_and_Objects"], ["\u5b57\u5178", "/zh/Dictionaries"], ["\u6a21\u5757\u548c\u5305", "/zh/Modules_and_Packages"], ["\u8f93\u5165\u548c\u8f93\u51fa", "/zh/Input_and_Output"], ["\u751f\u6210\u5668", "/zh/Generators"], ["\u5217\u8868\u63a8\u5bfc\u5f0f", "/zh/List_Comprehensions"], ["Lambda \u51fd\u6570", "/zh/Lambda_functions"], ["\u591a\u4e2a\u51fd\u6570\u53c2\u6570", "/zh/Multiple_Function_Arguments"], ["\u6b63\u5219\u8868\u8fbe\u5f0f", "/zh/Regular_Expressions"], ["\u5f02\u5e38\u5904\u7406", "/zh/Exception_Handling"], ["\u96c6\u5408", "/zh/Sets"], ["\u5e8f\u5217\u5316", "/zh/Serialization"], ["\u504f\u51fd\u6570", "/zh/Partial_functions"], ["\u4ee3\u7801\u81ea\u7701", "/zh/Code_Introspection"], ["\u95ed\u5305", "/zh/Closures"], ["\u88c5\u9970\u5668", "/zh/Decorators"], ["\u6620\u5c04\u3001\u8fc7\u6ee4\u3001\u5f52\u7ea6", "/zh/Map%2C_Filter%2C_Reduce"], ["\u89e3\u6790CSV\u6587\u4ef6", "/zh/Parsing_CSV_Files"]]};
+    </script>
+    
+    <script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.CodeCamp Python/zh/Modules and Packages by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Feb 2025 03:16:54 GMT -->
+</html>
